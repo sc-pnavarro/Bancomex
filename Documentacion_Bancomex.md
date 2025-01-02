@@ -1,4 +1,4 @@
-# Documentación de Importaciones
+# Documentación de Bancomex
 
 Este archivo documenta los módulos, archivos y procedimientos almacenados extraídos de los datos proporcionados.
 
