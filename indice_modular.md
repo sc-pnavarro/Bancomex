@@ -185,14 +185,6 @@
 | [COL00108.FRM](./COL00108.FRM) | ``buscar_Click`` | ``CMXsrv_fincol_bsc_tip`` |
 | [COL00108.FRM](./COL00108.FRM) | ``Proxima_Click`` | ``CMXsrv_fincol_bsc_tip`` |
 | [COL00108.FRM](./COL00108.FRM) | ``proximo_Click`` | ``CMXsrv_fincol_bsc_tip`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``anunctb_Click`` | ``CMXsrv_finobl_calc_anu`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``form_activate`` | ``CMXsrv_finobl_lee_obl`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``Form_Load`` | ``CMXsrv_lee_fpro`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``Mcbeanl_Click`` | ``CMXsrv_finobl_calc_anu`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``Mcbectb_Click`` | ``CMXsrv_finobl_ctb_oto`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``Mcbedel_Click`` | ``CMXsrv_fincol_eli_obl`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``Mobl_liq_ope_Click`` | ``CMXsrv_icrd_dat_liq_ope`` |
-| [Copy of OBL00103.FRM](./Copy of OBL00103.FRM) | ``valida_error`` | ``CMXsrv_finobl_val_obl`` |
 | [CRD00602.FRM](./CRD00602.FRM) | ``buscar_Click`` | ``CMXsrv_finobl_bus_cor`` |
 | [CRD00602.FRM](./CRD00602.FRM) | ``proximo_Click`` | ``CMXsrv_finobl_bus_cor`` |
 | [OBL00102.FRM](./OBL00102.FRM) | ``ELIMINAR_Click`` | ``CMXsrv_finobl_ecuo`` |
