@@ -1,42 +1,42 @@
 # Índice Bancomex
 
 # Exportaciones
-  - ## [EXPCBE](#expcbe)
-  - ## [EXPCCE](#expcce)
-  - ## [expdex](#expdex)
-  - ## [EXPNEG](#expneg)
-  - ## [expret](#expret)
+  - **[EXPCBE](#expcbe)**
+  - **[EXPCCE](#expcce)**
+  - **[expdex](#expdex)**
+  - **[EXPNEG](#expneg)**
+  - **[expret](#expret)**
 
 # Financiamiento
-  - ## [ADMIN](#admin)
-  - ## [COL_NEG](#col_neg)
-  - ## [INGRESO](#ingreso)
-  - ## [MODIFIC](#modific)
-  - ## [OBLIGA](#obliga)
-  - ## [PAGOS](#pagos)
-  - ## [PGOEXT](#pgoext)
+  - **[ADMIN](#admin)**
+  - **[COL_NEG](#col_neg)**
+  - **[INGRESO](#ingreso)**
+  - **[MODIFIC](#modific)**
+  - **[OBLIGA](#obliga)**
+  - **[PAGOS](#pagos)**
+  - **[PGOEXT](#pgoext)**
 
 # Importaciones
-  - ## [ARCOS](#arcos)
-  - ## [COBERIMP](#coberimp)
-  - ## [COBRANZA](#cobranza)
-  - ## [CRDEXT](#crdext)
-  - ## [CRD_CORR](#crd_corr)
-  - ## [DDI](#ddi)
-  - ## [IMPORT](#import)
-  - ## [INFORME](#informe)
-  - ## [MOD_ADI](#mod_adi)
-  - ## [MOD_CBR](#mod_cbr)
-  - ## [MOD_CRD](#mod_crd)
-  - ## [NEGO_AV](#nego_av)
-  - ## [NNEGO](#nnego)
-  - ## [PAGCBR](#pagcbr)
+  - **[ARCOS](#arcos)**
+  - **[COBERIMP](#coberimp)**
+  - **[COBRANZA](#cobranza)**
+  - **[CRDEXT](#crdext)**
+  - **[CRD_CORR](#crd_corr)**
+  - **[DDI](#ddi)**
+  - **[IMPORT](#import)**
+  - **[INFORME](#informe)**
+  - **[MOD_ADI](#mod_adi)**
+  - **[MOD_CBR](#mod_cbr)**
+  - **[MOD_CRD](#mod_crd)**
+  - **[NEGO_AV](#nego_av)**
+  - **[NNEGO](#nnego)**
+  - **[PAGCBR](#pagcbr)**
 
 ## EXPCBE
 <a name="expcbe"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Form_Activate | CMXsrv_expcbe_lee_prm | ACMXPRMGRL | sp_procxmode, CMXsrv_lee_fpro |
 | Form_Activate | CMXsrv_cmx_busc_suc_usu | master..sysprocesses, tbl_User | PrmACMXSUCSAL, CMXsrv_cmx_ing_lib, sp_procxmode |
 | Form_Activate | CMXsrv_expcbe_lee_cbe | ACMXPAIS, COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXENTDOC, ACMXSUCSAL, ACMXPRTCBE, CLN | CMXsrv_cmx_busc_suc_usu, CMXsrv_val_suc, sp_procxmode, CMXsrv_lee_fpro |
@@ -122,8 +122,8 @@
 ## EXPCCE
 <a name="expcce"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Form_Activate | CMXsrv_cmx_busc_suc_usu | master..sysprocesses, tbl_User | PrmACMXSUCSAL, CMXsrv_cmx_ing_lib, sp_procxmode |
 | Form_Activate | CMXsrv_expcce_lee_cce | ACMXPAIS, COR, tbl_User, CCE, ACMXSUCSAL, CLN | por, sp_procxmode |
 | Form_Activate | CMXsrv_expcce_trd_cce | ACMXFORPAG, ACMXVIATPT, ACMXMAXCCE, ACMXCNFCCE, ACMXMONEDA, ACMXCLACOM, CCE, ACMXRCBCCE | sp_procxmode |
@@ -194,8 +194,8 @@
 ## expdex
 <a name="expdex"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | form_activate | CMXsrv_expcbe_lee_prm | ACMXPRMGRL | sp_procxmode, CMXsrv_lee_fpro |
 | form_activate | CMXsrv_dex_lee_dex | ACMXSUCSAL, DEX, CLN, ACMXADUANA | sp_procxmode |
 | Mdexeli_Click | CMXsrv_dex_eli_dex | DEX | sp_procxmode |
@@ -218,8 +218,8 @@
 ## EXPNEG
 <a name="expneg"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Form_Activate | CMXsrv_expcbe_bus_evz | EVZ, CBE | sp_procxmode |
 | Proximo_Click | CMXsrv_expcbe_bus_evz | EVZ, CBE | sp_procxmode |
 | Reversar_Click | CMXsrv_expcbe_rev_cbe | EVL, ACMXDESEMB, COR, ORG, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE, TRSD, ACMXPRMEXP, COM, EVR, CTZ, DTN, OPREC, RET, PUCBCX10 | por, CMXsrv_mbyte_gen, CMXsrv_cnt_rev_vig, CMXsrv_expcbe_rev_trp, CMXsrv_ctl_chq_aprcbl, CMXsrv_rev_950, CMXsrv_cnt_610, sp_procxmode, CMXsrv_expcbe_grb_evz, CMXsrv_cnt_631, CMXsrv_cnt_601, CMXsrv_cnt_621, CMXsrv_lee_fpro |
@@ -292,8 +292,8 @@
 ## expret
 <a name="expret"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | buscar_Click | CMXsrv_busc_plz | ACMXPLAZAS, comex..ACMXPLAZAS | sp_procxmode |
 | fld_cor_cod_plz_Lostfocus | CMXsrv_lee_plz | ACMXPLAZAS | CMXsrv_mbyte_cmp, sp_procxmode |
 | proximos_Click | CMXsrv_busc_plz | ACMXPLAZAS, comex..ACMXPLAZAS | sp_procxmode |
@@ -359,8 +359,8 @@
 ## ADMIN
 <a name="admin"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | COMMAND4_Click | CMXsrv_finadm_imod_desti | TIP | CMXsrv_finadm_val_tipop, sp_procxmode |
 | Form_Load | CMXsrv_finadm_cons_dtip | TIP | sp_procxmode |
 | Command1_Click | CMXsrv_finadm_imod_ectb | TIP | CMXsrv_finadm_val_tipop, sp_procxmode |
@@ -381,8 +381,8 @@
 ## COL_NEG
 <a name="col_neg"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | CANCELAR_Click | CMXsrv_busc_tip_tas | CRD | sp_procxmode |
 | ELIMINAR_Click | CMXsrv_fincol_ecuo | CUO_REN, COL, CUO | CMXsrv_fincol_pre_cuad_tas, sp_procxmode |
 | Form_Activate | CMXsrv_fincol_cons_plnpa | CUO_REN, COL_REN, COL, CUO | sp_procxmode |
@@ -410,8 +410,8 @@
 ## INGRESO
 <a name="ingreso"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | cancelar_Click | CMXsrv_fincol_ren_fin | COL_REN, TIP, TAS, TAS_REN, EVE_REN, DAC_REN, ITA, CUO_REN, AVAL_REN, EVE, CAN_REN, COL | CMXsrv_cmx_fec_hoy, CMXsrv_fincol_pre_cuad_tas, sp_procxmode, CMXsrv_fincol_grb_col_ren, CMXsrv_lee_fpro |
 | ELIMINAR_Click | CMXsrv_fincol_ecuo | CUO_REN, COL, CUO | CMXsrv_fincol_pre_cuad_tas, sp_procxmode |
 | form_activate | CMXsrv_fincol_cons_plnpa | CUO_REN, COL_REN, COL, CUO | sp_procxmode |
@@ -458,8 +458,8 @@
 ## MODIFIC
 <a name="modific"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Form_Activate | CMXsrv_fincol_cons_tas | TAS | sp_procxmode |
 | aceptar_click | CMXsrv_fincol_efec_tras | TIP, comex..ACMXMONEDAFEC, COL, CUO | CMXsrv_fincol_ctb_cnd, CMXsrv_fincol_ctb_cob, CMXsrv_cnt_9000, CMXsrv_fincol_ctb_cst, sp_procxmode, CMXsrv_fincol_calc_cven |
 | Form_Activate | CMXsrv_fincol_cons_trasp | EVE, COL | sp_procxmode |
@@ -476,8 +476,8 @@
 ## OBLIGA
 <a name="obliga"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | buscar_Click | CMXsrv_fincol_bsc_tip | TIP | sp_procxmode |
 | Proxima_Click | CMXsrv_fincol_bsc_tip | TIP | sp_procxmode |
 | proximo_Click | CMXsrv_fincol_bsc_tip | TIP | sp_procxmode |
@@ -528,8 +528,8 @@
 ## PAGOS
 <a name="pagos"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | CALCULAR_Click | CMXsrv_fincol_efec_calpa | TF_PPAG, TIP, TAS, CUO, comex..ACMXMONEDA, COL_ADI, OBL, CTR, NEG_ADI, ACMXINTERE, CAN, ICR, COL | CMXsrv_fincol_eval_tnem, CMXsrv_fincol_eval_tmor, CMXsrv_util_det_habil, sp_procxmode, CMXsrv_fincol_calc_reba, CMXsrv_fincol_eval_tasa, CMXsrv_fincol_eval_tneg, CMXsrv_fincol_efcal_cv, CMXsrv_fincol_cal_tas_sfr |
 | Form_Activate | CMXsrv_fincol_cons_pag | CAN, COL | sp_procxmode |
 | Form_Load | CMXsrv_fincol_cons_detp | ACMXDESEMB, EVE, COL, CUO | sp_procxmode |
@@ -554,8 +554,8 @@
 ## PGOEXT
 <a name="pgoext"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | calcular_Click | CMXsrv_fincol_cal_pext | TIP, CUO, comex..ACMXMONEDA, OBL, CTR, COL, CTO | CMXsrv_fincol_calc_reba, CMXsrv_fincol_eval_tasa, sp_procxmode |
 | Contabilizar_Click | CMXsrv_busc_cod_ope | TIP, COL | sp_procxmode |
 | Contabilizar_Click | CMXsrv_fincol_ctb_pext | TIP, ACMXDESEMB, comex..ACMXINTEREFEC, TAS, CUO, COD, OBL, COL_ADI, ACMXMONEDAFEC, CTR, NEG_ADI, ACMXINTERE, EVE, ACMXINTEREFEC, COL, CTO, CCO | CMXsrv_ctb_pago, CMXsrv_util_gen_vig, sp_procxmode, CMXsrv_lee_fpro |
@@ -569,8 +569,8 @@
 ## ARCOS
 <a name="arcos"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Eliminar_Click | CMXsrv_iarc_eli_arc | ADI, CRD, ARC, NEG, COB, INF, COL | sp_procxmode |
 | Form_activate | CMXsrv_iarc_busc_arc | ARC | sp_procxmode |
 | aceptar_click | CMXsrv_iinf_busc_inf | INF | sp_procxmode |
@@ -587,8 +587,8 @@
 ## COBERIMP
 <a name="coberimp"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Form_Activate | CMXsrv_icob_lee_pln | DIC, POSBCX10, COB, ACMXBCOCEN, ACMXMONEDA, ACMXPAIS | CMXsrv_cmx_get_codes, CMXsrv_icob_obs_pln, sp_procxmode |
 | Mcobcur_Click | CMXsrv_icob_cur_cob | comex.dbo, COB | CMXsrv_icob_ctb_reem, sp_procxmode, CMXsrv_icob_val_cob |
 | Mcobcur_Click | CMXsrv_icob_pag_sop | DDI, ACMXDESEMB, ADI, DIC, ACMXPRMGRL, ACMXMONEDAFEC, COB, INF, warnmsg | CMXsrv_get_ult_dia_habil, CMXsrv_icob_refresh_pos, CMXsrv_val_cta_cte, CMXsrv_calc_imp_4pct, CMXsrv_icbr_act_rem, sp_procxmode, CMXsrv_icob_ctb_sop, CMXsrv_ctb_imp_ddi_so, CMXsrv_cmx_get_codes, CMXsrv_iddi_marc_ddi2, CMXsrv_icob_val_cob |
@@ -631,8 +631,8 @@
 ## COBRANZA
 <a name="cobranza"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | ejecut_avi_imp_999 | CMXsrv_busc_cor_swf | SWT | sp_procxmode |
 | ejecut_avi_imp_999 | CMXsrv_swf_bus_sms | SMS | sp_procxmode |
 | Form_Activate | CMXsrv_icbr_lee_cbr | ACMXPAIS, COR, LCB, ACMXVIATPT, ACMXBCOBCC, CBR, ACMXMONEDA, ACMXCLACOM, tbl_User, ACMXSUCSAL, CLN | PrmACMXESPECI, PrmACLNEJECTA, sp_procxmode |
@@ -694,8 +694,8 @@
 ## CRDEXT
 <a name="crdext"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Aceptar_Click | CMXsrv_icrd_a_ibab | MIBAB, IBAB | sp_procxmode |
 | Form_Load | CMXsrv_icrd_lee_glo_ibab | IBAB, COL, MIBAB | sp_procxmode, CMXsrv_icrd_pre_78 |
 | Aceptar_Click | CMXsrv_icrd_a_ibar | MIBAR, IBAR | sp_procxmode |
@@ -721,8 +721,8 @@
 ## CRD_CORR
 <a name="crd_corr"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | aceptar_Click | CMXsrv_icrd_asignar_cor | COR, ACMXMONEDAFEC, CRD, LCR | sp_procxmode |
 | buscar_Click | CMXsrv_icrd_bus_lcr_bco | COR | sp_procxmode |
 | fld_cor_cod_mtr_LostFocus | CMXsrv_icrd_lee_bco_mtr | comex..ACMXBANCOS | sp_procxmode |
@@ -741,8 +741,8 @@
 ## DDI
 <a name="ddi"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | aceptar_Click | CMXsrv_iddi_ingmod_ddi | INF, DDI | sp_procxmode |
 | continuar_Click | CMXsrv_iddi_lee_dec | DDI, ACMXVIATPT, ACMXRGMIMP, INF, ACMXBCOCEN, ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM, ACMXPAIS, CLN | sp_procxmode, CMXsrv_iddi_val_num_ddi |
 | eliminar_Click | CMXsrv_iddi_eli_ddi | DDI | sp_procxmode |
@@ -763,8 +763,8 @@
 ## IMPORT
 <a name="import"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | buscar_Click | CMXsrv_icrd_lee_dir_cln | DIRCLN | sp_procxmode |
 | buscar_click | CMXsrv_icrd_lee_tex_swf | ACMXTSWFESPMSG, ACMXTSWFINGMSG | sp_procxmode |
 | Aceptar_Click | CMXsrv_icrd_lee_cod_txt_swf | ACMXTSWFESPMSG, ACMXTSWFINGMSG | sp_procxmode |
@@ -818,8 +818,8 @@
 ## INFORME
 <a name="informe"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Eliminar_Click | CMXsrv_iarc_eli_arc | ADI, CRD, ARC, NEG, COB, INF, COL | sp_procxmode |
 | Form_Activate | CMXsrv_iarc_busc_arc | ARC | sp_procxmode |
 | Form_Activate | CMXsrv_iinf_lee0_inf | INF | PrmACMXFPAIMP, PrmACMXMONEDA, PrmACLNEJECTA, sp_procxmode |
@@ -891,8 +891,8 @@
 ## MOD_ADI
 <a name="mod_adi"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Aceptar_Click | CMXsrv_icrd_a_cnd | TIP, CRD_ADI, CRD, CRDCLON, COL_ADI, COM, ACMXMONEDA, LIB, comex..COL, MAPR, MCND, COL, ACMXOPEIMP, comex..CRD | CMXMCRDsrv_icrd_lee_mapr, CMXsrv_ctb_impto_tim, CMXsrv_icrd_a_dat_apr, CMXsrv_imp_calc_aladi, CMXsrv_ctb_impto_tim2, CMXsrv_busc_cod_ope, sp_procxmode, CMXsrv_ctb_impto_tim3, CMXsrv_icrd_act_pag_mix, CMXsrv_util_pesos |
 | busca_bco | CMXsrv_icrd_lee_bco_swf | ACMXPAIS, COR | CMXsrv_icrd_lee_cln, sp_procxmode |
 | fld_col_fec_vto_LostFocus | CMXsrv_util_det_habil | ACMXFERIADO | sp_procxmode |
@@ -904,8 +904,8 @@
 ## MOD_CBR
 <a name="mod_cbr"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | fld_cbr_cod_gdo_LostFocus | CMXsrv_icbr_lee_cln | CLN | sp_procxmode |
 | Form_Load | CMXsrv_icbr_lee_ctp | ACMXSUCSAL, MCBRCTP, CBR, ACMXPAIS, CLN, CBRANX | sp_procxmode |
 | INGRESAR_Click | CMXsrv_icbr_act_ctp | comex..CBR, MCBRCTP, CBRANX, CBR | sp_procxmode |
@@ -925,8 +925,8 @@
 ## MOD_CRD
 <a name="mod_crd"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Aceptar_Click | CMXsrv_icrd_a_ibab | MIBAB, IBAB | sp_procxmode |
 | Form_Load | CMXsrv_icrd_lee_glo_ibab | IBAB, COL, MIBAB | sp_procxmode, CMXsrv_icrd_pre_78 |
 | Aceptar_Click | CMXsrv_icrd_a_ibar | MIBAR, IBAR | sp_procxmode |
@@ -982,8 +982,8 @@
 ## NEGO_AV
 <a name="nego_av"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | aviso1 | CMXsrv_icrd_a_rec_age | COR, TAS, CRD, CUO, CNEG, COM, NEG, TRSD, DIS, EVE, ACMXMONEDA, ACMXINTERE, ACMXSUCSAL, COL | CMXsrv_util_fecha, sp_procxmode |
 | aviso1 | CMXsrv_busc_ofi_cta | CLN | PrmACMXESPECI, PrmACLNEJECTA, sp_procxmode |
 | aviso1 | CMXsrv_neg_busc_arc | ARC | sp_procxmode |
@@ -1026,8 +1026,8 @@
 ## NNEGO
 <a name="nnego"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | Form_Activate | CMXsrv_icrd_neg_lee_crd | NEG, COL | sp_procxmode |
 | Form_Activate | CMXsrv_icrd_lee_neg | TAS, CRD, ACMXFINVER, NEG, NEG_ADI, DIS, COL | sp_procxmode |
 | gen_mens_swift | CMXsrv_iswf_a_pru | switxt, switxt1 | CMXsrv_iswf_a_732, CMXsrv_iswf_esp_707b, CMXsrv_iswf_a_747, CMXsrv_iswf_a_412, CMXsrv_iswf_a_707b, CMXsrv_iswf_esp_740, CMXsrv_iswf_a_410, CMXsrv_iswf_esp_747, CMXsrv_iswf_neg_730, CMXsrv_iswf_neg_752, CMXsrv_iswf_a_700a, CMXsrv_iswf_a_707a, CMXsrv_iswf_esp_700b, CMXsrv_iswf_a_740, CMXsrv_iswf_a_700b, CMXsrv_iswf_esp_707a, srv_irem_imp_202, CMXsrv_iswf_747_neg, srv_irem_imp_100, sp_procxmode, CMXsrv_iswf_esp_700a |
@@ -1068,8 +1068,8 @@
 ## PAGCBR
 <a name="pagcbr"></a>
 
-| Segmento | Procedimiento Almacenado | Tablas Referenciadas | Procedimientos Referenciados |
-|----------|--------------------------|----------------------|---------------------------|
+| **Segmento** | **Procedimiento Almacenado** | **Tablas Referenciadas** | **Procedimientos Referenciados** |
+|-------------|------------------------------|--------------------------|-------------------------------|
 | ACEPTAR_Click | CMXsrv_icbr_lee_dat_var | ACMXMONEDAFEC, CBR, ACMXPRMENL | sp_procxmode |
 | ACEPTAR_Click | CMXsrv_icbr_val_pag | LCB, CBR, CCO | CMXsrv_val_cta_cte, CMXsrv_calc_imp_4pct, CMXsrv_util_fecha, sp_procxmode, CMXsrv_enl_val_sel, CMXsrv_ctb_impto_ddi |
 | ACEPTAR_Click | CMXsrv_icbr_ctb_pag | LCB, ACMXDESEMB, vig_cmx, COD, ICX, COM, ACMXMONEDAFEC, CBR, PCX, DIP, LIB, CLN, CCO | CMXsrv_mbyte_gen, CMXsrv_get_ult_dia_habil, CMXsrv_val_cta_cte, CMXsrv_cnt_gen_vig, CMXsrv_calc_imp_4pct, CMXsrv_util_fecha, CMXsrv_vig_gra_vig, CMXsrv_ipuc_gen_pln, CMXsrv_icbr_act_rem, CMXsrv_enl_act_enl, sp_procxmode, CMXsrv_icbr_ctb_pag1, sp_cmx_sii_1870, CMXsrv_iddi2_gen_det_pag, CMXsrv_cmx_get_codes, CMXsrv_ctb_impto_ddi, CMXsrv_util_pesos |
