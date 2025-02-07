@@ -34,7 +34,11 @@
 
 # Producto: Exportaciones
 
+<a id="exportaciones"></a>
+
 ## Módulo: EXPCBE
+
+<a id="exportaciones-expcbe"></a>
 
 ### Archivo: CBE00101.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -205,6 +209,8 @@
 
 ## Módulo: EXPCCE
 
+<a id="exportaciones-expcce"></a>
+
 ### Archivo: CCE00101.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -343,6 +349,8 @@
 
 ## Módulo: expdex
 
+<a id="exportaciones-expdex"></a>
+
 ### Archivo: DEX00101.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -384,6 +392,8 @@
 | Form_Activate | CMXsrv_dex_lee_dex | ACMXSUCSAL, DEX, CLN, ACMXADUANA | sp_procxmode |
 
 ## Módulo: EXPNEG
+
+<a id="exportaciones-expneg"></a>
 
 ### Archivo: CBE00601.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -525,6 +535,8 @@
 
 ## Módulo: expret
 
+<a id="exportaciones-expret"></a>
+
 ### Archivo: COR00906.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -646,7 +658,11 @@
 
 # Producto: Financiamiento
 
+<a id="financiamiento"></a>
+
 ## Módulo: ADMIN
+
+<a id="financiamiento-admin"></a>
 
 ### Archivo: ADM00201.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -683,6 +699,8 @@
 | proximas_Click | CMXsrv_finadm_bus_tipope | TIP | sp_procxmode |
 
 ## Módulo: COL_NEG
+
+<a id="financiamiento-col_neg"></a>
 
 ### Archivo: COL00102.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -750,6 +768,8 @@
 | Form_Load | CMXsrv_lee_fpro | ACMXFECPRO | sp_procxmode |
 
 ## Módulo: INGRESO
+
+<a id="financiamiento-ingreso"></a>
 
 ### Archivo: COL00102.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -841,6 +861,8 @@
 
 ## Módulo: MODIFIC
 
+<a id="financiamiento-modific"></a>
+
 ### Archivo: COL00303.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -892,6 +914,8 @@
 | Form_Load | CMXsrv_lee_fpro | ACMXFECPRO | sp_procxmode |
 
 ## Módulo: OBLIGA
+
+<a id="financiamiento-obliga"></a>
 
 ### Archivo: COL00108.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1023,6 +1047,8 @@
 
 ## Módulo: PAGOS
 
+<a id="financiamiento-pagos"></a>
+
 ### Archivo: COL00301.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -1091,6 +1117,8 @@
 
 ## Módulo: PGOEXT
 
+<a id="financiamiento-pgoext"></a>
+
 ### Archivo: PGOCOL01.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -1112,7 +1140,11 @@
 
 # Producto: Importaciones
 
+<a id="importaciones"></a>
+
 ## Módulo: ARCOS
+
+<a id="importaciones-arcos"></a>
 
 ### Archivo: ARC00100.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1141,6 +1173,8 @@
 | reversar_Click | CMXsrv_iinf_rev_evi | INF, ARC, INC, EVI | CMXsrv_com_rev, sp_procxmode |
 
 ## Módulo: COBERIMP
+
+<a id="importaciones-coberimp"></a>
 
 ### Archivo: COB00101.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1239,6 +1273,8 @@
 | Form_Load | CMXsrv_grl_fec_serv | N/A | SRV_MessageService, sp_procxmode |
 
 ## Módulo: COBRANZA
+
+<a id="importaciones-cobranza"></a>
 
 ### Archivo: CBR00101.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1377,6 +1413,8 @@
 
 ## Módulo: CRDEXT
 
+<a id="importaciones-crdext"></a>
+
 ### Archivo: BCO_BCO.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -1434,6 +1472,8 @@
 
 ## Módulo: CRD_CORR
 
+<a id="importaciones-crd_corr"></a>
+
 ### Archivo: COR00202.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -1464,6 +1504,8 @@
 
 ## Módulo: DDI
 
+<a id="importaciones-ddi"></a>
+
 ### Archivo: DDI00101.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -1487,6 +1529,8 @@
 | proximo_no_aso_Click | CMXsrv_iddi_busc_noasoc | DDI, ADI | CMXsrv_iddi_bus_noasoc_cob, CMXsrv_iddi_bus_noasoc_opr, sp_procxmode |
 
 ## Módulo: IMPORT
+
+<a id="importaciones-import"></a>
 
 ### Archivo: BUSCADIR.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1600,6 +1644,8 @@
 | enviar_Click | CMXsrv_iswf_a_pru | switxt, switxt1 | CMXsrv_iswf_a_732, CMXsrv_iswf_esp_707b, CMXsrv_iswf_a_747, CMXsrv_iswf_a_412, CMXsrv_iswf_a_707b, CMXsrv_iswf_esp_740, CMXsrv_iswf_a_410, CMXsrv_iswf_esp_747, CMXsrv_iswf_neg_730, CMXsrv_iswf_neg_752, CMXsrv_iswf_a_700a, CMXsrv_iswf_a_707a, CMXsrv_iswf_esp_700b, CMXsrv_iswf_a_740, CMXsrv_iswf_a_700b, CMXsrv_iswf_esp_707a, srv_irem_imp_202, CMXsrv_iswf_747_neg, srv_irem_imp_100, sp_procxmode, CMXsrv_iswf_esp_700a |
 
 ## Módulo: INFORME
+
+<a id="importaciones-informe"></a>
 
 ### Archivo: ARC00100.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1724,6 +1770,8 @@
 
 ## Módulo: MOD_ADI
 
+<a id="importaciones-mod_adi"></a>
+
 ### Archivo: CRD00202.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -1738,6 +1786,8 @@
 | Form_Load | CMXsrv_grl_fec_serv | N/A | SRV_MessageService, sp_procxmode |
 
 ## Módulo: MOD_CBR
+
+<a id="importaciones-mod_cbr"></a>
 
 ### Archivo: CBR00201.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1777,6 +1827,8 @@
 | Cancelar_Click | CMXsrv_icbr_eli_no_cont | MCBRDOC, MCBRCTP, MLCB, CBR, MCBRTER | sp_procxmode |
 
 ## Módulo: MOD_CRD
+
+<a id="importaciones-mod_crd"></a>
 
 ### Archivo: BCO_BCO.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -1901,6 +1953,8 @@
 
 ## Módulo: NEGO_AV
 
+<a id="importaciones-nego_av"></a>
+
 ### Archivo: AVISOS.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
 |-------------------|----------------------------------|-----------------------|----------------------------------------|
@@ -1958,6 +2012,8 @@
 | Form_Load | CMXsrv_icrd_bus_pago | CAN | sp_procxmode |
 
 ## Módulo: NNEGO
+
+<a id="importaciones-nnego"></a>
 
 ### Archivo: CRD01001.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
@@ -2042,6 +2098,8 @@
 | Form_Load | CMXsrv_icrd_bus_pago | CAN | sp_procxmode |
 
 ## Módulo: PAGCBR
+
+<a id="importaciones-pagcbr"></a>
 
 ### Archivo: CBR01006.FRM
 | Segmento          | Procedimiento Almacenado        | Tablas Referenciadas | Procedimientos Referenciados          |
