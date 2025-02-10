@@ -1,265 +1,292 @@
 | Productos | Eventos | Botón de Evento | Nombre Técnico del Botón | Función Asociada | Llamado a SP | Nombre Pantalla | Frames asociados | Llamado a Ejecutable |
 |-----------|---------|-----------------|--------------------------|------------------|--------------|----------------|-----------------|--------------------|
-| COBERIMP | ABRIR |  | ABRIR |  |  | COB00101.FRM |  |  |
-| COBERIMP | comgto1 |  | comgto1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | CONDICIONES1 |  | CONDICIONES1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | CONTABIL1 |  | CONTABIL1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | cur_a_pago1 |  | cur_a_pago1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | cursar1 |  | cursar1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | ddi1 |  | ddi1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | DISCREPANCIA1 |  | DISCREPANCIA1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | ELIMINAR1 |  | ELIMINAR1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | EMBARQUE1 |  | EMBARQUE1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | informe1 |  | informe1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | MCLIman |  | MCLIman |  |  | COB00101.FRM |  | client.exe |
-| COBERIMP | Mcobcur |  | Mcobcur |  | CMXsrv_icob_cur_cob | COB00101.FRM |  |  |
-| COBERIMP | Mcobcur_pago |  | Mcobcur_pago |  |  | COB00101.FRM |  |  |
-| COBERIMP | Mcobrev |  | Mcobrev |  | CMXsrv_icob_rev_etd | COB00101.FRM |  |  |
-| COBERIMP | Mcobvali |  | Mcobvali |  | CMXsrv_icob_val_cob | COB00101.FRM |  |  |
-| COBERIMP | Mcomddi |  | Mcomddi |  |  | COB00101.FRM |  | decing.exe |
-| COBERIMP | Mcomgto |  | Mcomgto |  |  | COB00101.FRM |  |  |
-| COBERIMP | menu_carta_cre |  | menu_carta_cre |  |  | COB00101.FRM |  | import.exe |
-| COBERIMP | menu_cob_imp |  | menu_cob_imp |  |  | COB00101.FRM |  | cobranza.exe |
-| COBERIMP | menu_coloca |  | menu_coloca |  |  | COB00101.FRM |  | ingreso.exe |
-| COBERIMP | menu_inf_imp |  | menu_inf_imp |  |  | COB00101.FRM |  | informe.exe |
-| COBERIMP | menu_trapasos |  | menu_trapasos |  |  | COB00101.FRM |  | trscon.exe |
-| COBERIMP | MNEGVOL |  | MNEGVOL |  |  | COB00101.FRM |  |  |
-| COBERIMP | NUEVA |  | NUEVA |  |  | COB00101.FRM |  |  |
-| COBERIMP | PLANPAGO1 |  | PLANPAGO1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | reversar1 |  | reversar1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | validar1 |  | validar1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | VOLVER1 |  | VOLVER1 |  |  | COB00101.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  |  | COB00201.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00201.FRM |  |  |
-| COBERIMP | FLD_AUX_OPC_BUSC |  | FLD_AUX_OPC_BUSC |  |  | COB00201.FRM |  |  |
-| COBERIMP | GRID_COB |  | GRID_COB |  |  | COB00201.FRM |  |  |
-| COBERIMP | PROXIMAS |  | PROXIMAS |  | CMXsrv_icob_busc_pln | COB00201.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_crea_norm | COB00300.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00300.FRM |  |  |
-| COBERIMP | FLD_COB_TIP_OPR |  | FLD_COB_TIP_OPR |  |  | COB00300.FRM |  |  |
-| COBERIMP | FLD_COB_TIP_PLN |  | FLD_COB_TIP_PLN |  |  | COB00300.FRM |  |  |
-| COBERIMP | fld_glo_pza_inf |  | fld_glo_pza_inf | Dim LT_index As Integer
+| OBLIGA | aceptar |  | aceptar |  |  | COL00108.FRM |  |  |
+| OBLIGA | buscar |  | buscar |  | CMXsrv_fincol_bsc_tip | COL00108.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | COL00108.FRM |  |  |
+| OBLIGA | fld_col_cod_bal |  | fld_col_cod_bal |  |  | COL00108.FRM |  |  |
+| OBLIGA | FLD_GLO_TIP_CRE |  | FLD_GLO_TIP_CRE | Dim LT_index As Integer
     Dim LV_A As String
-    If (fld_glo_pza_inf.ListIndex < 0) Then
+    If (fld_glo_tip_cre.ListIndex < 0) Then
         Beep
     Else
-        LT_index = fld_glo_pza_inf.ItemData(fld_glo_pza_inf.ListIndex)
-        GG_rsw = VBG_FLD_COB_PZA_INF_Set(GT_fld_glo_pza_inf(LT_index)) |  | COB00300.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_crea_reem | COB00301.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00301.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_act_gral | COB00302.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00302.FRM |  |  |
-| COBERIMP | FLD_GLO_FOR_PAG |  | FLD_GLO_FOR_PAG | Dim LT_index As Integer
+        LT_index = fld_glo_tip_cre.ItemData(fld_glo_tip_cre.ListIndex)
+        GG_rsw = VBG_FLD_COD_TIP_CRE_Set(GT_FLD_glo_tip_cre(LT_index)) |  | COL00108.FRM |  |  |
+| OBLIGA | GRID_TIPOPE |  | GRID_TIPOPE |  |  | COL00108.FRM |  |  |
+| OBLIGA | Proxima |  | Proxima |  | CMXsrv_fincol_bsc_tip | COL00108.FRM |  |  |
+| OBLIGA | proximo |  | proximo |  | CMXsrv_fincol_bsc_tip | COL00108.FRM |  |  |
+| OBLIGA | Aceptar |  | Aceptar |  |  | CRD00602.FRM |  |  |
+| OBLIGA | buscar |  | buscar |  | CMXsrv_finobl_bus_cor | CRD00602.FRM |  |  |
+| OBLIGA | Cancelar |  | Cancelar |  |  | CRD00602.FRM |  |  |
+| OBLIGA | fld_aux_glo_pai |  | fld_aux_glo_pai | Dim LT_index As Integer
     Dim LV_A As String
-    If (fld_glo_for_pag.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = fld_glo_for_pag.ItemData(fld_glo_for_pag.ListIndex)
-        GG_rsw = VBG_FLD_COB_FOR_PAG_Set(GT_FLD_GLO_FOR_PAG(LT_index)) |  | COB00302.FRM |  |  |
-| COBERIMP | FLD_GLO_PAI_PGO |  | FLD_GLO_PAI_PGO | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_PAI_PGO.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = FLD_GLO_PAI_PGO.ItemData(FLD_GLO_PAI_PGO.ListIndex)
-        GG_rsw = VBG_FLD_COB_PAI_PGO_Set(GT_FLD_GLO_PAI_PGO(LT_index)) |  | COB00302.FRM |  |  |
-| COBERIMP | fld_glo_pza_bcch |  | fld_glo_pza_bcch | Dim LT_index As Integer
-    Dim LV_A As String
-    If (fld_glo_pza_bcch.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = fld_glo_pza_bcch.ItemData(fld_glo_pza_bcch.ListIndex)
-        GG_rsw = VBG_FLD_COB_PZA_BCCH_Set(GT_fld_glo_pza_bcch(LT_index)) |  | COB00302.FRM |  |  |
-| COBERIMP | fld_glo_pza_inf |  | fld_glo_pza_inf | Dim LT_index As Integer
-    Dim LV_A As String
-    If (fld_glo_pza_inf.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = fld_glo_pza_inf.ItemData(fld_glo_pza_inf.ListIndex)
-        GG_rsw = VBG_FLD_COB_PZA_INF_Set(GT_fld_glo_pza_inf(LT_index)) |  | COB00302.FRM |  |  |
-| COBERIMP | fld_glo_tip_doc |  | fld_glo_tip_doc | Dim LT_index As Integer
-    Dim LV_A As String
-    If (fld_glo_tip_doc.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = fld_glo_tip_doc.ItemData(fld_glo_tip_doc.ListIndex)
-        GG_rsw = VBG_FLD_POS_TIP_DOC_Set(GT_fld_glo_tip_doc(LT_index)) |  | COB00302.FRM |  |  |
-| COBERIMP | fld_pos_glo_are_ctb |  | fld_pos_glo_are_ctb | Dim LT_index As Integer
-    Dim LV_A As String
-    If (fld_pos_glo_are_ctb.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = fld_pos_glo_are_ctb.ItemData(fld_pos_glo_are_ctb.ListIndex)
-        GG_rsw = VBG_FLD_POS_COD_ARE_CTB_Set(GT_fld_pos_glo_are_ctb(LT_index)) |  | COB00302.FRM |  |  |
-| COBERIMP | fld_pos_glo_ins_uti |  | fld_pos_glo_ins_uti | Dim LT_index As Integer
-    Dim LV_A As String
-    If (fld_pos_glo_ins_uti.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = fld_pos_glo_ins_uti.ItemData(fld_pos_glo_ins_uti.ListIndex)
-        GG_rsw = VBG_FLD_POS_COD_INS_UTI_Set(GT_fld_pos_glo_ins_uti(LT_index)) |  | COB00302.FRM |  |  |
-| COBERIMP | fld_pos_ind_afe |  | fld_pos_ind_afe |  |  | COB00302.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_act_val | COB00303.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00303.FRM |  |  |
-| COBERIMP | FLD_COB_GTO_BAN |  | FLD_COB_GTO_BAN |  |  | COB00303.FRM |  |  |
-| COBERIMP | FLD_COB_GTO_HAS_FOB |  | FLD_COB_GTO_HAS_FOB |  |  | COB00303.FRM |  |  |
-| COBERIMP | FLD_COB_VAL_FLT |  | FLD_COB_VAL_FLT |  |  | COB00303.FRM |  |  |
-| COBERIMP | FLD_COB_VAL_FOB |  | FLD_COB_VAL_FOB |  |  | COB00303.FRM |  |  |
-| COBERIMP | FLD_COB_VAL_MER |  | FLD_COB_VAL_MER |  |  | COB00303.FRM |  |  |
-| COBERIMP | FLD_COB_VAL_SEG |  | FLD_COB_VAL_SEG |  |  | COB00303.FRM |  |  |
-| COBERIMP | FLD_GLO_MON |  | FLD_GLO_MON | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_MON.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = FLD_GLO_MON.ItemData(FLD_GLO_MON.ListIndex)
-        GG_rsw = VBG_FLD_COB_MON_Set(GT_FLD_GLO_MON(LT_index)) |  | COB00303.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_act_acu | COB00304.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00304.FRM |  |  |
-| COBERIMP | FLD_GLO_ACU1 |  | FLD_GLO_ACU1 | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_ACU1.ListIndex < 0) Then
-      ' Beep
-      Else
-       LT_index = FLD_GLO_ACU1.ItemData(FLD_GLO_ACU1.ListIndex)
-       GG_rsw = VBG_FLD_COB_COD_ACU1_Set(GT_FLD_GLO_ACU1(LT_index)) |  | COB00304.FRM |  |  |
-| COBERIMP | FLD_GLO_ACU2 |  | FLD_GLO_ACU2 | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_ACU2.ListIndex < 0) Then
-       Beep
-      Else
-       LT_index = FLD_GLO_ACU2.ItemData(FLD_GLO_ACU2.ListIndex)
-       GG_rsw = VBG_FLD_COB_COD_ACU2_Set(GT_FLD_GLO_ACU2(LT_index)) |  | COB00304.FRM |  |  |
-| COBERIMP | FLD_GLO_ACU3 |  | FLD_GLO_ACU3 | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_ACU3.ListIndex < 0) Then
-'      Beep
-      Else
-       LT_index = FLD_GLO_ACU3.ItemData(FLD_GLO_ACU3.ListIndex)
-       GG_rsw = VBG_FLD_COB_COD_ACU3_Set(GT_FLD_GLO_ACU3(LT_index)) |  | COB00304.FRM |  |  |
-| COBERIMP | FLD_GLO_ACU4 |  | FLD_GLO_ACU4 | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_ACU4.ListIndex < 0) Then
-       Beep
-      Else
-       LT_index = FLD_GLO_ACU4.ItemData(FLD_GLO_ACU4.ListIndex)
-       GG_rsw = VBG_FLD_COB_COD_ACU4_Set(GT_FLD_GLO_ACU4(LT_index)) |  | COB00304.FRM |  |  |
-| COBERIMP | FLD_GLO_ACU5 |  | FLD_GLO_ACU5 | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_ACU5.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = FLD_GLO_ACU5.ItemData(FLD_GLO_ACU5.ListIndex)
-        GG_rsw = VBG_FLD_COB_COD_ACU5_Set(GT_FLD_GLO_ACU5(LT_index)) |  | COB00304.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  |  | COB00305.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00305.FRM |  |  |
-| COBERIMP | ELIMINAR |  | ELIMINAR |  | CMXsrv_icob_eli_int | COB00305.FRM |  |  |
-| COBERIMP | GRID_COB |  | GRID_COB |  |  | COB00305.FRM |  |  |
-| COBERIMP | NUEVO |  | NUEVO |  |  | COB00305.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_ingmod_int | COB00306.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00306.FRM |  |  |
-| COBERIMP | FLD_COB_CAP_INT |  | FLD_COB_CAP_INT |  |  | COB00306.FRM |  |  |
-| COBERIMP | FLD_COB_MTO_INT |  | FLD_COB_MTO_INT |  |  | COB00306.FRM |  |  |
-| COBERIMP | FLD_COB_TAS_INT_ANL |  | FLD_COB_TAS_INT_ANL |  |  | COB00306.FRM |  |  |
-| COBERIMP | FLD_GLO_BASE_TAS |  | FLD_GLO_BASE_TAS |  |  | COB00306.FRM |  |  |
-| COBERIMP | FLD_GLO_CPT_INT |  | FLD_GLO_CPT_INT | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_CPT_INT.ListIndex < 0) Then
-'      Beep
-      Else
-       LT_index = FLD_GLO_CPT_INT.ItemData(FLD_GLO_CPT_INT.ListIndex)
-       gg_rsw = VBG_FLD_COB_CPT_INT_Set(GT_FLD_GLO_CPT_INT(LT_index)) |  | COB00306.FRM |  |  |
-| COBERIMP | FLD_GLO_TIP_INT |  | FLD_GLO_TIP_INT | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_TIP_INT.ListIndex < 0) Then
-       Beep
-      Else
-       LT_index = FLD_GLO_TIP_INT.ItemData(FLD_GLO_TIP_INT.ListIndex)
-       gg_rsw = VBG_FLD_COB_TIP_INT_Set(GT_FLD_GLO_TIP_INT(LT_index)) |  | COB00306.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_ing_mod_srf | COB00307.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00307.FRM |  |  |
-| COBERIMP | CmdEliminar |  | CmdEliminar |  | CMXsrv_icob_eli_pln | COB00307.FRM |  |  |
-| COBERIMP | CmdReversar |  | CmdReversar |  | CMXsrv_icob_rev_etd | COB00307.FRM |  |  |
-| COBERIMP | CURSAR |  | CURSAR |  | CMXsrv_icob_ing_mod_srf | COB00307.FRM |  |  |
-| COBERIMP | CyG |  | CyG |  |  | COB00307.FRM |  |  |
-| COBERIMP | FLD_COB_VAL_TOT |  | FLD_COB_VAL_TOT |  |  | COB00307.FRM |  |  |
-| COBERIMP | FLD_GLO_MON |  | FLD_GLO_MON | Dim LT_index As Integer
-    Dim LV_A As String
-    If (FLD_GLO_MON.ListIndex < 0) Then
+    If (fld_aux_glo_pai.ListIndex < 0) Then
 	Beep
     Else
-	LT_index = FLD_GLO_MON.ItemData(FLD_GLO_MON.ListIndex)
-	GG_rsw = VBG_FLD_COB_MON_Set(GT_FLD_GLO_MON(LT_index)) |  | COB00307.FRM |  |  |
-| COBERIMP | FLD_GLO_PAI_PGO |  | FLD_GLO_PAI_PGO | Dim LT_index As Integer
+	LT_index = fld_aux_glo_pai.ItemData(fld_aux_glo_pai.ListIndex)
+	GG_rsw = VBG_FLD_AUX_COD_PAI_Set(GT_FLD_AUX_GLO_PAI(LT_index)) |  | CRD00602.FRM |  |  |
+| OBLIGA | fld_aux_glo_plz |  | fld_aux_glo_plz | Dim LT_index As Integer
     Dim LV_A As String
-    If (fld_glo_pai_pgo.ListIndex < 0) Then
+    If (fld_aux_glo_plz.ListIndex < 0) Then
 	Beep
     Else
-	LT_index = fld_glo_pai_pgo.ItemData(fld_glo_pai_pgo.ListIndex)
-	GG_rsw = VBG_FLD_COB_PAI_PGO_Set(GT_FLD_GLO_PAI_PGO(LT_index)) |  | COB00307.FRM |  |  |
-| COBERIMP | Reversar |  | Reversar |  | CMXsrv_icob_rev_etd | COB00307.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_anu | COB00501.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB00501.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_act_cur_a_pag | COB0601.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | COB0601.FRM |  |  |
-| COBERIMP | FLD_AUX_OPC_BUSC |  | FLD_AUX_OPC_BUSC |  |  | COB0601.FRM |  |  |
-| COBERIMP | fld_cob_tip_pla |  | fld_cob_tip_pla |  |  | COB0601.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_pag_sop | FORM2.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | FORM2.FRM |  |  |
-| COBERIMP | fld_cob_mto2_mn |  | fld_cob_mto2_mn |  |  | FORM2.FRM |  |  |
-| COBERIMP | fld_glo_cob_mon_pag |  | fld_glo_cob_mon_pag | Dim LT_index As Integer
-    Dim LV_A As String
-    If (fld_glo_cob_mon_pag.ListIndex < 0) Then
-        Beep
-      Else
-        LT_index = fld_glo_cob_mon_pag.ItemData(fld_glo_cob_mon_pag.ListIndex)
-        GG_rsw = VBG_fld_cob_mon_pag_Set(GT_fld_glo_cob_mon_pag(LT_index)) |  | FORM2.FRM |  |  |
-| COBERIMP | fld_glo_cob_odf_mx |  | fld_glo_cob_odf_mx | Dim LT_index As Integer
-    Dim LV_A As String
-
-    If (fld_glo_cob_odf_mx.ListIndex < 0) Then
-        Beep
-    Else
-        LT_index = fld_glo_cob_odf_mx.ItemData(fld_glo_cob_odf_mx.ListIndex)
-        GG_rsw = VBG_fld_cob_odf_mx_Set(GT_fld_glo_cob_odf_mx(LT_index)) |  | FORM2.FRM |  |  |
-| COBERIMP | fld_glo_cob_odf1_mn |  | fld_glo_cob_odf1_mn | Dim LT_index As Integer
+	LT_index = fld_aux_glo_plz.ItemData(fld_aux_glo_plz.ListIndex)
+	GG_rsw = VBG_fld_aux_cod_plz_Set(GT_FLD_AUX_GLO_PLZ(LT_index)) |  | CRD00602.FRM |  |  |
+| OBLIGA | FLD_INDICA_SW |  | FLD_INDICA_SW |  |  | CRD00602.FRM |  |  |
+| OBLIGA | GRID_CORR |  | GRID_CORR |  |  | CRD00602.FRM |  |  |
+| OBLIGA | proximo |  | proximo |  | CMXsrv_finobl_bus_cor | CRD00602.FRM |  |  |
+| OBLIGA | sw_pais |  | sw_pais |  |  | CRD00602.FRM |  |  |
+| OBLIGA | sw_plaza |  | sw_plaza |  |  | CRD00602.FRM |  |  |
+| OBLIGA | sw_todas |  | sw_todas |  |  | CRD00602.FRM |  |  |
+| OBLIGA | Command1 |  | Command1 |  |  | GRL00101.FRM |  |  |
+| OBLIGA | ELIMINAR |  | ELIMINAR |  |  | GRL00101.FRM |  |  |
+| OBLIGA | word |  | word |  |  | GRL00101.FRM |  |  |
+| OBLIGA | aceptar |  | aceptar |  |  | INFORMES.FRM |  | supda.exe |
+| OBLIGA | cancelar |  | cancelar |  |  | INFORMES.FRM |  |  |
+| OBLIGA | Command3D1 |  | Command3D1 |  |  | INFORMES.FRM |  |  |
+| OBLIGA | Option3D1 |  | Option3D1 |  |  | INFORMES.FRM |  |  |
+| OBLIGA | Procesos |  | Procesos |  |  | INFORMES.FRM |  | supda.exe |
+| OBLIGA | aceptar |  | aceptar |  |  | OBL00101.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00101.FRM |  |  |
+| OBLIGA | fld_aux_nom_mon |  | fld_aux_nom_mon | Dim LT_index As Integer
     Dim LV_A As String
 
-    If (fld_glo_cob_odf1_mn.ListIndex < 0) Then
+    If (fld_aux_nom_mon.ListIndex < 0) Then
         Beep
     Else
-        LT_index = fld_glo_cob_odf1_mn.ItemData(fld_glo_cob_odf1_mn.ListIndex)
-        GG_rsw = VBG_fld_cob_odf1_mn_Set(GT_fld_glo_cob_odf1_mn(LT_index)) |  | FORM2.FRM |  |  |
-| COBERIMP | fld_glo_cob_odf2_mn |  | fld_glo_cob_odf2_mn | Dim LT_index As Integer
+        LT_index = fld_aux_nom_mon.ItemData(fld_aux_nom_mon.ListIndex)
+        gg_rsw = VBG_fld_obl_mon_Set(GT_fld_aux_nom_mon(LT_index)) |  | OBL00101.FRM |  |  |
+| OBLIGA | fld_aux_nom_mon_ori |  | fld_aux_nom_mon_ori | Dim LT_index As Integer
     Dim LV_A As String
 
-    If (fld_glo_cob_odf2_mn.ListIndex < 0) Then
+    If (fld_aux_nom_mon_ori.ListIndex < 0) Then
         Beep
     Else
-        LT_index = fld_glo_cob_odf2_mn.ItemData(fld_glo_cob_odf2_mn.ListIndex)
-        GG_rsw = VBG_fld_cob_odf2_mn_Set(GT_fld_glo_cob_odf2_mn(LT_index)) |  | FORM2.FRM |  |  |
-| COBERIMP | Command1 |  | Command1 |  |  | GRL00101.FRM |  |  |
-| COBERIMP | ELIMINAR |  | ELIMINAR |  |  | GRL00101.FRM |  |  |
-| COBERIMP | word |  | word |  |  | GRL00101.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  |  | INFORMES.FRM |  | supda.exe |
-| COBERIMP | Cancelar |  | Cancelar |  |  | INFORMES.FRM |  |  |
-| COBERIMP | Command3D1 |  | Command3D1 |  |  | INFORMES.FRM |  |  |
-| COBERIMP | Option3D1 |  | Option3D1 |  |  | INFORMES.FRM |  |  |
-| COBERIMP | Procesos |  | Procesos |  |  | INFORMES.FRM |  | supda.exe |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  | CMXsrv_icob_cur_reem | ORI_DEST.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | ORI_DEST.FRM |  |  |
-| COBERIMP | fld_glo_cob_odf1_mn |  | fld_glo_cob_odf1_mn | Dim LT_index As Integer
+        LT_index = fld_aux_nom_mon_ori.ItemData(fld_aux_nom_mon_ori.ListIndex)
+        gg_rsw = VBG_fld_obl_mon_reem_Set(GT_fld_aux_nom_mon_ori(LT_index)) |  | OBL00101.FRM |  |  |
+| OBLIGA | fld_obl_mod_pag |  | fld_obl_mod_pag |  |  | OBL00101.FRM |  |  |
+| OBLIGA | fld_obl_mto_ori |  | fld_obl_mto_ori |  |  | OBL00101.FRM |  |  |
+| OBLIGA | fld_obl_rut_acre |  | fld_obl_rut_acre |  |  | OBL00101.FRM |  |  |
+| OBLIGA | fld_obl_tip_ope |  | fld_obl_tip_ope |  |  | OBL00101.FRM |  |  |
+| OBLIGA | fld_par_nom_suc |  | fld_par_nom_suc | Dim LT_index As Integer
     Dim LV_A As String
 
-    If (fld_glo_cob_odf1_mn.ListIndex < 0) Then
+    If (fld_par_nom_suc.ListIndex < 0) Then
         Beep
     Else
-        LT_index = fld_glo_cob_odf1_mn.ItemData(fld_glo_cob_odf1_mn.ListIndex)
-        GG_rsw = VBG_fld_cob_odf1_mn_Set(GT_fld_glo_cob_odf1_mn(LT_index)) |  | ORI_DEST.FRM |  |  |
-| COBERIMP | ACEPTAR |  | ACEPTAR |  |  | PREFER.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | PREFER.FRM |  |  |
-| COBERIMP | Cargar |  | Cargar |  |  | PREFER.FRM |  |  |
-| COBERIMP | Cancelar |  | Cancelar |  |  | PREGUNTA.FRM |  |  |
-| COBERIMP | contabilizar |  | contabilizar |  |  | PREGUNTA.FRM |  |  |
-| COBERIMP | pregunta |  | pregunta |  |  | PREGUNTA.FRM |  |  |
-| COBERIMP | sin_contabilizar |  | sin_contabilizar |  |  | PREGUNTA.FRM |  |  |
+        LT_index = fld_par_nom_suc.ItemData(fld_par_nom_suc.ListIndex)
+        gg_rsw = VBG_fld_obl_suc_Set(GT_fld_par_nom_suc(LT_index)) |  | OBL00101.FRM |  |  |
+| OBLIGA | FLD_PAR_NOM_TIP_TAS |  | FLD_PAR_NOM_TIP_TAS | Dim LT_index As Integer
+    Dim LV_A As String
+    Dim iFilas As Integer
+    Dim arglist As MIGPrmModalidadPagoDiaType
+
+    If (FLD_PAR_NOM_TIP_TAS.ListIndex < 0) Then
+        Beep
+    Else
+        LT_index = FLD_PAR_NOM_TIP_TAS.ItemData(FLD_PAR_NOM_TIP_TAS.ListIndex)
+        gg_rsw = VBG_fld_obl_tip_tas_Set(GT_FLD_PAR_NOM_TIP_TAS(LT_index))
+
+        If GT_FLD_PAR_TAS_INT(LT_index) = "S" Then
+           If GT_FLD_PAR_IND_DIA(LT_index) = "N" Then
+              fld_obl_mod_bas_dia.ListIndex = 0
+              'fld_obl_mod_bas_dia.Enabled = True
+              
+              arglist.fld_obl_tip_tas = RTrim(gv_fld_obl_tip_tas)
+              
+              rsw% = PrmModalidadPagoDia(gserver, arglist)
+              
+              If rsw% <> mig_succeed Then  ' Or GV_ERROR = 43003 Then
+                 Screen.MousePointer = 0
+                 Exit Sub |  | OBL00101.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00102.FRM |  |  |
+| OBLIGA | ELIMINAR |  | ELIMINAR |  | CMXsrv_finobl_ecuo | OBL00102.FRM |  |  |
+| OBLIGA | generar |  | generar |  |  | OBL00102.FRM |  |  |
+| OBLIGA | grid_inf |  | grid_inf |  |  | OBL00102.FRM |  |  |
+| OBLIGA | ingresar |  | ingresar |  |  | OBL00102.FRM |  |  |
+| OBLIGA | anunctb |  | anunctb |  | CMXsrv_finobl_calc_anu | OBL00103.FRM |  |  |
+| OBLIGA | avi_otor |  | avi_otor |  |  | OBL00103.FRM |  |  |
+| OBLIGA | avi_pago |  | avi_pago |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Comabrir |  | Comabrir |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMANULAR |  | COMANULAR |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMAPROBADA |  | COMAPROBADA |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMASIGNAR |  | COMASIGNAR |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMCESI1 |  | COMCESI1 |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMCONDICIONES |  | COMCONDICIONES |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMCTB |  | COMCTB |  |  | OBL00103.FRM |  |  |
+| OBLIGA | comEliminar |  | comEliminar |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMEMBARQUE |  | COMEMBARQUE |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMENDOSAR |  | COMENDOSAR |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMGTO1 |  | COMGTO1 |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Command3D1 |  | Command3D1 |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Command3D5 |  | Command3D5 |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMNOASIG |  | COMNOASIG |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Comnueva |  | Comnueva |  |  | OBL00103.FRM |  |  |
+| OBLIGA | compag |  | compag |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMQUIT |  | COMQUIT |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Comrevers |  | Comrevers |  |  | OBL00103.FRM |  |  |
+| OBLIGA | COMVOLVER |  | COMVOLVER |  |  | OBL00103.FRM |  |  |
+| OBLIGA | ffcorr |  | ffcorr |  |  | OBL00103.FRM |  | corres.exe |
+| OBLIGA | Mcbeabr |  | Mcbeabr |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Mcbeanl |  | Mcbeanl |  | CMXsrv_finobl_calc_anu | OBL00103.FRM |  |  |
+| OBLIGA | Mcbectb |  | Mcbectb |  | CMXsrv_finobl_ctb_oto | OBL00103.FRM |  | comgto.exe |
+| OBLIGA | Mcbedel |  | Mcbedel |  | CMXsrv_fincol_eli_obl | OBL00103.FRM |  |  |
+| OBLIGA | Mcbevol |  | Mcbevol |  |  | OBL00103.FRM |  |  |
+| OBLIGA | mcesi |  | mcesi |  |  | OBL00103.FRM |  |  |
+| OBLIGA | MCOMIGAS |  | MCOMIGAS |  |  | OBL00103.FRM |  | comgto.exe |
+| OBLIGA | MCRD |  | MCRD |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Mexpcrd |  | Mexpcrd |  |  | OBL00103.FRM |  | import.exe |
+| OBLIGA | Mfnccol |  | Mfnccol |  |  | OBL00103.FRM |  | ingreso.exe |
+| OBLIGA | Minfo |  | Minfo |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Mobl_liq_ope |  | Mobl_liq_ope |  | CMXsrv_icrd_dat_liq_ope | OBL00103.FRM |  |  |
+| OBLIGA | Mobl_proce |  | Mobl_proce |  |  | OBL00103.FRM |  |  |
+| OBLIGA | MOblRel |  | MOblRel |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Mproce |  | Mproce |  |  | OBL00103.FRM |  |  |
+| OBLIGA | Mtabtra |  | Mtabtra |  |  | OBL00103.FRM |  | trscon.exe |
+| OBLIGA | pagoextra |  | pagoextra |  |  | OBL00103.FRM |  | pgoext.exe |
+| OBLIGA | pertas |  | pertas |  |  | OBL00103.FRM |  | pertas.exe |
+| OBLIGA | pgoext1 |  | pgoext1 |  |  | OBL00103.FRM |  |  |
+| OBLIGA | valida1 |  | valida1 |  |  | OBL00103.FRM |  |  |
+| OBLIGA | aceptar |  | aceptar |  |  | OBL00104.FRM |  |  |
+| OBLIGA | buscar |  | buscar |  | CMXsrv_finobl_bsc_obl | OBL00104.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00104.FRM |  |  |
+| OBLIGA | fld_obl_nom_suc |  | fld_obl_nom_suc | Dim LT_index As Integer
+    Dim LV_A As String
+
+    If (fld_obl_nom_suc.ListIndex < 0) Then
+        Beep
+    Else
+        LT_index = fld_obl_nom_suc.ItemData(fld_obl_nom_suc.ListIndex)
+        GG_rsw = VBG_fld_obl_bus_suc_Set(GT_fld_obl_nom_suc(LT_index)) |  | OBL00104.FRM |  |  |
+| OBLIGA | fld_obl_tip_ope |  | fld_obl_tip_ope |  |  | OBL00104.FRM |  |  |
+| OBLIGA | grid_inf |  | grid_inf |  |  | OBL00104.FRM |  |  |
+| OBLIGA | opcion |  | opcion |  | CMXsrv_lee_opcion | OBL00104.FRM |  |  |
+| OBLIGA | Proxima |  | Proxima |  | CMXsrv_finobl_bsc_obl | OBL00104.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00112.FRM |  |  |
+| OBLIGA | generar |  | generar |  |  | OBL00112.FRM |  |  |
+| OBLIGA | aceptar |  | aceptar |  |  | OBL00122.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00122.FRM |  |  |
+| OBLIGA | calcular |  | calcular |  |  | OBL00201.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00201.FRM |  |  |
+| OBLIGA | fld_aux_nom_mon_ori |  | fld_aux_nom_mon_ori | Dim LT_index As Integer
+    Dim LV_A As String
+    If (fld_aux_nom_mon_ori.ListIndex < 0) Then
+        Beep
+    Else
+        LT_index = fld_aux_nom_mon_ori.ItemData(fld_aux_nom_mon_ori.ListIndex)
+        gg_rsw = VBG_fld_obl_mon_pag_Set(GT_fld_aux_nom_mon_ori(LT_index)) |  | OBL00201.FRM |  |  |
+| OBLIGA | fld_aux_sw_for_pag |  | fld_aux_sw_for_pag |  |  | OBL00201.FRM |  |  |
+| OBLIGA | fld_aux_sw_ind_pag |  | fld_aux_sw_ind_pag |  |  | OBL00201.FRM |  |  |
+| OBLIGA | fld_obl_mto_pag |  | fld_obl_mto_pag |  |  | OBL00201.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00202.FRM |  |  |
+| OBLIGA | contabilizar |  | contabilizar |  | CMXsrv_finobl_ictb_pag | OBL00202.FRM |  | comgto.exe |
+| OBLIGA | fld_obl_mto_int_pac |  | fld_obl_mto_int_pac |  |  | OBL00202.FRM |  |  |
+| OBLIGA | fld_obl_mto_pag |  | fld_obl_mto_pag |  |  | OBL00202.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00203.FRM |  |  |
+| OBLIGA | grid_inf |  | grid_inf |  |  | OBL00203.FRM |  |  |
+| OBLIGA | nuevo |  | nuevo |  |  | OBL00203.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00204.FRM |  |  |
+| OBLIGA | fld_obl_cap_pag |  | fld_obl_cap_pag |  |  | OBL00204.FRM |  |  |
+| OBLIGA | fld_obl_mto_int_pac |  | fld_obl_mto_int_pac |  |  | OBL00204.FRM |  |  |
+| OBLIGA | fld_obl_mto_tot_pag_mori |  | fld_obl_mto_tot_pag_mori |  |  | OBL00204.FRM |  |  |
+| OBLIGA | fld_obl_sdo_cuo |  | fld_obl_sdo_cuo |  |  | OBL00204.FRM |  |  |
+| OBLIGA | calcular |  | calcular |  | CMXsrv_finobl_calc_pror | OBL00301.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00301.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00302.FRM |  |  |
+| OBLIGA | contabilizar |  | contabilizar |  |  | OBL00302.FRM |  |  |
+| OBLIGA | fld_obl_int_pag |  | fld_obl_int_pag |  |  | OBL00302.FRM |  |  |
+| OBLIGA | fld_obl_mod_pag |  | fld_obl_mod_pag |  |  | OBL00302.FRM |  |  |
+| OBLIGA | FLD_PAR_NOM_TIP_TAS |  | FLD_PAR_NOM_TIP_TAS | Dim LT_index As Integer
+    Dim LV_A As String
+    Dim iFilas As Integer
+    Dim arglist As MIGPrmModalidadPagoDiaType
+
+    If (FLD_PAR_NOM_TIP_TAS.ListIndex < 0) Then
+	Beep
+    Else
+	LT_index = FLD_PAR_NOM_TIP_TAS.ItemData(FLD_PAR_NOM_TIP_TAS.ListIndex)
+	gg_rsw = VBG_fld_aux_tip_tas_pror_Set(GT_FLD_PAR_NOM_TIP_TAS(LT_index))
+
+	If GT_FLD_PAR_TAS_INT(LT_index) = "S" Then
+	   If GT_FLD_PAR_IND_DIA(LT_index) = "N" Then
+	      fld_obl_mod_bas_dia.ListIndex = 0
+	      'fld_obl_mod_bas_dia.Enabled = True
+
+	      arglist.fld_obl_tip_tas = RTrim(fld_aux_tip_tas_pror)   'RTrim(gv_fld_obl_tip_tas)
+	      
+	      rsw% = PrmModalidadPagoDia(gserver, arglist)
+	      
+	      If rsw% <> mig_succeed Then  ' Or GV_ERROR = 43003 Then
+		 Screen.MousePointer = 0
+		 Exit Sub |  | OBL00302.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00303.FRM |  |  |
+| OBLIGA | grid_inf |  | grid_inf |  |  | OBL00303.FRM |  |  |
+| OBLIGA | nuevo |  | nuevo |  |  | OBL00303.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00304.FRM |  |  |
+| OBLIGA | fld_par_nom_tip_tas |  | fld_par_nom_tip_tas | Dim LT_index As Integer
+    Dim LV_A As String
+    If (fld_par_nom_tip_tas.ListIndex < 0) Then
+        Beep
+    Else
+        LT_index = fld_par_nom_tip_tas.ItemData(fld_par_nom_tip_tas.ListIndex)
+        GG_rsw = VBG_fld_aux_tip_tas_pror_Set(GT_fld_par_nom_tip_tas(LT_index)) |  | OBL00304.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00401.FRM |  |  |
+| OBLIGA | contabilizar |  | contabilizar |  | CMXsrv_finobl_ctb_anu | OBL00401.FRM |  |  |
+| OBLIGA | fld_obl_cap_pag |  | fld_obl_cap_pag |  |  | OBL00401.FRM |  |  |
+| OBLIGA | fld_obl_int_pag |  | fld_obl_int_pag |  |  | OBL00401.FRM |  |  |
+| OBLIGA | calcular |  | calcular |  | CMXsrv_finobl_calc_anu | OBL00402.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00402.FRM |  |  |
+| OBLIGA | fld_obl_int_pag |  | fld_obl_int_pag |  |  | OBL00402.FRM |  |  |
+| OBLIGA | fld_obl_mto_pag |  | fld_obl_mto_pag |  |  | OBL00402.FRM |  |  |
+| OBLIGA | aceptar |  | aceptar |  |  | OBL00501.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00501.FRM |  |  |
+| OBLIGA | fld_aux_nom_mon_ori |  | fld_aux_nom_mon_ori | Dim LT_index As Integer
+    Dim LV_A As String
+
+    If (fld_aux_nom_mon_ori.ListIndex < 0) Then
+        Beep
+    Else
+        LT_index = fld_aux_nom_mon_ori.ItemData(fld_aux_nom_mon_ori.ListIndex)
+        gg_rsw = VBG_fld_obl_mon_reem_Set(GT_fld_aux_nom_mon_ori(LT_index)) |  | OBL00501.FRM |  |  |
+| OBLIGA | fld_obl_mod_pag |  | fld_obl_mod_pag |  |  | OBL00501.FRM |  |  |
+| OBLIGA | fld_obl_mto_ori |  | fld_obl_mto_ori |  |  | OBL00501.FRM |  |  |
+| OBLIGA | FLD_PAR_NOM_TIP_TAS |  | FLD_PAR_NOM_TIP_TAS | Dim LT_index As Integer
+    Dim LV_A As String
+    Dim iFilas As Integer
+    Dim arglist As MIGPrmModalidadPagoDiaType
+
+    If (FLD_PAR_NOM_TIP_TAS.ListIndex < 0) Then
+        Beep
+    Else
+        LT_index = FLD_PAR_NOM_TIP_TAS.ItemData(FLD_PAR_NOM_TIP_TAS.ListIndex)
+        gg_rsw = VBG_fld_obl_tip_tas_Set(GT_FLD_PAR_NOM_TIP_TAS(LT_index))
+
+        If GT_FLD_PAR_TAS_INT(LT_index) = "S" Then
+           If GT_FLD_PAR_IND_DIA(LT_index) = "N" Then
+              arglist.fld_obl_tip_tas = RTrim(gv_fld_obl_tip_tas)
+
+              rsw% = PrmModalidadPagoDia(gserver, arglist)
+              
+              If rsw% <> mig_succeed Then  ' Or GV_ERROR = 43003 Then
+                 Screen.MousePointer = 0
+                 Exit Sub |  | OBL00501.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00502.FRM |  |  |
+| OBLIGA | grid_inf |  | grid_inf |  |  | OBL00502.FRM |  |  |
+| OBLIGA | nueva |  | nueva |  |  | OBL00502.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00503.FRM |  |  |
+| OBLIGA | fld_obl_mto_cap_ori |  | fld_obl_mto_cap_ori |  |  | OBL00503.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00601.FRM |  |  |
+| OBLIGA | efectuar |  | efectuar |  | CMXsrv_finobl_rev_eve | OBL00601.FRM |  |  |
+| OBLIGA | grid_inf |  | grid_inf |  |  | OBL00601.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00602.FRM |  |  |
+| OBLIGA | fld_obl_mto_cap_ori |  | fld_obl_mto_cap_ori |  |  | OBL00602.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00701.FRM |  |  |
+| OBLIGA | ELIMINAR |  | ELIMINAR |  | CMXsrv_finobl_eli_ctr | OBL00701.FRM |  |  |
+| OBLIGA | grid_oblcol |  | grid_oblcol |  |  | OBL00701.FRM |  |  |
+| OBLIGA | nuevo |  | nuevo |  |  | OBL00701.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL00702.FRM |  |  |
+| OBLIGA | nuevo |  | nuevo |  | CMXsrv_finobl_ing_ctr | OBL00702.FRM |  |  |
+| OBLIGA | aceptar |  | aceptar |  | CMXsrv_finobl_cesion_obl | OBL130.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | OBL130.FRM |  |  |
+| OBLIGA | aceptar |  | aceptar |  |  | PREFER.FRM |  |  |
+| OBLIGA | cancelar |  | cancelar |  |  | PREFER.FRM |  |  |
+| OBLIGA | Cargar |  | Cargar |  |  | PREFER.FRM |  |  |
