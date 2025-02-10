@@ -35,1064 +35,1064 @@
 ## EXPCBE
 <a name="expcbe" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Form_Activate | ACMXPRMGRL | [CMXsrv_expcbe_lee_prm](#cmxsrv_expcbe_lee_prm) |
-| Form_Activate | master..sysprocesses, tbl_User | [CMXsrv_cmx_busc_suc_usu](#cmxsrv_cmx_busc_suc_usu) |
-| Form_Activate | ACMXPAIS, COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXENTDOC, ACMXSUCSAL, ACMXPRTCBE, CLN | [CMXsrv_expcbe_lee_cbe](#cmxsrv_expcbe_lee_cbe) |
-| Form_Load | ACMXSUCSAL, ACMXDL3475FEC, tbl_User | [CMXsrv_trae_glo_fec](#cmxsrv_trae_glo_fec) |
-| ingcomg_Click | ACMXDESEMB, ASND, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE, COM, TRSD, CLN, ACMXESPECI | [CMXsrv_expcbe_avs_cyg1](#cmxsrv_expcbe_avs_cyg1) |
-| ingcomg_Click | ASND, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE | [CMXsrv_expcbe_avs_cyg2](#cmxsrv_expcbe_avs_cyg2) |
-| ingret_Click | ACMXPAIS, COR, ACMXDESEMB, CBE, ACMXMONEDA, ACMXSUCSAL, CLN, ACMXESPECI, RET | [CMXsrv_expcbe_avs_ret](#cmxsrv_expcbe_avs_ret) |
-| M3_Click | switxt, switxt1 | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) |
-| M4_Click | switxt, switxt1 | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) |
-| Mcbeanl_Click | CBE | [CMXsrv_expcbe_anl_cbe](#cmxsrv_expcbe_anl_cbe) |
-| Mcbectb_Click | OPE_BCI, CBE | [CMXsrv_expcbe_ctb_ing](#cmxsrv_expcbe_ctb_ing) |
-| Mcbedel_Click | EVL, CBE01, COD, CBE, EVZ, COM, ACTZ, CTZ | [CMXsrv_expcbe_del_cbe](#cmxsrv_expcbe_del_cbe) |
-| Mcbeval_Click | COR, CBE01, ACMXPRMGRL, CBE, DCZ, CTZ, warnmsg, ACMXPAIS, ACMXFERIADO, CCO | [CMXsrv_expcbe_val_cbe](#cmxsrv_expcbe_val_cbe) |
-| Men1_Click | switxt, switxt1 | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) |
-| aceptar_Click | ACMXPAIS, CBE | [CMXsrv_expcbe_grb_ctp](#cmxsrv_expcbe_grb_ctp) |
-| fld_cbe_cod_exp_lostfocus | CLN | [CMXsrv_expcbe_lee_cln](#cmxsrv_expcbe_lee_cln) |
-| fld_cbe_cod_suc_LostFocus | ACMXSUCSAL, tbl_User | [CMXsrv_val_suc](#cmxsrv_val_suc) |
-| Form_Activate | ACMXSUCSAL, ACMXPAIS, CBE, CLN | [CMXsrv_expcbe_lee_ctp](#cmxsrv_expcbe_lee_ctp) |
-| aceptar_Click | ACMXPRMGRL, CBE, COR, CBE01 | [CMXsrv_expcbe_grb_bco](#cmxsrv_expcbe_grb_bco) |
-| fld_cbe_cod_cob_Lostfocus | ACMXPAIS, COR | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) |
-| fld_cbe_cod_rmb_LostFocus | ACMXPAIS, COR | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) |
-| Form_Activate | CBE, COR, CBE01 | [CMXsrv_expcbe_lee_bco](#cmxsrv_expcbe_lee_bco) |
-| aceptar_Click | CBE, DCZ | [CMXsrv_expcbe_grb_doc](#cmxsrv_expcbe_grb_doc) |
-| aceptar_Click | CBE02 | [CMXsrv_expcbe_grb_doc02](#cmxsrv_expcbe_grb_doc02) |
-| Form_Activate | CBE | [CMXsrv_expcbe_lee_doc](#cmxsrv_expcbe_lee_doc) |
-| Form_Activate | CBE02 | [CMXsrv_expcbe_lee_doc02](#cmxsrv_expcbe_lee_doc02) |
-| ELIMINAR_Click | ACTZ, CBE, CTZ | [CMXsrv_expcbe_del_ctz](#cmxsrv_expcbe_del_ctz) |
-| Form_Activate | ACTZ, CBE, CTZ | [CMXsrv_expcbe_bus_ctz](#cmxsrv_expcbe_bus_ctz) |
-| aceptar_Click | ACTZ, CBE, CTZ | [CMXsrv_expcbe_grb_ctz](#cmxsrv_expcbe_grb_ctz) |
-| Form_Activate | ACTZ, CBE, CTZ | [CMXsrv_expcbe_mto_ctz](#cmxsrv_expcbe_mto_ctz) |
-| Form_Activate | ACTZ, CBE, CTZ | [CMXsrv_expcbe_lee_ctz](#cmxsrv_expcbe_lee_ctz) |
-| aceptar_Click | ACMXPAIS, COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXENTDOC, ACMXSUCSAL, ACMXPRTCBE, CLN | [CMXsrv_expcbe_lee_cbe](#cmxsrv_expcbe_lee_cbe) |
-| buscar_Click | CBE | [CMXsrv_expcbe_bus_cbe](#cmxsrv_expcbe_bus_cbe) |
-| fld_aux_cod_exp_LostFocus | CLN | [CMXsrv_expcbe_lee_cln](#cmxsrv_expcbe_lee_cln) |
-| Proximas_Click | CBE | [CMXsrv_expcbe_bus_cbe](#cmxsrv_expcbe_bus_cbe) |
-| aceptar_Click | ACTZ, ACMXPRMGRL, CBE | [CMXsrv_expcbe_mdf_cbe](#cmxsrv_expcbe_mdf_cbe) |
-| aceptar_Click | ACTZ, CBE, CTZ | [CMXsrv_expcbe_cre_actz](#cmxsrv_expcbe_cre_actz) |
-| fld_cbe_cod_suc_LostFocus | ACMXSUCSAL, tbl_User | [CMXsrv_val_suc](#cmxsrv_val_suc) |
-| Form_Activate | COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXSUCSAL, CLN | [CMXsrv_expcbe_lee_mdf](#cmxsrv_expcbe_lee_mdf) |
-| aceptar_Click | ACMXDESEMB, COR, CLN, RET, vig_cmx, COD, ACMXIMPUES, ACMXPRMGRL, CBE, ACMXPRMEXP, COM, tbl_User, OPREC, ACMXPAIS, ACMXFERIADO, CCO | [CMXsrv_expcbe_pgo_cbe](#cmxsrv_expcbe_pgo_cbe) |
-| fld_cbe_cod_rmb_LostFocus | ACMXPAIS, COR | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) |
-| Form_Activate | ACMXDESEMB, COR, CBE, ACMXPRMEXP, ACMXMONEDA, OPREC, CLN | [CMXsrv_expcbe_lee_pgo](#cmxsrv_expcbe_lee_pgo) |
-| Form_Activate | EVZ, CBE | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) |
-| Proximo_Click | EVZ, CBE | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) |
-| Reversar_Click | EVL, ACMXDESEMB, COR, ORG, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE, TRSD, ACMXPRMEXP, COM, EVR, CTZ, DTN, OPREC, RET, PUCBCX10 | [CMXsrv_expcbe_rev_cbe](#cmxsrv_expcbe_rev_cbe) |
-| Form_Activate | ACMXDESEMB, COR, ACMXPGOCBE, EVZ, CBE, ACMXMONEDA, ACMXTIPEVE, ACMXSUCSAL | [CMXsrv_expcbe_lee_evz](#cmxsrv_expcbe_lee_evz) |
-| Eliminar_Click | CBE02, CBE, DCZ | [CMXsrv_expcbe_del_dcz](#cmxsrv_expcbe_del_dcz) |
-| Form_Activate | DCZ | [CMXsrv_expcbe_bus_dcz](#cmxsrv_expcbe_bus_dcz) |
-| aceptar_Click | CBE02, CBE, DCZ | [CMXsrv_expcbe_grb_dcz](#cmxsrv_expcbe_grb_dcz) |
-| Form_Activate | DCZ | [CMXsrv_expcbe_lee_dcz](#cmxsrv_expcbe_lee_dcz) |
-| aceptar_Click | ACMXPAIS, COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXENTDOC, ACMXSUCSAL, ACMXPRTCBE, CLN | [CMXsrv_expcbe_lee_cbe](#cmxsrv_expcbe_lee_cbe) |
-| buscar_Click | CBE | [CMXsrv_expcbe_bus_vto](#cmxsrv_expcbe_bus_vto) |
-| fld_aux_cod_exp_LostFocus | CLN | [CMXsrv_expcbe_lee_cln](#cmxsrv_expcbe_lee_cln) |
-| Proximas_Click | CBE | [CMXsrv_expcbe_bus_vto](#cmxsrv_expcbe_bus_vto) |
-| aceptar_Click |  | [CMXsrv_avi_dat_cou](#cmxsrv_avi_dat_cou) |
-| aceptar_Click | COR, ACMXPGOCBE, ACMXPRTCBE, CBE01, CBE, CBE02, ACMXMONEDA, CTZ, ACMXENTDOC, ACMXPAIS, ACMXPAISES, CLN | [CMXsrv_expcbe_avs_rem1](#cmxsrv_expcbe_avs_rem1) |
-| aceptar_Click | COR, CBE01, CBE, CTZ, ACMXMONEDA, ACMXPAISES, CLN, CCO | [CMXsrv_expcbe_avs_rem3](#cmxsrv_expcbe_avs_rem3) |
-| imprime_esp | CBE02, CBE, DCZ | [CMXsrv_expcbe_avs_rem2](#cmxsrv_expcbe_avs_rem2) |
-| imprime_esp | ACMXREMFESPMSG, ACMXREMFINGMSG | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) |
-| imprime_ing | CBE02, CBE, DCZ | [CMXsrv_expcbe_avs_rem2](#cmxsrv_expcbe_avs_rem2) |
-| imprime_ing | ACMXREMFESPMSG, ACMXREMFINGMSG | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) |
-| buscar_Click | ACMXPLAZAS, comex..ACMXPLAZAS | [CMXsrv_busc_plz](#cmxsrv_busc_plz) |
-| fld_cor_cod_plz_Lostfocus | ACMXPLAZAS | [CMXsrv_lee_plz](#cmxsrv_lee_plz) |
-| proximos_Click | ACMXPLAZAS, comex..ACMXPLAZAS | [CMXsrv_busc_plz](#cmxsrv_busc_plz) |
-| buscar_Click | ACMXPAIS | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) |
-| fld_cor_cod_pais_LostFocus | comex..ACMXPAIS | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) |
-| proximos_Click | ACMXPAIS | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) |
-| aceptar_Click | ACMXPAIS, COR | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) |
-| buscar_Click | COR | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) |
-| fld_aux_cod_pai_LostFocus | comex..ACMXPAIS | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) |
-| fld_aux_cod_plz_LostFocus | ACMXPLAZAS | [CMXsrv_lee_plz](#cmxsrv_lee_plz) |
-| proximos_Click | COR | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) |
-| buscar_Click | ACMXBANCOS | [CMXsrv_busc_bco_mtr](#cmxsrv_busc_bco_mtr) |
-| proximos_Click | ACMXBANCOS | [CMXsrv_busc_bco_mtr](#cmxsrv_busc_bco_mtr) |
-| enviar_Click | switxt, switxt1 | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) |
-| Aceptar_Click | ACMXPAIS, COR | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) |
-| buscar_Click | COR | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) |
-| proximos_Click | COR | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Form_Activate | [CMXsrv_expcbe_lee_prm](#cmxsrv_expcbe_lee_prm) | ACMXPRMGRL |
+| Form_Activate | [CMXsrv_cmx_busc_suc_usu](#cmxsrv_cmx_busc_suc_usu) | master..sysprocesses, tbl_User |
+| Form_Activate | [CMXsrv_expcbe_lee_cbe](#cmxsrv_expcbe_lee_cbe) | ACMXPAIS, COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXENTDOC, ACMXSUCSAL, ACMXPRTCBE, CLN |
+| Form_Load | [CMXsrv_trae_glo_fec](#cmxsrv_trae_glo_fec) | ACMXSUCSAL, ACMXDL3475FEC, tbl_User |
+| ingcomg_Click | [CMXsrv_expcbe_avs_cyg1](#cmxsrv_expcbe_avs_cyg1) | ACMXDESEMB, ASND, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE, COM, TRSD, CLN, ACMXESPECI |
+| ingcomg_Click | [CMXsrv_expcbe_avs_cyg2](#cmxsrv_expcbe_avs_cyg2) | ASND, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE |
+| ingret_Click | [CMXsrv_expcbe_avs_ret](#cmxsrv_expcbe_avs_ret) | ACMXPAIS, COR, ACMXDESEMB, CBE, ACMXMONEDA, ACMXSUCSAL, CLN, ACMXESPECI, RET |
+| M3_Click | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) | switxt, switxt1 |
+| M4_Click | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) | switxt, switxt1 |
+| Mcbeanl_Click | [CMXsrv_expcbe_anl_cbe](#cmxsrv_expcbe_anl_cbe) | CBE |
+| Mcbectb_Click | [CMXsrv_expcbe_ctb_ing](#cmxsrv_expcbe_ctb_ing) | OPE_BCI, CBE |
+| Mcbedel_Click | [CMXsrv_expcbe_del_cbe](#cmxsrv_expcbe_del_cbe) | EVL, CBE01, COD, CBE, EVZ, COM, ACTZ, CTZ |
+| Mcbeval_Click | [CMXsrv_expcbe_val_cbe](#cmxsrv_expcbe_val_cbe) | COR, CBE01, ACMXPRMGRL, CBE, DCZ, CTZ, warnmsg, ACMXPAIS, ACMXFERIADO, CCO |
+| Men1_Click | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) | switxt, switxt1 |
+| aceptar_Click | [CMXsrv_expcbe_grb_ctp](#cmxsrv_expcbe_grb_ctp) | ACMXPAIS, CBE |
+| fld_cbe_cod_exp_lostfocus | [CMXsrv_expcbe_lee_cln](#cmxsrv_expcbe_lee_cln) | CLN |
+| fld_cbe_cod_suc_LostFocus | [CMXsrv_val_suc](#cmxsrv_val_suc) | ACMXSUCSAL, tbl_User |
+| Form_Activate | [CMXsrv_expcbe_lee_ctp](#cmxsrv_expcbe_lee_ctp) | ACMXSUCSAL, ACMXPAIS, CBE, CLN |
+| aceptar_Click | [CMXsrv_expcbe_grb_bco](#cmxsrv_expcbe_grb_bco) | ACMXPRMGRL, CBE, COR, CBE01 |
+| fld_cbe_cod_cob_Lostfocus | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) | ACMXPAIS, COR |
+| fld_cbe_cod_rmb_LostFocus | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) | ACMXPAIS, COR |
+| Form_Activate | [CMXsrv_expcbe_lee_bco](#cmxsrv_expcbe_lee_bco) | CBE, COR, CBE01 |
+| aceptar_Click | [CMXsrv_expcbe_grb_doc](#cmxsrv_expcbe_grb_doc) | CBE, DCZ |
+| aceptar_Click | [CMXsrv_expcbe_grb_doc02](#cmxsrv_expcbe_grb_doc02) | CBE02 |
+| Form_Activate | [CMXsrv_expcbe_lee_doc](#cmxsrv_expcbe_lee_doc) | CBE |
+| Form_Activate | [CMXsrv_expcbe_lee_doc02](#cmxsrv_expcbe_lee_doc02) | CBE02 |
+| ELIMINAR_Click | [CMXsrv_expcbe_del_ctz](#cmxsrv_expcbe_del_ctz) | ACTZ, CBE, CTZ |
+| Form_Activate | [CMXsrv_expcbe_bus_ctz](#cmxsrv_expcbe_bus_ctz) | ACTZ, CBE, CTZ |
+| aceptar_Click | [CMXsrv_expcbe_grb_ctz](#cmxsrv_expcbe_grb_ctz) | ACTZ, CBE, CTZ |
+| Form_Activate | [CMXsrv_expcbe_mto_ctz](#cmxsrv_expcbe_mto_ctz) | ACTZ, CBE, CTZ |
+| Form_Activate | [CMXsrv_expcbe_lee_ctz](#cmxsrv_expcbe_lee_ctz) | ACTZ, CBE, CTZ |
+| aceptar_Click | [CMXsrv_expcbe_lee_cbe](#cmxsrv_expcbe_lee_cbe) | ACMXPAIS, COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXENTDOC, ACMXSUCSAL, ACMXPRTCBE, CLN |
+| buscar_Click | [CMXsrv_expcbe_bus_cbe](#cmxsrv_expcbe_bus_cbe) | CBE |
+| fld_aux_cod_exp_LostFocus | [CMXsrv_expcbe_lee_cln](#cmxsrv_expcbe_lee_cln) | CLN |
+| Proximas_Click | [CMXsrv_expcbe_bus_cbe](#cmxsrv_expcbe_bus_cbe) | CBE |
+| aceptar_Click | [CMXsrv_expcbe_mdf_cbe](#cmxsrv_expcbe_mdf_cbe) | ACTZ, ACMXPRMGRL, CBE |
+| aceptar_Click | [CMXsrv_expcbe_cre_actz](#cmxsrv_expcbe_cre_actz) | ACTZ, CBE, CTZ |
+| fld_cbe_cod_suc_LostFocus | [CMXsrv_val_suc](#cmxsrv_val_suc) | ACMXSUCSAL, tbl_User |
+| Form_Activate | [CMXsrv_expcbe_lee_mdf](#cmxsrv_expcbe_lee_mdf) | COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXSUCSAL, CLN |
+| aceptar_Click | [CMXsrv_expcbe_pgo_cbe](#cmxsrv_expcbe_pgo_cbe) | ACMXDESEMB, COR, CLN, RET, vig_cmx, COD, ACMXIMPUES, ACMXPRMGRL, CBE, ACMXPRMEXP, COM, tbl_User, OPREC, ACMXPAIS, ACMXFERIADO, CCO |
+| fld_cbe_cod_rmb_LostFocus | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) | ACMXPAIS, COR |
+| Form_Activate | [CMXsrv_expcbe_lee_pgo](#cmxsrv_expcbe_lee_pgo) | ACMXDESEMB, COR, CBE, ACMXPRMEXP, ACMXMONEDA, OPREC, CLN |
+| Form_Activate | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) | EVZ, CBE |
+| Proximo_Click | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) | EVZ, CBE |
+| Reversar_Click | [CMXsrv_expcbe_rev_cbe](#cmxsrv_expcbe_rev_cbe) | EVL, ACMXDESEMB, COR, ORG, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE, TRSD, ACMXPRMEXP, COM, EVR, CTZ, DTN, OPREC, RET, PUCBCX10 |
+| Form_Activate | [CMXsrv_expcbe_lee_evz](#cmxsrv_expcbe_lee_evz) | ACMXDESEMB, COR, ACMXPGOCBE, EVZ, CBE, ACMXMONEDA, ACMXTIPEVE, ACMXSUCSAL |
+| Eliminar_Click | [CMXsrv_expcbe_del_dcz](#cmxsrv_expcbe_del_dcz) | CBE02, CBE, DCZ |
+| Form_Activate | [CMXsrv_expcbe_bus_dcz](#cmxsrv_expcbe_bus_dcz) | DCZ |
+| aceptar_Click | [CMXsrv_expcbe_grb_dcz](#cmxsrv_expcbe_grb_dcz) | CBE02, CBE, DCZ |
+| Form_Activate | [CMXsrv_expcbe_lee_dcz](#cmxsrv_expcbe_lee_dcz) | DCZ |
+| aceptar_Click | [CMXsrv_expcbe_lee_cbe](#cmxsrv_expcbe_lee_cbe) | ACMXPAIS, COR, ACMXPGOCBE, CBE01, CBE, ACMXMONEDA, ACMXENTDOC, ACMXSUCSAL, ACMXPRTCBE, CLN |
+| buscar_Click | [CMXsrv_expcbe_bus_vto](#cmxsrv_expcbe_bus_vto) | CBE |
+| fld_aux_cod_exp_LostFocus | [CMXsrv_expcbe_lee_cln](#cmxsrv_expcbe_lee_cln) | CLN |
+| Proximas_Click | [CMXsrv_expcbe_bus_vto](#cmxsrv_expcbe_bus_vto) | CBE |
+| aceptar_Click | [CMXsrv_avi_dat_cou](#cmxsrv_avi_dat_cou) |  |
+| aceptar_Click | [CMXsrv_expcbe_avs_rem1](#cmxsrv_expcbe_avs_rem1) | COR, ACMXPGOCBE, ACMXPRTCBE, CBE01, CBE, CBE02, ACMXMONEDA, CTZ, ACMXENTDOC, ACMXPAIS, ACMXPAISES, CLN |
+| aceptar_Click | [CMXsrv_expcbe_avs_rem3](#cmxsrv_expcbe_avs_rem3) | COR, CBE01, CBE, CTZ, ACMXMONEDA, ACMXPAISES, CLN, CCO |
+| imprime_esp | [CMXsrv_expcbe_avs_rem2](#cmxsrv_expcbe_avs_rem2) | CBE02, CBE, DCZ |
+| imprime_esp | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) | ACMXREMFESPMSG, ACMXREMFINGMSG |
+| imprime_ing | [CMXsrv_expcbe_avs_rem2](#cmxsrv_expcbe_avs_rem2) | CBE02, CBE, DCZ |
+| imprime_ing | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) | ACMXREMFESPMSG, ACMXREMFINGMSG |
+| buscar_Click | [CMXsrv_busc_plz](#cmxsrv_busc_plz) | ACMXPLAZAS, comex..ACMXPLAZAS |
+| fld_cor_cod_plz_Lostfocus | [CMXsrv_lee_plz](#cmxsrv_lee_plz) | ACMXPLAZAS |
+| proximos_Click | [CMXsrv_busc_plz](#cmxsrv_busc_plz) | ACMXPLAZAS, comex..ACMXPLAZAS |
+| buscar_Click | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) | ACMXPAIS |
+| fld_cor_cod_pais_LostFocus | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) | comex..ACMXPAIS |
+| proximos_Click | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) | ACMXPAIS |
+| aceptar_Click | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) | COR |
+| fld_aux_cod_pai_LostFocus | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) | comex..ACMXPAIS |
+| fld_aux_cod_plz_LostFocus | [CMXsrv_lee_plz](#cmxsrv_lee_plz) | ACMXPLAZAS |
+| proximos_Click | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) | COR |
+| buscar_Click | [CMXsrv_busc_bco_mtr](#cmxsrv_busc_bco_mtr) | ACMXBANCOS |
+| proximos_Click | [CMXsrv_busc_bco_mtr](#cmxsrv_busc_bco_mtr) | ACMXBANCOS |
+| enviar_Click | [CMXsrv_expcbe_swf_sel](#cmxsrv_expcbe_swf_sel) | switxt, switxt1 |
+| Aceptar_Click | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) | COR |
+| proximos_Click | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) | COR |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## EXPCCE
 <a name="expcce" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Form_Activate | master..sysprocesses, tbl_User | [CMXsrv_cmx_busc_suc_usu](#cmxsrv_cmx_busc_suc_usu) |
-| Form_Activate | ACMXPAIS, COR, tbl_User, CCE, ACMXSUCSAL, CLN | [CMXsrv_expcce_lee_cce](#cmxsrv_expcce_lee_cce) |
-| Form_Activate | ACMXFORPAG, ACMXVIATPT, ACMXMAXCCE, ACMXCNFCCE, ACMXMONEDA, ACMXCLACOM, CCE, ACMXRCBCCE | [CMXsrv_expcce_trd_cce](#cmxsrv_expcce_trd_cce) |
-| MCCEANL_CLICK | CCE | [CMXsrv_expcce_anl_cce](#cmxsrv_expcce_anl_cce) |
-| Mccectb_click | CCE | [CMXsrv_expcce_ctb_ing](#cmxsrv_expcce_ctb_ing) |
-| Mccedel_Click | COD, ACCECTP, ACCECND, CCB, COM, ACCEBCO, DCC, CCE, EVC, ACCEDCC, AFIN | [CMXsrv_expcce_del_cce](#cmxsrv_expcce_del_cce) |
-| MCCEVAL_CLICK | ACMXPAIS, COR, ACMXPRMGRL, CCE_ADI, DCC, tbl_User, CCE, warnmsg, ACMXSUCSAL, COL | [CMXsrv_expcce_val_cce](#cmxsrv_expcce_val_cce) |
-| Mmt730_Click | switxt, switxt1 | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) |
-| Mmt730Ing_Click | switxt, switxt1 | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) |
-| Aceptar_Click | CCB, ACCEBCO, ACCECRSE, CRSE, CCE | [CMXsrv_expcce_grb_bco](#cmxsrv_expcce_grb_bco) |
-| fld_cce_bco_avs_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| fld_cce_bco_orig_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| fld_cce_cod_ems_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| fld_cce_cod_rmb_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| Form_Activate | COR, CCB, ACMXSUCSAL, ACCEBCO, CRSE, CCE, ACMXPAIS | [CMXsrv_expcce_lee_bco](#cmxsrv_expcce_lee_bco) |
-| Aceptar_Click | ACCECTP, CCE | [CMXsrv_expcce_grb_ctp](#cmxsrv_expcce_grb_ctp) |
-| fld_cce_cod_bn1_LostFocus | CLN | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) |
-| fld_cce_cod_bn2_LostFocus | CLN | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) |
-| Form_Activate | ACCECTP, ACMXPAIS, CLN, CCE | [CMXsrv_expcce_lee_ctp](#cmxsrv_expcce_lee_ctp) |
-| Aceptar_Click | CCE | [CMXsrv_expcce_cre_cce](#cmxsrv_expcce_cre_cce) |
-| Aceptar_Click | CCB, ACCEBCO, ACCECRSE, CRSE, CCE | [CMXsrv_expcce_grb_bco](#cmxsrv_expcce_grb_bco) |
-| Aceptar_Click | ACCECTP, CCE | [CMXsrv_expcce_grb_ctp](#cmxsrv_expcce_grb_ctp) |
-| Aceptar_Click | ACMXPAIS, DCC, CCE | [CMXsrv_expcce_gen_dcc](#cmxsrv_expcce_gen_dcc) |
-| Aceptar_Click | CCE_ADI, ACCECRSE, CRSE, CCE, ACCE_ADI, ACCECND | [CMXsrv_expcce_grb_cnd](#cmxsrv_expcce_grb_cnd) |
-| fld_cce_fec_vto_LostFocus | ACMXFERIADO | [CMXsrv_util_det_habil](#cmxsrv_util_det_habil) |
-| Form_Activate | CCE_ADI, ACCECRSE, CRSE, CCE, ACCE_ADI, ACCECND | [CMXsrv_expcce_lee_cnd](#cmxsrv_expcce_lee_cnd) |
-| Form_Activate | ACMXFORPAG, ACMXVIATPT, ACMXMAXCCE, ACMXCNFCCE, ACMXMONEDA, CCE, ACMXCLACOM, ACMXFDESDE, ACMXRCBCCE, ACCECND | [CMXsrv_expcce_trd_cnd](#cmxsrv_expcce_trd_cnd) |
-| ELIMINAR_Click | DCC, CCE, ACCEDCC | [CMXsrv_expcce_del_dcc](#cmxsrv_expcce_del_dcc) |
-| Form_Activate | DCC, CCE, ACCEDCC | [CMXsrv_expcce_bus_dcc](#cmxsrv_expcce_bus_dcc) |
-| Aceptar_Click | DCC, CCE, ACCEDCC | [CMXsrv_expcce_grb_dcc](#cmxsrv_expcce_grb_dcc) |
-| Form_Activate | DCC, CCE, ACCEDCC | [CMXsrv_expcce_lee_dcc](#cmxsrv_expcce_lee_dcc) |
-| Aceptar_Click | ACMXPAIS, COR, tbl_User, CCE, ACMXSUCSAL, CLN | [CMXsrv_expcce_lee_cce](#cmxsrv_expcce_lee_cce) |
-| buscar_Click | CCE | [CMXsrv_expcce_bus_cce](#cmxsrv_expcce_bus_cce) |
-| fld_aux_cod_bn1_lostfocus | CLN | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) |
-| proximo_Click | CCE | [CMXsrv_expcce_bus_cce](#cmxsrv_expcce_bus_cce) |
-| Aceptar_Click | COR, ACCECTP, ACCEBCO, CCE_ADI, ACCECRSE, DAC, DCC, CRSE, CCE, ACCE_ADI, NGE, COL, ACCEDCC, ACCECND | [CMXsrv_expcce_mdf_cce](#cmxsrv_expcce_mdf_cce) |
-| Cancelar_Click | ACCECTP, ACCEBCO, ACCEDCC, ACCECND | [CMXsrv_expcce_can_mdf](#cmxsrv_expcce_can_mdf) |
-| fld_cce_cod_bn1_LostFocus | CLN | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) |
-| fld_cce_cod_ems_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| Form_Activate | ACMXSUCSAL, COR, CCE, CLN | [CMXsrv_expcce_lee_mdf](#cmxsrv_expcce_lee_mdf) |
-| Aceptar_Click | COR, CCE, CLN | [CMXsrv_expcce_cnf_cce](#cmxsrv_expcce_cnf_cce) |
-| Aceptar_Click | AFIN | [CMXsrv_expcce_grb_afin](#cmxsrv_expcce_grb_afin) |
-| Form_Activate | ACMXFORPAG, COR, ACMXMONEDA, CCE, CLN | [CMXsrv_expcce_lee_cnf](#cmxsrv_expcce_lee_cnf) |
-| Form_Activate | CCE, AFIN | [CMXsrv_expcce_lee_afin](#cmxsrv_expcce_lee_afin) |
-| Aceptar_Click | COR, CCE | [CMXsrv_expcce_trp_cce](#cmxsrv_expcce_trp_cce) |
-| fld_cce_bco_dst_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| Form_Activate | CCE | [CMXsrv_expcce_lee_trp](#cmxsrv_expcce_lee_trp) |
-| Form_Activate | EVC, CCE, NGE | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) |
-| proximo_Click | EVC, CCE, NGE | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) |
-| reversar_Click | COR, TAS, ACMXIMPUES, LTR, DCN, EVC, RET, CUO, EVO, TRSD, DSN, CCE, NGE, PUCBCX10, COD, CNO, COM, DAC, EVE, CAN, COL, AFIN, ORG, DTN, EVR | [CMXsrv_expcce_rev_cce](#cmxsrv_expcce_rev_cce) |
-| Form_Activate | ACMXFORPAG, ACMXMONEDA, CCE, NGE, EVC, ACMXSUCSAL, ACMXTIPEVE | [CMXsrv_expcce_lee_evc](#cmxsrv_expcce_lee_evc) |
-| aceptar_Click | ACMXFORPAG, COR, CCB, NGEB, ACMXMONEDA, LTR, CCE, DCN, NGE, ACMXPAISES, CLN | [CMXsrv_expcce_avs_rem1](#cmxsrv_expcce_avs_rem1) |
-| buscar_Click | ACMXPLAZAS, comex..ACMXPLAZAS | [CMXsrv_busc_plz](#cmxsrv_busc_plz) |
-| fld_cor_cod_plz_Lostfocus | ACMXPLAZAS | [CMXsrv_lee_plz](#cmxsrv_lee_plz) |
-| proximos_Click | ACMXPLAZAS, comex..ACMXPLAZAS | [CMXsrv_busc_plz](#cmxsrv_busc_plz) |
-| buscar_Click | ACMXPAIS | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) |
-| fld_cor_cod_pais_LostFocus | comex..ACMXPAIS | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) |
-| proximos_Click | ACMXPAIS | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) |
-| Aceptar_Click | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| buscar_Click | COR | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) |
-| Command1_Click | COR | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) |
-| proximos_Click | COR | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) |
-| enviar_Click | switxt, switxt1 | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Form_Activate | [CMXsrv_cmx_busc_suc_usu](#cmxsrv_cmx_busc_suc_usu) | master..sysprocesses, tbl_User |
+| Form_Activate | [CMXsrv_expcce_lee_cce](#cmxsrv_expcce_lee_cce) | ACMXPAIS, COR, tbl_User, CCE, ACMXSUCSAL, CLN |
+| Form_Activate | [CMXsrv_expcce_trd_cce](#cmxsrv_expcce_trd_cce) | ACMXFORPAG, ACMXVIATPT, ACMXMAXCCE, ACMXCNFCCE, ACMXMONEDA, ACMXCLACOM, CCE, ACMXRCBCCE |
+| MCCEANL_CLICK | [CMXsrv_expcce_anl_cce](#cmxsrv_expcce_anl_cce) | CCE |
+| Mccectb_click | [CMXsrv_expcce_ctb_ing](#cmxsrv_expcce_ctb_ing) | CCE |
+| Mccedel_Click | [CMXsrv_expcce_del_cce](#cmxsrv_expcce_del_cce) | COD, ACCECTP, ACCECND, CCB, COM, ACCEBCO, DCC, CCE, EVC, ACCEDCC, AFIN |
+| MCCEVAL_CLICK | [CMXsrv_expcce_val_cce](#cmxsrv_expcce_val_cce) | ACMXPAIS, COR, ACMXPRMGRL, CCE_ADI, DCC, tbl_User, CCE, warnmsg, ACMXSUCSAL, COL |
+| Mmt730_Click | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) | switxt, switxt1 |
+| Mmt730Ing_Click | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) | switxt, switxt1 |
+| Aceptar_Click | [CMXsrv_expcce_grb_bco](#cmxsrv_expcce_grb_bco) | CCB, ACCEBCO, ACCECRSE, CRSE, CCE |
+| fld_cce_bco_avs_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| fld_cce_bco_orig_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| fld_cce_cod_ems_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| fld_cce_cod_rmb_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| Form_Activate | [CMXsrv_expcce_lee_bco](#cmxsrv_expcce_lee_bco) | COR, CCB, ACMXSUCSAL, ACCEBCO, CRSE, CCE, ACMXPAIS |
+| Aceptar_Click | [CMXsrv_expcce_grb_ctp](#cmxsrv_expcce_grb_ctp) | ACCECTP, CCE |
+| fld_cce_cod_bn1_LostFocus | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) | CLN |
+| fld_cce_cod_bn2_LostFocus | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) | CLN |
+| Form_Activate | [CMXsrv_expcce_lee_ctp](#cmxsrv_expcce_lee_ctp) | ACCECTP, ACMXPAIS, CLN, CCE |
+| Aceptar_Click | [CMXsrv_expcce_cre_cce](#cmxsrv_expcce_cre_cce) | CCE |
+| Aceptar_Click | [CMXsrv_expcce_grb_bco](#cmxsrv_expcce_grb_bco) | CCB, ACCEBCO, ACCECRSE, CRSE, CCE |
+| Aceptar_Click | [CMXsrv_expcce_grb_ctp](#cmxsrv_expcce_grb_ctp) | ACCECTP, CCE |
+| Aceptar_Click | [CMXsrv_expcce_gen_dcc](#cmxsrv_expcce_gen_dcc) | ACMXPAIS, DCC, CCE |
+| Aceptar_Click | [CMXsrv_expcce_grb_cnd](#cmxsrv_expcce_grb_cnd) | CCE_ADI, ACCECRSE, CRSE, CCE, ACCE_ADI, ACCECND |
+| fld_cce_fec_vto_LostFocus | [CMXsrv_util_det_habil](#cmxsrv_util_det_habil) | ACMXFERIADO |
+| Form_Activate | [CMXsrv_expcce_lee_cnd](#cmxsrv_expcce_lee_cnd) | CCE_ADI, ACCECRSE, CRSE, CCE, ACCE_ADI, ACCECND |
+| Form_Activate | [CMXsrv_expcce_trd_cnd](#cmxsrv_expcce_trd_cnd) | ACMXFORPAG, ACMXVIATPT, ACMXMAXCCE, ACMXCNFCCE, ACMXMONEDA, CCE, ACMXCLACOM, ACMXFDESDE, ACMXRCBCCE, ACCECND |
+| ELIMINAR_Click | [CMXsrv_expcce_del_dcc](#cmxsrv_expcce_del_dcc) | DCC, CCE, ACCEDCC |
+| Form_Activate | [CMXsrv_expcce_bus_dcc](#cmxsrv_expcce_bus_dcc) | DCC, CCE, ACCEDCC |
+| Aceptar_Click | [CMXsrv_expcce_grb_dcc](#cmxsrv_expcce_grb_dcc) | DCC, CCE, ACCEDCC |
+| Form_Activate | [CMXsrv_expcce_lee_dcc](#cmxsrv_expcce_lee_dcc) | DCC, CCE, ACCEDCC |
+| Aceptar_Click | [CMXsrv_expcce_lee_cce](#cmxsrv_expcce_lee_cce) | ACMXPAIS, COR, tbl_User, CCE, ACMXSUCSAL, CLN |
+| buscar_Click | [CMXsrv_expcce_bus_cce](#cmxsrv_expcce_bus_cce) | CCE |
+| fld_aux_cod_bn1_lostfocus | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) | CLN |
+| proximo_Click | [CMXsrv_expcce_bus_cce](#cmxsrv_expcce_bus_cce) | CCE |
+| Aceptar_Click | [CMXsrv_expcce_mdf_cce](#cmxsrv_expcce_mdf_cce) | COR, ACCECTP, ACCEBCO, CCE_ADI, ACCECRSE, DAC, DCC, CRSE, CCE, ACCE_ADI, NGE, COL, ACCEDCC, ACCECND |
+| Cancelar_Click | [CMXsrv_expcce_can_mdf](#cmxsrv_expcce_can_mdf) | ACCECTP, ACCEBCO, ACCEDCC, ACCECND |
+| fld_cce_cod_bn1_LostFocus | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) | CLN |
+| fld_cce_cod_ems_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| Form_Activate | [CMXsrv_expcce_lee_mdf](#cmxsrv_expcce_lee_mdf) | ACMXSUCSAL, COR, CCE, CLN |
+| Aceptar_Click | [CMXsrv_expcce_cnf_cce](#cmxsrv_expcce_cnf_cce) | COR, CCE, CLN |
+| Aceptar_Click | [CMXsrv_expcce_grb_afin](#cmxsrv_expcce_grb_afin) | AFIN |
+| Form_Activate | [CMXsrv_expcce_lee_cnf](#cmxsrv_expcce_lee_cnf) | ACMXFORPAG, COR, ACMXMONEDA, CCE, CLN |
+| Form_Activate | [CMXsrv_expcce_lee_afin](#cmxsrv_expcce_lee_afin) | CCE, AFIN |
+| Aceptar_Click | [CMXsrv_expcce_trp_cce](#cmxsrv_expcce_trp_cce) | COR, CCE |
+| fld_cce_bco_dst_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| Form_Activate | [CMXsrv_expcce_lee_trp](#cmxsrv_expcce_lee_trp) | CCE |
+| Form_Activate | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) | EVC, CCE, NGE |
+| proximo_Click | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) | EVC, CCE, NGE |
+| reversar_Click | [CMXsrv_expcce_rev_cce](#cmxsrv_expcce_rev_cce) | COR, TAS, ACMXIMPUES, LTR, DCN, EVC, RET, CUO, EVO, TRSD, DSN, CCE, NGE, PUCBCX10, COD, CNO, COM, DAC, EVE, CAN, COL, AFIN, ORG, DTN, EVR |
+| Form_Activate | [CMXsrv_expcce_lee_evc](#cmxsrv_expcce_lee_evc) | ACMXFORPAG, ACMXMONEDA, CCE, NGE, EVC, ACMXSUCSAL, ACMXTIPEVE |
+| aceptar_Click | [CMXsrv_expcce_avs_rem1](#cmxsrv_expcce_avs_rem1) | ACMXFORPAG, COR, CCB, NGEB, ACMXMONEDA, LTR, CCE, DCN, NGE, ACMXPAISES, CLN |
+| buscar_Click | [CMXsrv_busc_plz](#cmxsrv_busc_plz) | ACMXPLAZAS, comex..ACMXPLAZAS |
+| fld_cor_cod_plz_Lostfocus | [CMXsrv_lee_plz](#cmxsrv_lee_plz) | ACMXPLAZAS |
+| proximos_Click | [CMXsrv_busc_plz](#cmxsrv_busc_plz) | ACMXPLAZAS, comex..ACMXPLAZAS |
+| buscar_Click | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) | ACMXPAIS |
+| fld_cor_cod_pais_LostFocus | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) | comex..ACMXPAIS |
+| proximos_Click | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) | ACMXPAIS |
+| Aceptar_Click | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) | COR |
+| Command1_Click | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) | COR |
+| proximos_Click | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) | COR |
+| enviar_Click | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) | switxt, switxt1 |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## expdex
 <a name="expdex" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| form_activate | ACMXPRMGRL | [CMXsrv_expcbe_lee_prm](#cmxsrv_expcbe_lee_prm) |
-| form_activate | ACMXSUCSAL, DEX, CLN, ACMXADUANA | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) |
-| Mdexeli_Click | DEX | [CMXsrv_dex_eli_dex](#cmxsrv_dex_eli_dex) |
-| ACEPTAR_Click | DEX | [CMXsrv_dex_act_dex](#cmxsrv_dex_act_dex) |
-| fld_dex_dia_plz_max_LostFocus |  | [CMXsrv_expdex_cal_fec](#cmxsrv_expdex_cal_fec) |
-| fld_dex_fec_acep_LostFocus |  | [CMXsrv_expdex_cal_fec](#cmxsrv_expdex_cal_fec) |
-| fld_dex_rut_exp_LostFocus | CLN | [CMXsrv_dex_lee_cli](#cmxsrv_dex_lee_cli) |
-| FORM_Load | ACMXSUCSAL, DEX, CLN, ACMXADUANA | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) |
-| Buscar_Click | DEX | [CMXsrv_dex_bus_dex](#cmxsrv_dex_bus_dex) |
-| fld_dex_rut_exp_LostFocus | CLN | [CMXsrv_dex_lee_cli](#cmxsrv_dex_lee_cli) |
-| FORM_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| ACEPTAR_Click | DEX | [CMXsrv_dex_act_dex](#cmxsrv_dex_act_dex) |
-| fld_dex_rut_exp_LostFocus | CLN | [CMXsrv_dex_lee_cli](#cmxsrv_dex_lee_cli) |
-| FORM_Load | ACMXSUCSAL, DEX, CLN, ACMXADUANA | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) |
-| COMELIMINAR_Click | DEX | [CMXsrv_dex_eli_dex](#cmxsrv_dex_eli_dex) |
-| Form_Activate | ACMXSUCSAL, DEX, CLN, ACMXADUANA | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| form_activate | [CMXsrv_expcbe_lee_prm](#cmxsrv_expcbe_lee_prm) | ACMXPRMGRL |
+| form_activate | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) | ACMXSUCSAL, DEX, CLN, ACMXADUANA |
+| Mdexeli_Click | [CMXsrv_dex_eli_dex](#cmxsrv_dex_eli_dex) | DEX |
+| ACEPTAR_Click | [CMXsrv_dex_act_dex](#cmxsrv_dex_act_dex) | DEX |
+| fld_dex_dia_plz_max_LostFocus | [CMXsrv_expdex_cal_fec](#cmxsrv_expdex_cal_fec) |  |
+| fld_dex_fec_acep_LostFocus | [CMXsrv_expdex_cal_fec](#cmxsrv_expdex_cal_fec) |  |
+| fld_dex_rut_exp_LostFocus | [CMXsrv_dex_lee_cli](#cmxsrv_dex_lee_cli) | CLN |
+| FORM_Load | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) | ACMXSUCSAL, DEX, CLN, ACMXADUANA |
+| Buscar_Click | [CMXsrv_dex_bus_dex](#cmxsrv_dex_bus_dex) | DEX |
+| fld_dex_rut_exp_LostFocus | [CMXsrv_dex_lee_cli](#cmxsrv_dex_lee_cli) | CLN |
+| FORM_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| ACEPTAR_Click | [CMXsrv_dex_act_dex](#cmxsrv_dex_act_dex) | DEX |
+| fld_dex_rut_exp_LostFocus | [CMXsrv_dex_lee_cli](#cmxsrv_dex_lee_cli) | CLN |
+| FORM_Load | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) | ACMXSUCSAL, DEX, CLN, ACMXADUANA |
+| COMELIMINAR_Click | [CMXsrv_dex_eli_dex](#cmxsrv_dex_eli_dex) | DEX |
+| Form_Activate | [CMXsrv_dex_lee_dex](#cmxsrv_dex_lee_dex) | ACMXSUCSAL, DEX, CLN, ACMXADUANA |
 
 ---
 
 ## EXPNEG
 <a name="expneg" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Form_Activate | EVZ, CBE | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) |
-| Proximo_Click | EVZ, CBE | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) |
-| Reversar_Click | EVL, ACMXDESEMB, COR, ORG, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE, TRSD, ACMXPRMEXP, COM, EVR, CTZ, DTN, OPREC, RET, PUCBCX10 | [CMXsrv_expcbe_rev_cbe](#cmxsrv_expcbe_rev_cbe) |
-| Form_Activate | ACMXDESEMB, COR, ACMXPGOCBE, EVZ, CBE, ACMXMONEDA, ACMXTIPEVE, ACMXSUCSAL | [CMXsrv_expcbe_lee_evz](#cmxsrv_expcbe_lee_evz) |
-| Form_Activate | ACMXMONEDA, CCE, ACMXFORPAG | [CMXsrv_expcce_lee_bas](#cmxsrv_expcce_lee_bas) |
-| Form_Activate | COR, ACMXVIATPT, ACMXSUCSAL, ACMXDISNEG, ACMXMONEDA, ACMXCLACOM, NGE, ACMXPAIS, CLN, ACMXTPONEG | [CMXsrv_expcce_lee_neg](#cmxsrv_expcce_lee_neg) |
-| Mccealznge_click | COL, CCE, NGE | [CMXsrv_expcce_alz_dis](#cmxsrv_expcce_alz_dis) |
-| Mcceanlnge_click | CCE, NGE | [CMXsrv_expcce_anl_neg](#cmxsrv_expcce_anl_neg) |
-| Mccectbnge_Click | COR, LTR, CCE, NGE, AFIN | [CMXsrv_expcce_ctb_neg](#cmxsrv_expcce_ctb_neg) |
-| Mccedelnge_Click | CRSN, COD, COM, NGEB, LTR, DSN, CCE, DCN, NGE, EVC, AFIN | [CMXsrv_expcce_del_neg](#cmxsrv_expcce_del_neg) |
-| Mccevalnge_click | NGEB, LTR, DCC, warnmsg, CCE, DCN, NGE, COL, AFIN | [CMXsrv_expcce_val_neg](#cmxsrv_expcce_val_neg) |
-| Mtel742_Click | switxt, switxt1 | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) |
-| Form_Activate | EVC, CCE, NGE | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) |
-| Proximo_Click | EVC, CCE, NGE | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) |
-| Reversar_Click | COR, TAS, ACMXIMPUES, LTR, DCN, EVC, RET, CUO, EVO, TRSD, DSN, CCE, NGE, PUCBCX10, COD, CNO, COM, DAC, EVE, CAN, COL, AFIN, ORG, DTN, EVR | [CMXsrv_expcce_rev_cce](#cmxsrv_expcce_rev_cce) |
-| Form_Activate | ACMXFORPAG, ACMXMONEDA, CCE, NGE, EVC, ACMXSUCSAL, ACMXTIPEVE | [CMXsrv_expcce_lee_evc](#cmxsrv_expcce_lee_evc) |
-| aceptar_Click | CRSN, CCE, NGEB, NGE | [CMXsrv_expcce_grb_neg](#cmxsrv_expcce_grb_neg) |
-| aceptar_Click | DCC, CCE, DCN, NGE | [CMXsrv_expcce_gen_dcn](#cmxsrv_expcce_gen_dcn) |
-| aceptar_Click | AFIN | [CMXsrv_expcce_grb_afin](#cmxsrv_expcce_grb_afin) |
-| fld_cce_cod_exp_nge_LostFocus | CLN | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) |
-| fld_cce_cod_pag_nge_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| fld_cce_cod_rmb_nge_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| fld_cce_ins_rem1_nge_GotFocus | COR, ACMXCRDREMTXT, ACMXMONEDA, CCE, NGE, ACMXPAISES, CCO | [CMXsrv_expcce_avs_rem5](#cmxsrv_expcce_avs_rem5) |
-| Form_Load | COR, CRSN, NGEB, CCE, NGE, ACMXPAIS, CLN | [CMXsrv_expcce_lee_nge](#cmxsrv_expcce_lee_nge) |
-| Form_Load | ACMXVIATPT, ACMXRCBCCE, ACMXMONEDA, ACMXCLACOM, NGE, ACMXTPONEG | [CMXsrv_expcce_trd_nge](#cmxsrv_expcce_trd_nge) |
-| Form_Load | ACMXPAIS, COR, ACMXVIATPT, CCB, ACMXMONEDA, CRSE, CCE, ACMXCLACOM, NGE, ACMXSUCSAL, CLN, ACMXTPONEG | [CMXsrv_expcce_ini_neg](#cmxsrv_expcce_ini_neg) |
-| Form_Load | CCE, AFIN | [CMXsrv_expcce_lee_afin](#cmxsrv_expcce_lee_afin) |
-| lee_bco | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| ELIMINAR_Click | CCE, DCN, NGE | [CMXsrv_expcce_del_dcn](#cmxsrv_expcce_del_dcn) |
-| Form_Activate | DCN, NGE | [CMXsrv_expcce_bus_dcn](#cmxsrv_expcce_bus_dcn) |
-| Aceptar_Click | CCE, DCN, NGE | [CMXsrv_expcce_grb_dcn](#cmxsrv_expcce_grb_dcn) |
-| Form_Load | DCC, DCN, NGE | [CMXsrv_expcce_lee_dcn](#cmxsrv_expcce_lee_dcn) |
-| ELIMINAR_Click | LTR, CCE, NGE | [CMXsrv_expcce_del_ltr](#cmxsrv_expcce_del_ltr) |
-| Form_Activate | LTR, NGE | [CMXsrv_expcce_bus_ltr](#cmxsrv_expcce_bus_ltr) |
-| Aceptar_Click | LTR, CCE, NGE | [CMXsrv_expcce_grb_ltr](#cmxsrv_expcce_grb_ltr) |
-| Form_Load | LTR, CCE, NGE | [CMXsrv_expcce_lee_ltr](#cmxsrv_expcce_lee_ltr) |
-| ELIMINAR_Click | DSN, CCE, NGE | [CMXsrv_expcce_del_dsn](#cmxsrv_expcce_del_dsn) |
-| Form_Activate | DCC, DSN, CCE, DCN, NGE | [CMXsrv_expcce_gen_dsn](#cmxsrv_expcce_gen_dsn) |
-| Form_Activate | DSN, NGE | [CMXsrv_expcce_bus_dsn](#cmxsrv_expcce_bus_dsn) |
-| Salir_Click | DSN, CCE, NGE | [CMXsrv_expcce_chk_dsn](#cmxsrv_expcce_chk_dsn) |
-| Aceptar_Click | DSN, CCE, NGE | [CMXsrv_expcce_grb_dsn](#cmxsrv_expcce_grb_dsn) |
-| Form_Load | DSN, NGE | [CMXsrv_expcce_lee_dsn](#cmxsrv_expcce_lee_dsn) |
-| buscar_Click | CCE, NGE | [CMXsrv_expcce_bus_neg](#cmxsrv_expcce_bus_neg) |
-| Proximas_Click | CCE, NGE | [CMXsrv_expcce_bus_neg](#cmxsrv_expcce_bus_neg) |
-| aceptar_Click | ACMXDESEMB, COR, vig_cmx, ACMXIMPUES, COD, ACMXPRMEXP, COM, CCE, tbl_User, NGE, CLN, RET | [CMXsrv_expcce_pgo_neg](#cmxsrv_expcce_pgo_neg) |
-| aceptar_Click | AFIN | [CMXsrv_expcce_grb_afin](#cmxsrv_expcce_grb_afin) |
-| fld_cce_cod_exp_nge_LostFocus | CLN | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) |
-| fld_cce_cod_rmb_nge_LostFocus | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| Form_Load | ACMXDESEMB, COR, ACMXPRMEXP, ACMXMONEDA, CCE, NGE, CLN | [CMXsrv_expcce_lee_pgo](#cmxsrv_expcce_lee_pgo) |
-| Form_Load | CCE, AFIN | [CMXsrv_expcce_lee_afin](#cmxsrv_expcce_lee_afin) |
-| lee_bco | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| aceptar_Click |  | [CMXsrv_avi_dat_cou](#cmxsrv_avi_dat_cou) |
-| aceptar_Click | COR, CRSN, NGEB, CCE, NGE, ACMXPAIS, CLN | [CMXsrv_expcce_lee_nge](#cmxsrv_expcce_lee_nge) |
-| aceptar_Click | ACMXFORPAG, COR, CCB, NGEB, ACMXMONEDA, LTR, CCE, DCN, NGE, ACMXPAISES, CLN | [CMXsrv_expcce_avs_rem1](#cmxsrv_expcce_avs_rem1) |
-| aceptar_Click | LTR, NGE | [CMXsrv_expcce_avs_rem3](#cmxsrv_expcce_avs_rem3) |
-| imprime_esp | DCN | [CMXsrv_expcce_avs_rem2](#cmxsrv_expcce_avs_rem2) |
-| imprime_esp | DSN | [CMXsrv_expcce_avs_rem4](#cmxsrv_expcce_avs_rem4) |
-| imprime_esp | ACMXREMFESPMSG, ACMXREMFINGMSG | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) |
-| imprime_ing | DCN | [CMXsrv_expcce_avs_rem2](#cmxsrv_expcce_avs_rem2) |
-| imprime_ing | DSN | [CMXsrv_expcce_avs_rem4](#cmxsrv_expcce_avs_rem4) |
-| imprime_ing | ACMXREMFESPMSG, ACMXREMFINGMSG | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) |
-| aceptar_Click | ACMXPAIS, COR | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) |
-| buscar_Click | COR | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) |
-| proximos_Click | COR | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) |
-| enviar_Click | switxt, switxt1 | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Form_Activate | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) | EVZ, CBE |
+| Proximo_Click | [CMXsrv_expcbe_bus_evz](#cmxsrv_expcbe_bus_evz) | EVZ, CBE |
+| Reversar_Click | [CMXsrv_expcbe_rev_cbe](#cmxsrv_expcbe_rev_cbe) | EVL, ACMXDESEMB, COR, ORG, ACMXIMPUES, ACMXPRMGRL, EVZ, CBE, TRSD, ACMXPRMEXP, COM, EVR, CTZ, DTN, OPREC, RET, PUCBCX10 |
+| Form_Activate | [CMXsrv_expcbe_lee_evz](#cmxsrv_expcbe_lee_evz) | ACMXDESEMB, COR, ACMXPGOCBE, EVZ, CBE, ACMXMONEDA, ACMXTIPEVE, ACMXSUCSAL |
+| Form_Activate | [CMXsrv_expcce_lee_bas](#cmxsrv_expcce_lee_bas) | ACMXMONEDA, CCE, ACMXFORPAG |
+| Form_Activate | [CMXsrv_expcce_lee_neg](#cmxsrv_expcce_lee_neg) | COR, ACMXVIATPT, ACMXSUCSAL, ACMXDISNEG, ACMXMONEDA, ACMXCLACOM, NGE, ACMXPAIS, CLN, ACMXTPONEG |
+| Mccealznge_click | [CMXsrv_expcce_alz_dis](#cmxsrv_expcce_alz_dis) | COL, CCE, NGE |
+| Mcceanlnge_click | [CMXsrv_expcce_anl_neg](#cmxsrv_expcce_anl_neg) | CCE, NGE |
+| Mccectbnge_Click | [CMXsrv_expcce_ctb_neg](#cmxsrv_expcce_ctb_neg) | COR, LTR, CCE, NGE, AFIN |
+| Mccedelnge_Click | [CMXsrv_expcce_del_neg](#cmxsrv_expcce_del_neg) | CRSN, COD, COM, NGEB, LTR, DSN, CCE, DCN, NGE, EVC, AFIN |
+| Mccevalnge_click | [CMXsrv_expcce_val_neg](#cmxsrv_expcce_val_neg) | NGEB, LTR, DCC, warnmsg, CCE, DCN, NGE, COL, AFIN |
+| Mtel742_Click | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) | switxt, switxt1 |
+| Form_Activate | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) | EVC, CCE, NGE |
+| Proximo_Click | [CMXsrv_expcce_bus_evc](#cmxsrv_expcce_bus_evc) | EVC, CCE, NGE |
+| Reversar_Click | [CMXsrv_expcce_rev_cce](#cmxsrv_expcce_rev_cce) | COR, TAS, ACMXIMPUES, LTR, DCN, EVC, RET, CUO, EVO, TRSD, DSN, CCE, NGE, PUCBCX10, COD, CNO, COM, DAC, EVE, CAN, COL, AFIN, ORG, DTN, EVR |
+| Form_Activate | [CMXsrv_expcce_lee_evc](#cmxsrv_expcce_lee_evc) | ACMXFORPAG, ACMXMONEDA, CCE, NGE, EVC, ACMXSUCSAL, ACMXTIPEVE |
+| aceptar_Click | [CMXsrv_expcce_grb_neg](#cmxsrv_expcce_grb_neg) | CRSN, CCE, NGEB, NGE |
+| aceptar_Click | [CMXsrv_expcce_gen_dcn](#cmxsrv_expcce_gen_dcn) | DCC, CCE, DCN, NGE |
+| aceptar_Click | [CMXsrv_expcce_grb_afin](#cmxsrv_expcce_grb_afin) | AFIN |
+| fld_cce_cod_exp_nge_LostFocus | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) | CLN |
+| fld_cce_cod_pag_nge_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| fld_cce_cod_rmb_nge_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| fld_cce_ins_rem1_nge_GotFocus | [CMXsrv_expcce_avs_rem5](#cmxsrv_expcce_avs_rem5) | COR, ACMXCRDREMTXT, ACMXMONEDA, CCE, NGE, ACMXPAISES, CCO |
+| Form_Load | [CMXsrv_expcce_lee_nge](#cmxsrv_expcce_lee_nge) | COR, CRSN, NGEB, CCE, NGE, ACMXPAIS, CLN |
+| Form_Load | [CMXsrv_expcce_trd_nge](#cmxsrv_expcce_trd_nge) | ACMXVIATPT, ACMXRCBCCE, ACMXMONEDA, ACMXCLACOM, NGE, ACMXTPONEG |
+| Form_Load | [CMXsrv_expcce_ini_neg](#cmxsrv_expcce_ini_neg) | ACMXPAIS, COR, ACMXVIATPT, CCB, ACMXMONEDA, CRSE, CCE, ACMXCLACOM, NGE, ACMXSUCSAL, CLN, ACMXTPONEG |
+| Form_Load | [CMXsrv_expcce_lee_afin](#cmxsrv_expcce_lee_afin) | CCE, AFIN |
+| lee_bco | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| ELIMINAR_Click | [CMXsrv_expcce_del_dcn](#cmxsrv_expcce_del_dcn) | CCE, DCN, NGE |
+| Form_Activate | [CMXsrv_expcce_bus_dcn](#cmxsrv_expcce_bus_dcn) | DCN, NGE |
+| Aceptar_Click | [CMXsrv_expcce_grb_dcn](#cmxsrv_expcce_grb_dcn) | CCE, DCN, NGE |
+| Form_Load | [CMXsrv_expcce_lee_dcn](#cmxsrv_expcce_lee_dcn) | DCC, DCN, NGE |
+| ELIMINAR_Click | [CMXsrv_expcce_del_ltr](#cmxsrv_expcce_del_ltr) | LTR, CCE, NGE |
+| Form_Activate | [CMXsrv_expcce_bus_ltr](#cmxsrv_expcce_bus_ltr) | LTR, NGE |
+| Aceptar_Click | [CMXsrv_expcce_grb_ltr](#cmxsrv_expcce_grb_ltr) | LTR, CCE, NGE |
+| Form_Load | [CMXsrv_expcce_lee_ltr](#cmxsrv_expcce_lee_ltr) | LTR, CCE, NGE |
+| ELIMINAR_Click | [CMXsrv_expcce_del_dsn](#cmxsrv_expcce_del_dsn) | DSN, CCE, NGE |
+| Form_Activate | [CMXsrv_expcce_gen_dsn](#cmxsrv_expcce_gen_dsn) | DCC, DSN, CCE, DCN, NGE |
+| Form_Activate | [CMXsrv_expcce_bus_dsn](#cmxsrv_expcce_bus_dsn) | DSN, NGE |
+| Salir_Click | [CMXsrv_expcce_chk_dsn](#cmxsrv_expcce_chk_dsn) | DSN, CCE, NGE |
+| Aceptar_Click | [CMXsrv_expcce_grb_dsn](#cmxsrv_expcce_grb_dsn) | DSN, CCE, NGE |
+| Form_Load | [CMXsrv_expcce_lee_dsn](#cmxsrv_expcce_lee_dsn) | DSN, NGE |
+| buscar_Click | [CMXsrv_expcce_bus_neg](#cmxsrv_expcce_bus_neg) | CCE, NGE |
+| Proximas_Click | [CMXsrv_expcce_bus_neg](#cmxsrv_expcce_bus_neg) | CCE, NGE |
+| aceptar_Click | [CMXsrv_expcce_pgo_neg](#cmxsrv_expcce_pgo_neg) | ACMXDESEMB, COR, vig_cmx, ACMXIMPUES, COD, ACMXPRMEXP, COM, CCE, tbl_User, NGE, CLN, RET |
+| aceptar_Click | [CMXsrv_expcce_grb_afin](#cmxsrv_expcce_grb_afin) | AFIN |
+| fld_cce_cod_exp_nge_LostFocus | [CMXsrv_expcce_lee_cln](#cmxsrv_expcce_lee_cln) | CLN |
+| fld_cce_cod_rmb_nge_LostFocus | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| Form_Load | [CMXsrv_expcce_lee_pgo](#cmxsrv_expcce_lee_pgo) | ACMXDESEMB, COR, ACMXPRMEXP, ACMXMONEDA, CCE, NGE, CLN |
+| Form_Load | [CMXsrv_expcce_lee_afin](#cmxsrv_expcce_lee_afin) | CCE, AFIN |
+| lee_bco | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| aceptar_Click | [CMXsrv_avi_dat_cou](#cmxsrv_avi_dat_cou) |  |
+| aceptar_Click | [CMXsrv_expcce_lee_nge](#cmxsrv_expcce_lee_nge) | COR, CRSN, NGEB, CCE, NGE, ACMXPAIS, CLN |
+| aceptar_Click | [CMXsrv_expcce_avs_rem1](#cmxsrv_expcce_avs_rem1) | ACMXFORPAG, COR, CCB, NGEB, ACMXMONEDA, LTR, CCE, DCN, NGE, ACMXPAISES, CLN |
+| aceptar_Click | [CMXsrv_expcce_avs_rem3](#cmxsrv_expcce_avs_rem3) | LTR, NGE |
+| imprime_esp | [CMXsrv_expcce_avs_rem2](#cmxsrv_expcce_avs_rem2) | DCN |
+| imprime_esp | [CMXsrv_expcce_avs_rem4](#cmxsrv_expcce_avs_rem4) | DSN |
+| imprime_esp | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) | ACMXREMFESPMSG, ACMXREMFINGMSG |
+| imprime_ing | [CMXsrv_expcce_avs_rem2](#cmxsrv_expcce_avs_rem2) | DCN |
+| imprime_ing | [CMXsrv_expcce_avs_rem4](#cmxsrv_expcce_avs_rem4) | DSN |
+| imprime_ing | [CMXsrv_expcbe_avs_rem4](#cmxsrv_expcbe_avs_rem4) | ACMXREMFESPMSG, ACMXREMFINGMSG |
+| aceptar_Click | [CMXsrv_expcce_lee_cor](#cmxsrv_expcce_lee_cor) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) | COR |
+| proximos_Click | [CMXsrv_expcce_bus_cor](#cmxsrv_expcce_bus_cor) | COR |
+| enviar_Click | [CMXsrv_expcce_swf_sel](#cmxsrv_expcce_swf_sel) | switxt, switxt1 |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## expret
 <a name="expret" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| buscar_Click | ACMXPLAZAS, comex..ACMXPLAZAS | [CMXsrv_busc_plz](#cmxsrv_busc_plz) |
-| fld_cor_cod_plz_Lostfocus | ACMXPLAZAS | [CMXsrv_lee_plz](#cmxsrv_lee_plz) |
-| proximos_Click | ACMXPLAZAS, comex..ACMXPLAZAS | [CMXsrv_busc_plz](#cmxsrv_busc_plz) |
-| buscar_Click | ACMXPAIS | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) |
-| fld_cor_cod_pais_LostFocus | comex..ACMXPAIS | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) |
-| proximos_Click | ACMXPAIS | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) |
-| Aceptar_Click | ACMXPAIS, COR | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) |
-| buscar_Click | COR | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) |
-| proximos_Click | COR | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) |
-| Command2_Click | DTN, ACMXPRMEXP, switxt, switxt1 | [CMXsrv_expret_swf_sel](#cmxsrv_expret_swf_sel) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| Form_Activate | master..sysprocesses, tbl_User | [CMXsrv_cmx_busc_suc_usu](#cmxsrv_cmx_busc_suc_usu) |
-| Form_Activate | DTN, ACMXPRMEXP, ACMXMONEDA, ACMXSUCSAL, CLN, RET | [CMXsrv_expret_lee_ret](#cmxsrv_expret_lee_ret) |
-| Form_Load | ACMXPRMGRL, ACMXPRMEXP | [CMXsrv_expret_lee_prm](#cmxsrv_expret_lee_prm) |
-| M_cgyc_Click | ACMXDESEMB, ASND, ACMXIMPUES, ACMXPRMGRL, COM, TRSD, EVR, CLN, ACMXESPECI, RET | [CMXsrv_expret_avs_cyg1](#cmxsrv_expret_avs_cyg1) |
-| M_cgyc_Click | ASND, ACMXIMPUES, ACMXPRMGRL, EVR, RET | [CMXsrv_expret_avs_cyg2](#cmxsrv_expret_avs_cyg2) |
-| mavisliq_Click | DTN, ACMXMONEDA, ACMXSUCSAL, CLN, ACMXESPECI, RET | [CMXsrv_expret_avs_liq1](#cmxsrv_expret_avs_liq1) |
-| mavisliq_Click | ORG, RET | [CMXsrv_expret_avs_liq2](#cmxsrv_expret_avs_liq2) |
-| mavisliq_Click | DTN, ACMXPRMEXP, RET | [CMXsrv_expret_avs_liq3](#cmxsrv_expret_avs_liq3) |
-| Mcbectb_Click | ACMXDESEMB, ORG, COR, ACMXIMPUES, ACMXPRMGRL, CCL, ACMXPRMEXP, ACMXMONEDAFEC, COM, tbl_User, warnmsg, DTN, CLN, RET | [CMXsrv_expret_val_ret](#cmxsrv_expret_val_ret) |
-| Mcbectb_Click | DTN, ACMXMONEDAFEC, RET, ACMXPRMENL | [CMXsrv_expret_sum_dtn_mn](#cmxsrv_expret_sum_dtn_mn) |
-| Mcbectb_Click | ACMXDESEMB, ASND, PLV, ACMXPRMGRL, CCL, ACMXPRMEXP, PLI, tbl_User, DTN, CLN, RET | [CMXsrv_expret_ctb_ing](#cmxsrv_expret_ctb_ing) |
-| Mcbedel_Click | ORG, COD, COM, DTN, RET | [CMXsrv_expret_del_ret](#cmxsrv_expret_del_ret) |
-| Mliqctb_Click | ACMXSUCSAL, ACMXMONEDA, CLN, RET | [CMXsrv_expret_avs_adm1](#cmxsrv_expret_avs_adm1) |
-| Mliqctb_Click | ORG, ACMXPRMEXP, RET | [CMXsrv_expret_avs_adm2](#cmxsrv_expret_avs_adm2) |
-| Mliqctb_Click | DTN, ACMXPRMEXP, RET | [CMXsrv_expret_avs_adm3](#cmxsrv_expret_avs_adm3) |
-| Mvalid_Click | ACMXDESEMB, ORG, COR, ACMXIMPUES, ACMXPRMGRL, CCL, ACMXPRMEXP, ACMXMONEDAFEC, COM, tbl_User, warnmsg, DTN, CLN, RET | [CMXsrv_expret_val_ret](#cmxsrv_expret_val_ret) |
-| ACEPTAR_Click | RET | [CMXsrv_expret_act_tpo_cbo](#cmxsrv_expret_act_tpo_cbo) |
-| ACEPTAR_Click | ACMXDESEMB, ORG, COR, ACMXIMPUES, ACMXPRMGRL, CCL, ACMXPRMEXP, ACMXMONEDAFEC, COM, tbl_User, warnmsg, DTN, CLN, RET | [CMXsrv_expret_val_ret](#cmxsrv_expret_val_ret) |
-| ACEPTAR_Click | RET | [CMXsrv_expret_cre_ret](#cmxsrv_expret_cre_ret) |
-| ACEPTAR_Click | CLN, tbl_User, RET | [CMXsrv_expret_grb_det](#cmxsrv_expret_grb_det) |
-| fld_ret_mon_ret_LostFocus | ACMXMONEDAFEC | [CMXsrv_expret_tpo_cbo](#cmxsrv_expret_tpo_cbo) |
-| fld_ret_rut_cli_LostFocus | CLN | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) |
-| Form_Load | ACMXSUCSAL, ACMXMONEDA, CLN, RET | [CMXsrv_expret_lee_det](#cmxsrv_expret_lee_det) |
-| ELIMINAR_Click | ORG, RET | [CMXsrv_expret_del_org](#cmxsrv_expret_del_org) |
-| Form_Activate | ORG, RET | [CMXsrv_expret_bus_org](#cmxsrv_expret_bus_org) |
-| ACEPTAR_Click | ACMXDESEMB, ORG, ACMXPLNCTAN, ACMXSRVEXT, ACMXPLNCTAX, RET | [CMXsrv_expret_grb_org](#cmxsrv_expret_grb_org) |
-| Form_Activate | ORG, RET | [CMXsrv_expret_mto_org](#cmxsrv_expret_mto_org) |
-| Form_Activate | ACMXDESEMB, ORG, COR, ACMXTPODOC, ACMXPAIS | [CMXsrv_expret_lee_org](#cmxsrv_expret_lee_org) |
-| valida_vigente | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX | [CMXsrv_vig_lee_cta](#cmxsrv_vig_lee_cta) |
-| ELIMINAR_Click | DTN, RET | [CMXsrv_expret_del_dtn](#cmxsrv_expret_del_dtn) |
-| emitir_Click | DTN, ACMXPRMEXP, switxt, switxt1 | [CMXsrv_expret_swf_sel](#cmxsrv_expret_swf_sel) |
-| Form_Activate | DTN, RET | [CMXsrv_expret_bus_dtn](#cmxsrv_expret_bus_dtn) |
-| ACEPTAR_Click | ACMXDESEMB, ACMXPRMGRL, CCL, ACMXPRMEXP, DTN, RET | [CMXsrv_expret_grb_dtn](#cmxsrv_expret_grb_dtn) |
-| fld_ret_cod_ben_LostFocus | CLN | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) |
-| fld_ret_mto_arb_LostFocus | ACMXPRMGRL, ACMXMONEDA | [CMXsrv_expret_cal_arb](#cmxsrv_expret_cal_arb) |
-| fld_ret_mto_ben_LostFocus | ACMXPRMGRL, ACMXMONEDA | [CMXsrv_expret_cal_arb](#cmxsrv_expret_cal_arb) |
-| fld_ret_par_ben_LostFocus | ACMXPRMGRL, ACMXMONEDA | [CMXsrv_expret_cal_arb](#cmxsrv_expret_cal_arb) |
-| Form_Activate | DTN, COM, RET, ACMXIMPUES | [CMXsrv_expret_mto_dtn](#cmxsrv_expret_mto_dtn) |
-| Form_Load | ACMXPAIS, ACMXDESEMB, COR, DTN, ACMXMONEDA, APUCCODOPECMB, ACMXSUCSAL | [CMXsrv_expret_lee_dtn](#cmxsrv_expret_lee_dtn) |
-| Form_Load | CLN | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) |
-| buscar_Click | RET | [CMXsrv_expret_bus_ret](#cmxsrv_expret_bus_ret) |
-| fld_ret_rut_cli_LostFocus | CLN | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) |
-| proxima_Click | RET | [CMXsrv_expret_bus_ret](#cmxsrv_expret_bus_ret) |
-| Command1_Click | EVR, RET | [CMXsrv_expret_bus_evr](#cmxsrv_expret_bus_evr) |
-| Form_Activate | EVR, RET | [CMXsrv_expret_bus_evr](#cmxsrv_expret_bus_evr) |
-| proximo_Click | EVR, RET | [CMXsrv_expret_bus_evr](#cmxsrv_expret_bus_evr) |
-| reversar_Click | ORG, DTN, PLV, ACMXPRMEXP, PLI, TRSD, EVR, RET | [CMXsrv_expret_rev_ret](#cmxsrv_expret_rev_ret) |
-| Form_Load | ACMXTIPEVE, EVR, ACMXSUCSAL | [CMXsrv_expret_lee_evr](#cmxsrv_expret_lee_evr) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| buscar_Click | [CMXsrv_busc_plz](#cmxsrv_busc_plz) | ACMXPLAZAS, comex..ACMXPLAZAS |
+| fld_cor_cod_plz_Lostfocus | [CMXsrv_lee_plz](#cmxsrv_lee_plz) | ACMXPLAZAS |
+| proximos_Click | [CMXsrv_busc_plz](#cmxsrv_busc_plz) | ACMXPLAZAS, comex..ACMXPLAZAS |
+| buscar_Click | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) | ACMXPAIS |
+| fld_cor_cod_pais_LostFocus | [CMXsrv_cor_lee_pais](#cmxsrv_cor_lee_pais) | comex..ACMXPAIS |
+| proximos_Click | [CMXsrv_cor_busc_pais](#cmxsrv_cor_busc_pais) | ACMXPAIS |
+| Aceptar_Click | [CMXsrv_expcbe_lee_cor](#cmxsrv_expcbe_lee_cor) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) | COR |
+| proximos_Click | [CMXsrv_expcbe_bus_cor](#cmxsrv_expcbe_bus_cor) | COR |
+| Command2_Click | [CMXsrv_expret_swf_sel](#cmxsrv_expret_swf_sel) | DTN, ACMXPRMEXP, switxt, switxt1 |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| Form_Activate | [CMXsrv_cmx_busc_suc_usu](#cmxsrv_cmx_busc_suc_usu) | master..sysprocesses, tbl_User |
+| Form_Activate | [CMXsrv_expret_lee_ret](#cmxsrv_expret_lee_ret) | DTN, ACMXPRMEXP, ACMXMONEDA, ACMXSUCSAL, CLN, RET |
+| Form_Load | [CMXsrv_expret_lee_prm](#cmxsrv_expret_lee_prm) | ACMXPRMGRL, ACMXPRMEXP |
+| M_cgyc_Click | [CMXsrv_expret_avs_cyg1](#cmxsrv_expret_avs_cyg1) | ACMXDESEMB, ASND, ACMXIMPUES, ACMXPRMGRL, COM, TRSD, EVR, CLN, ACMXESPECI, RET |
+| M_cgyc_Click | [CMXsrv_expret_avs_cyg2](#cmxsrv_expret_avs_cyg2) | ASND, ACMXIMPUES, ACMXPRMGRL, EVR, RET |
+| mavisliq_Click | [CMXsrv_expret_avs_liq1](#cmxsrv_expret_avs_liq1) | DTN, ACMXMONEDA, ACMXSUCSAL, CLN, ACMXESPECI, RET |
+| mavisliq_Click | [CMXsrv_expret_avs_liq2](#cmxsrv_expret_avs_liq2) | ORG, RET |
+| mavisliq_Click | [CMXsrv_expret_avs_liq3](#cmxsrv_expret_avs_liq3) | DTN, ACMXPRMEXP, RET |
+| Mcbectb_Click | [CMXsrv_expret_val_ret](#cmxsrv_expret_val_ret) | ACMXDESEMB, ORG, COR, ACMXIMPUES, ACMXPRMGRL, CCL, ACMXPRMEXP, ACMXMONEDAFEC, COM, tbl_User, warnmsg, DTN, CLN, RET |
+| Mcbectb_Click | [CMXsrv_expret_sum_dtn_mn](#cmxsrv_expret_sum_dtn_mn) | DTN, ACMXMONEDAFEC, RET, ACMXPRMENL |
+| Mcbectb_Click | [CMXsrv_expret_ctb_ing](#cmxsrv_expret_ctb_ing) | ACMXDESEMB, ASND, PLV, ACMXPRMGRL, CCL, ACMXPRMEXP, PLI, tbl_User, DTN, CLN, RET |
+| Mcbedel_Click | [CMXsrv_expret_del_ret](#cmxsrv_expret_del_ret) | ORG, COD, COM, DTN, RET |
+| Mliqctb_Click | [CMXsrv_expret_avs_adm1](#cmxsrv_expret_avs_adm1) | ACMXSUCSAL, ACMXMONEDA, CLN, RET |
+| Mliqctb_Click | [CMXsrv_expret_avs_adm2](#cmxsrv_expret_avs_adm2) | ORG, ACMXPRMEXP, RET |
+| Mliqctb_Click | [CMXsrv_expret_avs_adm3](#cmxsrv_expret_avs_adm3) | DTN, ACMXPRMEXP, RET |
+| Mvalid_Click | [CMXsrv_expret_val_ret](#cmxsrv_expret_val_ret) | ACMXDESEMB, ORG, COR, ACMXIMPUES, ACMXPRMGRL, CCL, ACMXPRMEXP, ACMXMONEDAFEC, COM, tbl_User, warnmsg, DTN, CLN, RET |
+| ACEPTAR_Click | [CMXsrv_expret_act_tpo_cbo](#cmxsrv_expret_act_tpo_cbo) | RET |
+| ACEPTAR_Click | [CMXsrv_expret_val_ret](#cmxsrv_expret_val_ret) | ACMXDESEMB, ORG, COR, ACMXIMPUES, ACMXPRMGRL, CCL, ACMXPRMEXP, ACMXMONEDAFEC, COM, tbl_User, warnmsg, DTN, CLN, RET |
+| ACEPTAR_Click | [CMXsrv_expret_cre_ret](#cmxsrv_expret_cre_ret) | RET |
+| ACEPTAR_Click | [CMXsrv_expret_grb_det](#cmxsrv_expret_grb_det) | CLN, tbl_User, RET |
+| fld_ret_mon_ret_LostFocus | [CMXsrv_expret_tpo_cbo](#cmxsrv_expret_tpo_cbo) | ACMXMONEDAFEC |
+| fld_ret_rut_cli_LostFocus | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) | CLN |
+| Form_Load | [CMXsrv_expret_lee_det](#cmxsrv_expret_lee_det) | ACMXSUCSAL, ACMXMONEDA, CLN, RET |
+| ELIMINAR_Click | [CMXsrv_expret_del_org](#cmxsrv_expret_del_org) | ORG, RET |
+| Form_Activate | [CMXsrv_expret_bus_org](#cmxsrv_expret_bus_org) | ORG, RET |
+| ACEPTAR_Click | [CMXsrv_expret_grb_org](#cmxsrv_expret_grb_org) | ACMXDESEMB, ORG, ACMXPLNCTAN, ACMXSRVEXT, ACMXPLNCTAX, RET |
+| Form_Activate | [CMXsrv_expret_mto_org](#cmxsrv_expret_mto_org) | ORG, RET |
+| Form_Activate | [CMXsrv_expret_lee_org](#cmxsrv_expret_lee_org) | ACMXDESEMB, ORG, COR, ACMXTPODOC, ACMXPAIS |
+| valida_vigente | [CMXsrv_vig_lee_cta](#cmxsrv_vig_lee_cta) | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX |
+| ELIMINAR_Click | [CMXsrv_expret_del_dtn](#cmxsrv_expret_del_dtn) | DTN, RET |
+| emitir_Click | [CMXsrv_expret_swf_sel](#cmxsrv_expret_swf_sel) | DTN, ACMXPRMEXP, switxt, switxt1 |
+| Form_Activate | [CMXsrv_expret_bus_dtn](#cmxsrv_expret_bus_dtn) | DTN, RET |
+| ACEPTAR_Click | [CMXsrv_expret_grb_dtn](#cmxsrv_expret_grb_dtn) | ACMXDESEMB, ACMXPRMGRL, CCL, ACMXPRMEXP, DTN, RET |
+| fld_ret_cod_ben_LostFocus | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) | CLN |
+| fld_ret_mto_arb_LostFocus | [CMXsrv_expret_cal_arb](#cmxsrv_expret_cal_arb) | ACMXPRMGRL, ACMXMONEDA |
+| fld_ret_mto_ben_LostFocus | [CMXsrv_expret_cal_arb](#cmxsrv_expret_cal_arb) | ACMXPRMGRL, ACMXMONEDA |
+| fld_ret_par_ben_LostFocus | [CMXsrv_expret_cal_arb](#cmxsrv_expret_cal_arb) | ACMXPRMGRL, ACMXMONEDA |
+| Form_Activate | [CMXsrv_expret_mto_dtn](#cmxsrv_expret_mto_dtn) | DTN, COM, RET, ACMXIMPUES |
+| Form_Load | [CMXsrv_expret_lee_dtn](#cmxsrv_expret_lee_dtn) | ACMXPAIS, ACMXDESEMB, COR, DTN, ACMXMONEDA, APUCCODOPECMB, ACMXSUCSAL |
+| Form_Load | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) | CLN |
+| buscar_Click | [CMXsrv_expret_bus_ret](#cmxsrv_expret_bus_ret) | RET |
+| fld_ret_rut_cli_LostFocus | [CMXsrv_expret_lee_cln](#cmxsrv_expret_lee_cln) | CLN |
+| proxima_Click | [CMXsrv_expret_bus_ret](#cmxsrv_expret_bus_ret) | RET |
+| Command1_Click | [CMXsrv_expret_bus_evr](#cmxsrv_expret_bus_evr) | EVR, RET |
+| Form_Activate | [CMXsrv_expret_bus_evr](#cmxsrv_expret_bus_evr) | EVR, RET |
+| proximo_Click | [CMXsrv_expret_bus_evr](#cmxsrv_expret_bus_evr) | EVR, RET |
+| reversar_Click | [CMXsrv_expret_rev_ret](#cmxsrv_expret_rev_ret) | ORG, DTN, PLV, ACMXPRMEXP, PLI, TRSD, EVR, RET |
+| Form_Load | [CMXsrv_expret_lee_evr](#cmxsrv_expret_lee_evr) | ACMXTIPEVE, EVR, ACMXSUCSAL |
 
 ---
 
 ## ADMIN
 <a name="admin" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| COMMAND4_Click | TIP | [CMXsrv_finadm_imod_desti](#cmxsrv_finadm_imod_desti) |
-| Form_Load | TIP | [CMXsrv_finadm_cons_dtip](#cmxsrv_finadm_cons_dtip) |
-| Command1_Click | TIP | [CMXsrv_finadm_imod_ectb](#cmxsrv_finadm_imod_ectb) |
-| Command2_Click | TIP, TIP_CTA | [CMXsrv_finadm_eli_tipop](#cmxsrv_finadm_eli_tipop) |
-| Form_Load | TIP | [CMXsrv_finadm_cons_ectb](#cmxsrv_finadm_cons_ectb) |
-| COMMAND3_Click | TIP, TIP_CTA | [CMXsrv_finadm_eli_tipop](#cmxsrv_finadm_eli_tipop) |
-| COMMAND4_Click | TIP | [CMXsrv_finadm_imod_itip](#cmxsrv_finadm_imod_itip) |
-| Form_Load | TIP | [CMXsrv_finadm_cons_itip](#cmxsrv_finadm_cons_itip) |
-| Form_Activate | TIP, ACMXPLAZO, ACMXPROCMX, ACMXMB1 | [CMXsrv_finadm_lee_tipop](#cmxsrv_finadm_lee_tipop) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| Mdel_Click | TIP, TIP_CTA | [CMXsrv_finadm_eli_tipop](#cmxsrv_finadm_eli_tipop) |
-| Mval_Click | APEPROR, TIP, TAS, CUO, ACMXPLNCTAN, ACMXMONEDAFEC, PANCTL, ACLNCBCABCI, ACMXPLNCTAX, TIP_CTA, ACMXMONEDA, warnmsg, EVE, ACMXSUCSAL, PANVTO, ACMXINTEREFEC, COL, PANMOR | [CMXsrv_finadm_val_tipop](#cmxsrv_finadm_val_tipop) |
-| buscar_Click | TIP | [CMXsrv_finadm_bus_tipope](#cmxsrv_finadm_bus_tipope) |
-| proximas_Click | TIP | [CMXsrv_finadm_bus_tipope](#cmxsrv_finadm_bus_tipope) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| COMMAND4_Click | [CMXsrv_finadm_imod_desti](#cmxsrv_finadm_imod_desti) | TIP |
+| Form_Load | [CMXsrv_finadm_cons_dtip](#cmxsrv_finadm_cons_dtip) | TIP |
+| Command1_Click | [CMXsrv_finadm_imod_ectb](#cmxsrv_finadm_imod_ectb) | TIP |
+| Command2_Click | [CMXsrv_finadm_eli_tipop](#cmxsrv_finadm_eli_tipop) | TIP, TIP_CTA |
+| Form_Load | [CMXsrv_finadm_cons_ectb](#cmxsrv_finadm_cons_ectb) | TIP |
+| COMMAND3_Click | [CMXsrv_finadm_eli_tipop](#cmxsrv_finadm_eli_tipop) | TIP, TIP_CTA |
+| COMMAND4_Click | [CMXsrv_finadm_imod_itip](#cmxsrv_finadm_imod_itip) | TIP |
+| Form_Load | [CMXsrv_finadm_cons_itip](#cmxsrv_finadm_cons_itip) | TIP |
+| Form_Activate | [CMXsrv_finadm_lee_tipop](#cmxsrv_finadm_lee_tipop) | TIP, ACMXPLAZO, ACMXPROCMX, ACMXMB1 |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| Mdel_Click | [CMXsrv_finadm_eli_tipop](#cmxsrv_finadm_eli_tipop) | TIP, TIP_CTA |
+| Mval_Click | [CMXsrv_finadm_val_tipop](#cmxsrv_finadm_val_tipop) | APEPROR, TIP, TAS, CUO, ACMXPLNCTAN, ACMXMONEDAFEC, PANCTL, ACLNCBCABCI, ACMXPLNCTAX, TIP_CTA, ACMXMONEDA, warnmsg, EVE, ACMXSUCSAL, PANVTO, ACMXINTEREFEC, COL, PANMOR |
+| buscar_Click | [CMXsrv_finadm_bus_tipope](#cmxsrv_finadm_bus_tipope) | TIP |
+| proximas_Click | [CMXsrv_finadm_bus_tipope](#cmxsrv_finadm_bus_tipope) | TIP |
 
 ---
 
 ## COL_NEG
 <a name="col_neg" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| CANCELAR_Click | CRD | [CMXsrv_busc_tip_tas](#cmxsrv_busc_tip_tas) |
-| ELIMINAR_Click | CUO_REN, COL, CUO | [CMXsrv_fincol_ecuo](#cmxsrv_fincol_ecuo) |
-| Form_Activate | CUO_REN, COL_REN, COL, CUO | [CMXsrv_fincol_cons_plnpa](#cmxsrv_fincol_cons_plnpa) |
-| Form_Load | TAS | [CMXsrv_pertas_val_display](#cmxsrv_pertas_val_display) |
-| ELIMINAR_Click | DAC, AVAL, AVAL_REN, COL | [CMXsrv_fincol_eava](#cmxsrv_fincol_eava) |
-| Form_Activate | CRDCLON, AVAL, AVAL_REN, COL | [CMXsrv_fincol_cons_aval](#cmxsrv_fincol_cons_aval) |
-| ingresar_Click | AVAL, AVAL_REN, CLN, COL | [CMXsrv_fincol_iava](#cmxsrv_fincol_iava) |
-| Form_Activate | CAN, COL | [CMXsrv_fincol_cons_pag](#cmxsrv_fincol_cons_pag) |
-| proximos_Click | CAN, COL | [CMXsrv_fincol_cons_pag](#cmxsrv_fincol_cons_pag) |
-| Form_Activate | CAN, EVE | [CMXsrv_fincol_trae_det_pag](#cmxsrv_fincol_trae_det_pag) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_pror](#cmxsrv_fincol_cons_pror) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_eve](#cmxsrv_fincol_cons_eve) |
-| Aceptar_Click | ACMXPAIS, COR | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) |
-| buscar_Click | COR | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) |
-| proximo_Click | COR | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) |
-| Aceptar_Click | TIP, comex..ACMXINTEREFEC, COR, CRD, CUO, OBL, NEG, NEG_ADI, DAC, ACMXINTERE, ACMXMONEDA, ACMXINTEREFEC, AVAL, MYC, COL, CTO | [CMXsrv_fincol_vtocre_prov](#cmxsrv_fincol_vtocre_prov) |
-| Form_Load | TIP, CRD, CNEG, NEG, COL | [CMXsrv_fincol_prec_vtocre](#cmxsrv_fincol_prec_vtocre) |
-| buscar_Click | COR | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) |
-| proximo_Click | COR | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| Form_Load | ACMXFECPRO | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| CANCELAR_Click | [CMXsrv_busc_tip_tas](#cmxsrv_busc_tip_tas) | CRD |
+| ELIMINAR_Click | [CMXsrv_fincol_ecuo](#cmxsrv_fincol_ecuo) | CUO_REN, COL, CUO |
+| Form_Activate | [CMXsrv_fincol_cons_plnpa](#cmxsrv_fincol_cons_plnpa) | CUO_REN, COL_REN, COL, CUO |
+| Form_Load | [CMXsrv_pertas_val_display](#cmxsrv_pertas_val_display) | TAS |
+| ELIMINAR_Click | [CMXsrv_fincol_eava](#cmxsrv_fincol_eava) | DAC, AVAL, AVAL_REN, COL |
+| Form_Activate | [CMXsrv_fincol_cons_aval](#cmxsrv_fincol_cons_aval) | CRDCLON, AVAL, AVAL_REN, COL |
+| ingresar_Click | [CMXsrv_fincol_iava](#cmxsrv_fincol_iava) | AVAL, AVAL_REN, CLN, COL |
+| Form_Activate | [CMXsrv_fincol_cons_pag](#cmxsrv_fincol_cons_pag) | CAN, COL |
+| proximos_Click | [CMXsrv_fincol_cons_pag](#cmxsrv_fincol_cons_pag) | CAN, COL |
+| Form_Activate | [CMXsrv_fincol_trae_det_pag](#cmxsrv_fincol_trae_det_pag) | CAN, EVE |
+| Form_Activate | [CMXsrv_fincol_cons_pror](#cmxsrv_fincol_cons_pror) | EVE, COL |
+| Form_Activate | [CMXsrv_fincol_cons_eve](#cmxsrv_fincol_cons_eve) | EVE, COL |
+| Aceptar_Click | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) | COR |
+| proximo_Click | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) | COR |
+| Aceptar_Click | [CMXsrv_fincol_vtocre_prov](#cmxsrv_fincol_vtocre_prov) | TIP, comex..ACMXINTEREFEC, COR, CRD, CUO, OBL, NEG, NEG_ADI, DAC, ACMXINTERE, ACMXMONEDA, ACMXINTEREFEC, AVAL, MYC, COL, CTO |
+| Form_Load | [CMXsrv_fincol_prec_vtocre](#cmxsrv_fincol_prec_vtocre) | TIP, CRD, CNEG, NEG, COL |
+| buscar_Click | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) | COR |
+| proximo_Click | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) | COR |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| Form_Load | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) | ACMXFECPRO |
 
 ---
 
 ## INGRESO
 <a name="ingreso" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| cancelar_Click | COL_REN, TIP, TAS, TAS_REN, EVE_REN, DAC_REN, ITA, CUO_REN, AVAL_REN, EVE, CAN_REN, COL | [CMXsrv_fincol_ren_fin](#cmxsrv_fincol_ren_fin) |
-| ELIMINAR_Click | CUO_REN, COL, CUO | [CMXsrv_fincol_ecuo](#cmxsrv_fincol_ecuo) |
-| form_activate | CUO_REN, COL_REN, COL, CUO | [CMXsrv_fincol_cons_plnpa](#cmxsrv_fincol_cons_plnpa) |
-| cancelar_Click | COL_REN, TIP, TAS, TAS_REN, EVE_REN, DAC_REN, ITA, CUO_REN, AVAL_REN, EVE, CAN_REN, COL | [CMXsrv_fincol_ren_fin](#cmxsrv_fincol_ren_fin) |
-| ELIMINAR_Click | DAC, AVAL, AVAL_REN, COL | [CMXsrv_fincol_eava](#cmxsrv_fincol_eava) |
-| form_activate | CRDCLON, AVAL, AVAL_REN, COL | [CMXsrv_fincol_cons_aval](#cmxsrv_fincol_cons_aval) |
-| aceptar_Click | TIP, CUO, OBL, CTR, CLN, COL, CTO | [CMXsrv_fincol_gmod_ctr](#cmxsrv_fincol_gmod_ctr) |
-| busca_bco | ACMXPAIS, COR | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) |
-| fld_obl_bco_acr_LostFocus | COR | [CMXsrv_fincol_lee_bco](#cmxsrv_fincol_lee_bco) |
-| fld_obl_rut_acr_LostFocus | CLN | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) |
-| form_activate | OBL, CTR | [CMXsrv_fincol_cons_ctr](#cmxsrv_fincol_cons_ctr) |
-| aceptar_Click | TIP, ACMXDESEMB, CUO, COD, vig_cmx, COL_ADI, ACMXPRMGRL, OBL, COM, MYC, ACMXMONEDA, LIB, OPE_BCI, CLN, COL, CCO | [CMXsrv_fincol_ctb_oto](#cmxsrv_fincol_ctb_oto) |
-| Avi5_Click | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) |
-| form_activate | COR, TAS, NEG_ADI, ACMXINTERE, TIP, CUO, CCL, ACMXFINVER, ACMXAPROBAC, COL_ADI, ACMXACTIVIDA, ACMXINTEREFEC, AVAL, ACMXSUCSAL, CLN, comex..ACMXINTEREFEC, COM, ACMXMONEDA, EVE, tbl_User, COL | [CMXsrv_fincol_lee_col](#cmxsrv_fincol_lee_col) |
-| Form_Load | ACMXFECPRO | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) |
-| MCOLCOMI_CLICK | TIP, COL | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) |
-| MCOLCOMI_CLICK | COL | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) |
-| MCOLCONTOTOR_CLICK | TIP, COL | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) |
-| MCOLCONTOTOR_CLICK | COL | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) |
-| MCOLCONTOTOR_CLICK | TIP, ACMXDESEMB, CUO, COD, vig_cmx, COL_ADI, ACMXPRMGRL, OBL, COM, MYC, ACMXMONEDA, LIB, OPE_BCI, CLN, COL, CCO | [CMXsrv_fincol_ctb_oto](#cmxsrv_fincol_ctb_oto) |
-| MCOLELI_CLICK | COL_REN, COL_ADI, COM, TAS_REN, DAC_REN, EVE_REN, DAC, CUO_REN, AVAL_REN, LIB, CAN_REN, COL | [CMXsrv_fincol_eli_col](#cmxsrv_fincol_eli_col) |
-| valida | TIP, COL, warnmsg | [CMXsrv_fincol_val_col](#cmxsrv_fincol_val_col) |
-| aceptar_Click | COR, TAS, NEG_ADI, ACMXINTERE, TIP, CUO, CCL, ACMXFINVER, ACMXAPROBAC, COL_ADI, ACMXACTIVIDA, ACMXINTEREFEC, AVAL, ACMXSUCSAL, CLN, comex..ACMXINTEREFEC, COM, ACMXMONEDA, EVE, tbl_User, COL | [CMXsrv_fincol_lee_col](#cmxsrv_fincol_lee_col) |
-| buscar_Click | TIP | [CMXsrv_fincol_bsc_col](#cmxsrv_fincol_bsc_col) |
-| fld_col_tip_ope_lostfocus | TIP | [CMXsrv_fincol_lee_tip](#cmxsrv_fincol_lee_tip) |
-| PROXIMAS_Click | TIP | [CMXsrv_fincol_bsc_col](#cmxsrv_fincol_bsc_col) |
-| ingresar_Click | AVAL, AVAL_REN, CLN, COL | [CMXsrv_fincol_iava](#cmxsrv_fincol_iava) |
-| aceptar_Click | TIP, COL | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) |
-| aceptar_Click | COL | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) |
-| aceptar_Click | CLN, COL | [CMXsrv_fincol_ctb_novf](#cmxsrv_fincol_ctb_novf) |
-| FLD_COL_COD_CLI_LOSTFOCUS | CLN | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) |
-| FLD_COL_RUT_DEU_NOV_LostFocus | CLN | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) |
-| form_activate | EVE, COL | [CMXsrv_fincol_cons_nov](#cmxsrv_fincol_cons_nov) |
-| FLD_COL_COD_CLI_LOSTFOCUS | CLN | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) |
-| FLD_COL_RUT_DEU_NOV_LostFocus | CLN | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) |
-| Aceptar_Click | ACMXPAIS, COR | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) |
-| buscar_Click | COR | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) |
-| proximo_Click | COR | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) |
-| Form_Load |  | [CMXsrv_cmx_get_codes](#cmxsrv_cmx_get_codes) |
-| Form_Load |  | [CMXsrv_grl_trae_cod_bco](#cmxsrv_grl_trae_cod_bco) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| cancelar_Click | [CMXsrv_fincol_ren_fin](#cmxsrv_fincol_ren_fin) | COL_REN, TIP, TAS, TAS_REN, EVE_REN, DAC_REN, ITA, CUO_REN, AVAL_REN, EVE, CAN_REN, COL |
+| ELIMINAR_Click | [CMXsrv_fincol_ecuo](#cmxsrv_fincol_ecuo) | CUO_REN, COL, CUO |
+| form_activate | [CMXsrv_fincol_cons_plnpa](#cmxsrv_fincol_cons_plnpa) | CUO_REN, COL_REN, COL, CUO |
+| cancelar_Click | [CMXsrv_fincol_ren_fin](#cmxsrv_fincol_ren_fin) | COL_REN, TIP, TAS, TAS_REN, EVE_REN, DAC_REN, ITA, CUO_REN, AVAL_REN, EVE, CAN_REN, COL |
+| ELIMINAR_Click | [CMXsrv_fincol_eava](#cmxsrv_fincol_eava) | DAC, AVAL, AVAL_REN, COL |
+| form_activate | [CMXsrv_fincol_cons_aval](#cmxsrv_fincol_cons_aval) | CRDCLON, AVAL, AVAL_REN, COL |
+| aceptar_Click | [CMXsrv_fincol_gmod_ctr](#cmxsrv_fincol_gmod_ctr) | TIP, CUO, OBL, CTR, CLN, COL, CTO |
+| busca_bco | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) | ACMXPAIS, COR |
+| fld_obl_bco_acr_LostFocus | [CMXsrv_fincol_lee_bco](#cmxsrv_fincol_lee_bco) | COR |
+| fld_obl_rut_acr_LostFocus | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) | CLN |
+| form_activate | [CMXsrv_fincol_cons_ctr](#cmxsrv_fincol_cons_ctr) | OBL, CTR |
+| aceptar_Click | [CMXsrv_fincol_ctb_oto](#cmxsrv_fincol_ctb_oto) | TIP, ACMXDESEMB, CUO, COD, vig_cmx, COL_ADI, ACMXPRMGRL, OBL, COM, MYC, ACMXMONEDA, LIB, OPE_BCI, CLN, COL, CCO |
+| Avi5_Click | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL |
+| form_activate | [CMXsrv_fincol_lee_col](#cmxsrv_fincol_lee_col) | COR, TAS, NEG_ADI, ACMXINTERE, TIP, CUO, CCL, ACMXFINVER, ACMXAPROBAC, COL_ADI, ACMXACTIVIDA, ACMXINTEREFEC, AVAL, ACMXSUCSAL, CLN, comex..ACMXINTEREFEC, COM, ACMXMONEDA, EVE, tbl_User, COL |
+| Form_Load | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) | ACMXFECPRO |
+| MCOLCOMI_CLICK | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) | TIP, COL |
+| MCOLCOMI_CLICK | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) | COL |
+| MCOLCONTOTOR_CLICK | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) | TIP, COL |
+| MCOLCONTOTOR_CLICK | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) | COL |
+| MCOLCONTOTOR_CLICK | [CMXsrv_fincol_ctb_oto](#cmxsrv_fincol_ctb_oto) | TIP, ACMXDESEMB, CUO, COD, vig_cmx, COL_ADI, ACMXPRMGRL, OBL, COM, MYC, ACMXMONEDA, LIB, OPE_BCI, CLN, COL, CCO |
+| MCOLELI_CLICK | [CMXsrv_fincol_eli_col](#cmxsrv_fincol_eli_col) | COL_REN, COL_ADI, COM, TAS_REN, DAC_REN, EVE_REN, DAC, CUO_REN, AVAL_REN, LIB, CAN_REN, COL |
+| valida | [CMXsrv_fincol_val_col](#cmxsrv_fincol_val_col) | TIP, COL, warnmsg |
+| aceptar_Click | [CMXsrv_fincol_lee_col](#cmxsrv_fincol_lee_col) | COR, TAS, NEG_ADI, ACMXINTERE, TIP, CUO, CCL, ACMXFINVER, ACMXAPROBAC, COL_ADI, ACMXACTIVIDA, ACMXINTEREFEC, AVAL, ACMXSUCSAL, CLN, comex..ACMXINTEREFEC, COM, ACMXMONEDA, EVE, tbl_User, COL |
+| buscar_Click | [CMXsrv_fincol_bsc_col](#cmxsrv_fincol_bsc_col) | TIP |
+| fld_col_tip_ope_lostfocus | [CMXsrv_fincol_lee_tip](#cmxsrv_fincol_lee_tip) | TIP |
+| PROXIMAS_Click | [CMXsrv_fincol_bsc_col](#cmxsrv_fincol_bsc_col) | TIP |
+| ingresar_Click | [CMXsrv_fincol_iava](#cmxsrv_fincol_iava) | AVAL, AVAL_REN, CLN, COL |
+| aceptar_Click | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) | TIP, COL |
+| aceptar_Click | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) | COL |
+| aceptar_Click | [CMXsrv_fincol_ctb_novf](#cmxsrv_fincol_ctb_novf) | CLN, COL |
+| FLD_COL_COD_CLI_LOSTFOCUS | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) | CLN |
+| FLD_COL_RUT_DEU_NOV_LostFocus | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) | CLN |
+| form_activate | [CMXsrv_fincol_cons_nov](#cmxsrv_fincol_cons_nov) | EVE, COL |
+| FLD_COL_COD_CLI_LOSTFOCUS | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) | CLN |
+| FLD_COL_RUT_DEU_NOV_LostFocus | [CMXsrv_fincol_lee_cln](#cmxsrv_fincol_lee_cln) | CLN |
+| Aceptar_Click | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) | COR |
+| proximo_Click | [CMXsrv_icrd_busc_bco](#cmxsrv_icrd_busc_bco) | COR |
+| Form_Load | [CMXsrv_cmx_get_codes](#cmxsrv_cmx_get_codes) |  |
+| Form_Load | [CMXsrv_grl_trae_cod_bco](#cmxsrv_grl_trae_cod_bco) |  |
 
 ---
 
 ## MODIFIC
 <a name="modific" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Form_Activate | TAS | [CMXsrv_fincol_cons_tas](#cmxsrv_fincol_cons_tas) |
-| aceptar_click | TIP, comex..ACMXMONEDAFEC, COL, CUO | [CMXsrv_fincol_efec_tras](#cmxsrv_fincol_efec_tras) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_trasp](#cmxsrv_fincol_cons_trasp) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_dtrs](#cmxsrv_fincol_cons_dtrs) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_eve](#cmxsrv_fincol_cons_eve) |
-| Form_Load | EVE, COL | [CMXsrv_fincol_cons_deve](#cmxsrv_fincol_cons_deve) |
-| aceptar_click |  | [CMXsrv_fincol_cont_gst](#cmxsrv_fincol_cont_gst) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_gst](#cmxsrv_fincol_cons_gst) |
-| Form_Activate |  | [CMXsrv_fincol_cons_dgst](#cmxsrv_fincol_cons_dgst) |
-| Form_Load | ACMXFECPRO | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Form_Activate | [CMXsrv_fincol_cons_tas](#cmxsrv_fincol_cons_tas) | TAS |
+| aceptar_click | [CMXsrv_fincol_efec_tras](#cmxsrv_fincol_efec_tras) | TIP, comex..ACMXMONEDAFEC, COL, CUO |
+| Form_Activate | [CMXsrv_fincol_cons_trasp](#cmxsrv_fincol_cons_trasp) | EVE, COL |
+| Form_Activate | [CMXsrv_fincol_cons_dtrs](#cmxsrv_fincol_cons_dtrs) | EVE, COL |
+| Form_Activate | [CMXsrv_fincol_cons_eve](#cmxsrv_fincol_cons_eve) | EVE, COL |
+| Form_Load | [CMXsrv_fincol_cons_deve](#cmxsrv_fincol_cons_deve) | EVE, COL |
+| aceptar_click | [CMXsrv_fincol_cont_gst](#cmxsrv_fincol_cont_gst) |  |
+| Form_Activate | [CMXsrv_fincol_cons_gst](#cmxsrv_fincol_cons_gst) | EVE, COL |
+| Form_Activate | [CMXsrv_fincol_cons_dgst](#cmxsrv_fincol_cons_dgst) |  |
+| Form_Load | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) | ACMXFECPRO |
 
 ---
 
 ## OBLIGA
 <a name="obliga" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| buscar_Click | TIP | [CMXsrv_fincol_bsc_tip](#cmxsrv_fincol_bsc_tip) |
-| Proxima_Click | TIP | [CMXsrv_fincol_bsc_tip](#cmxsrv_fincol_bsc_tip) |
-| proximo_Click | TIP | [CMXsrv_fincol_bsc_tip](#cmxsrv_fincol_bsc_tip) |
-| buscar_Click | COR | [CMXsrv_finobl_bus_cor](#cmxsrv_finobl_bus_cor) |
-| proximo_Click | COR | [CMXsrv_finobl_bus_cor](#cmxsrv_finobl_bus_cor) |
-| ELIMINAR_Click | OBL, CTO | [CMXsrv_finobl_ecuo](#cmxsrv_finobl_ecuo) |
-| form_activate | OBL, CTO | [CMXsrv_finobl_gpln](#cmxsrv_finobl_gpln) |
-| form_activate | OBL, CTO | [CMXsrv_finobl_cons_plnpa](#cmxsrv_finobl_cons_plnpa) |
-| anunctb_Click | OBL | [CMXsrv_finobl_calc_anu](#cmxsrv_finobl_calc_anu) |
-| form_activate | TIP, COR, OBL, ACMXINTERE, ACMXMONEDA, ACMXSUCSAL, CLN | [CMXsrv_finobl_lee_obl](#cmxsrv_finobl_lee_obl) |
-| Form_Load | ACMXFECPRO | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) |
-| Mcbeanl_Click | OBL | [CMXsrv_finobl_calc_anu](#cmxsrv_finobl_calc_anu) |
-| Mcbectb_Click | ACMXDESEMB, TIP, COD, OBL, CTO, CCO | [CMXsrv_finobl_ctb_oto](#cmxsrv_finobl_ctb_oto) |
-| Mcbedel_Click | OBL, OBL_ADI | [CMXsrv_fincol_eli_obl](#cmxsrv_fincol_eli_obl) |
-| Mobl_liq_ope_Click | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) |
-| valida_error | TIP, OBL, ACMXINTERE, warnmsg, OBL_ADI | [CMXsrv_finobl_val_obl](#cmxsrv_finobl_val_obl) |
-| buscar_Click | OBL | [CMXsrv_finobl_bsc_obl](#cmxsrv_finobl_bsc_obl) |
-| fld_obl_tip_ope_LostFocus | TIP | [CMXsrv_fincol_lee_tip](#cmxsrv_fincol_lee_tip) |
-| Proxima_Click | OBL | [CMXsrv_finobl_bsc_obl](#cmxsrv_finobl_bsc_obl) |
-| contabilizar_Click | OBL, CTO, EVO | [CMXsrv_finobl_ictb_pag](#cmxsrv_finobl_ictb_pag) |
-| contabilizar_Click | OBL, CTO | [CMXsrv_finobl_obt_sdocuo](#cmxsrv_finobl_obt_sdocuo) |
-| form_activate | CTO | [CMXsrv_finobl_new_tas](#cmxsrv_finobl_new_tas) |
-| form_activate | CNO | [CMXsrv_finobl_cons_pag](#cmxsrv_finobl_cons_pag) |
-| form_activate | OBL, CTO, EVO | [CMXsrv_finobl_cons_detp](#cmxsrv_finobl_cons_detp) |
-| calcular_Click | OBL | [CMXsrv_finobl_calc_pror](#cmxsrv_finobl_calc_pror) |
-| form_activate | OBL, EVO | [CMXsrv_finobl_cons_pror](#cmxsrv_finobl_cons_pror) |
-| form_activate | OBL, EVO | [CMXsrv_finobl_cons_dpror](#cmxsrv_finobl_cons_dpror) |
-| contabilizar_Click | TIP, COR, OBL, COL, CTO | [CMXsrv_finobl_ctb_anu](#cmxsrv_finobl_ctb_anu) |
-| calcular_Click | OBL | [CMXsrv_finobl_calc_anu](#cmxsrv_finobl_calc_anu) |
-| form_activate | CNO, EVO | [CMXsrv_finobl_cons_anu](#cmxsrv_finobl_cons_anu) |
-| form_activate | OBL, EVO | [CMXsrv_finobl_cons_mod](#cmxsrv_finobl_cons_mod) |
-| form_activate | CNO, EVO | [CMXsrv_finobl_cons_dmod](#cmxsrv_finobl_cons_dmod) |
-| efectuar_Click | OBL, TRSD, APRCBL, EVO | [CMXsrv_finobl_rev_eve](#cmxsrv_finobl_rev_eve) |
-| form_activate | EVO | [CMXsrv_finobl_cons_eve](#cmxsrv_finobl_cons_eve) |
-| form_activate | EVO | [CMXsrv_finobl_cons_deve](#cmxsrv_finobl_cons_deve) |
-| ELIMINAR_Click | CTR | [CMXsrv_finobl_eli_ctr](#cmxsrv_finobl_eli_ctr) |
-| form_activate | CTR | [CMXsrv_finobl_cons_ctr](#cmxsrv_finobl_cons_ctr) |
-| nuevo_Click | COL, OBL, TIP, CTR | [CMXsrv_finobl_ing_ctr](#cmxsrv_finobl_ing_ctr) |
-| aceptar_Click | OBL, COR | [CMXsrv_finobl_cesion_obl](#cmxsrv_finobl_cesion_obl) |
-| banco_acreedor | COR | [CMXsrv_comgrl_lee_nom_cor](#cmxsrv_comgrl_lee_nom_cor) |
-| fld_obl_cod_bco_acre_lostfocus | COR | [CMXsrv_comgrl_lee_nom_cor](#cmxsrv_comgrl_lee_nom_cor) |
-| fld_obl_rut_acre_lostfocus | CLN | [CMXsrv_lee_cln](#cmxsrv_lee_cln) |
-| form_activate | OBL | [CMXsrv_finobl_busc_acre](#cmxsrv_finobl_busc_acre) |
-| Form_Load |  | [CMXsrv_cmx_get_codes](#cmxsrv_cmx_get_codes) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| buscar_Click | [CMXsrv_fincol_bsc_tip](#cmxsrv_fincol_bsc_tip) | TIP |
+| Proxima_Click | [CMXsrv_fincol_bsc_tip](#cmxsrv_fincol_bsc_tip) | TIP |
+| proximo_Click | [CMXsrv_fincol_bsc_tip](#cmxsrv_fincol_bsc_tip) | TIP |
+| buscar_Click | [CMXsrv_finobl_bus_cor](#cmxsrv_finobl_bus_cor) | COR |
+| proximo_Click | [CMXsrv_finobl_bus_cor](#cmxsrv_finobl_bus_cor) | COR |
+| ELIMINAR_Click | [CMXsrv_finobl_ecuo](#cmxsrv_finobl_ecuo) | OBL, CTO |
+| form_activate | [CMXsrv_finobl_gpln](#cmxsrv_finobl_gpln) | OBL, CTO |
+| form_activate | [CMXsrv_finobl_cons_plnpa](#cmxsrv_finobl_cons_plnpa) | OBL, CTO |
+| anunctb_Click | [CMXsrv_finobl_calc_anu](#cmxsrv_finobl_calc_anu) | OBL |
+| form_activate | [CMXsrv_finobl_lee_obl](#cmxsrv_finobl_lee_obl) | TIP, COR, OBL, ACMXINTERE, ACMXMONEDA, ACMXSUCSAL, CLN |
+| Form_Load | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) | ACMXFECPRO |
+| Mcbeanl_Click | [CMXsrv_finobl_calc_anu](#cmxsrv_finobl_calc_anu) | OBL |
+| Mcbectb_Click | [CMXsrv_finobl_ctb_oto](#cmxsrv_finobl_ctb_oto) | ACMXDESEMB, TIP, COD, OBL, CTO, CCO |
+| Mcbedel_Click | [CMXsrv_fincol_eli_obl](#cmxsrv_fincol_eli_obl) | OBL, OBL_ADI |
+| Mobl_liq_ope_Click | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL |
+| valida_error | [CMXsrv_finobl_val_obl](#cmxsrv_finobl_val_obl) | TIP, OBL, ACMXINTERE, warnmsg, OBL_ADI |
+| buscar_Click | [CMXsrv_finobl_bsc_obl](#cmxsrv_finobl_bsc_obl) | OBL |
+| fld_obl_tip_ope_LostFocus | [CMXsrv_fincol_lee_tip](#cmxsrv_fincol_lee_tip) | TIP |
+| Proxima_Click | [CMXsrv_finobl_bsc_obl](#cmxsrv_finobl_bsc_obl) | OBL |
+| contabilizar_Click | [CMXsrv_finobl_ictb_pag](#cmxsrv_finobl_ictb_pag) | OBL, CTO, EVO |
+| contabilizar_Click | [CMXsrv_finobl_obt_sdocuo](#cmxsrv_finobl_obt_sdocuo) | OBL, CTO |
+| form_activate | [CMXsrv_finobl_new_tas](#cmxsrv_finobl_new_tas) | CTO |
+| form_activate | [CMXsrv_finobl_cons_pag](#cmxsrv_finobl_cons_pag) | CNO |
+| form_activate | [CMXsrv_finobl_cons_detp](#cmxsrv_finobl_cons_detp) | OBL, CTO, EVO |
+| calcular_Click | [CMXsrv_finobl_calc_pror](#cmxsrv_finobl_calc_pror) | OBL |
+| form_activate | [CMXsrv_finobl_cons_pror](#cmxsrv_finobl_cons_pror) | OBL, EVO |
+| form_activate | [CMXsrv_finobl_cons_dpror](#cmxsrv_finobl_cons_dpror) | OBL, EVO |
+| contabilizar_Click | [CMXsrv_finobl_ctb_anu](#cmxsrv_finobl_ctb_anu) | TIP, COR, OBL, COL, CTO |
+| calcular_Click | [CMXsrv_finobl_calc_anu](#cmxsrv_finobl_calc_anu) | OBL |
+| form_activate | [CMXsrv_finobl_cons_anu](#cmxsrv_finobl_cons_anu) | CNO, EVO |
+| form_activate | [CMXsrv_finobl_cons_mod](#cmxsrv_finobl_cons_mod) | OBL, EVO |
+| form_activate | [CMXsrv_finobl_cons_dmod](#cmxsrv_finobl_cons_dmod) | CNO, EVO |
+| efectuar_Click | [CMXsrv_finobl_rev_eve](#cmxsrv_finobl_rev_eve) | OBL, TRSD, APRCBL, EVO |
+| form_activate | [CMXsrv_finobl_cons_eve](#cmxsrv_finobl_cons_eve) | EVO |
+| form_activate | [CMXsrv_finobl_cons_deve](#cmxsrv_finobl_cons_deve) | EVO |
+| ELIMINAR_Click | [CMXsrv_finobl_eli_ctr](#cmxsrv_finobl_eli_ctr) | CTR |
+| form_activate | [CMXsrv_finobl_cons_ctr](#cmxsrv_finobl_cons_ctr) | CTR |
+| nuevo_Click | [CMXsrv_finobl_ing_ctr](#cmxsrv_finobl_ing_ctr) | COL, OBL, TIP, CTR |
+| aceptar_Click | [CMXsrv_finobl_cesion_obl](#cmxsrv_finobl_cesion_obl) | OBL, COR |
+| banco_acreedor | [CMXsrv_comgrl_lee_nom_cor](#cmxsrv_comgrl_lee_nom_cor) | COR |
+| fld_obl_cod_bco_acre_lostfocus | [CMXsrv_comgrl_lee_nom_cor](#cmxsrv_comgrl_lee_nom_cor) | COR |
+| fld_obl_rut_acre_lostfocus | [CMXsrv_lee_cln](#cmxsrv_lee_cln) | CLN |
+| form_activate | [CMXsrv_finobl_busc_acre](#cmxsrv_finobl_busc_acre) | OBL |
+| Form_Load | [CMXsrv_cmx_get_codes](#cmxsrv_cmx_get_codes) |  |
 
 ---
 
 ## PAGOS
 <a name="pagos" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| CALCULAR_Click | TF_PPAG, TIP, TAS, CUO, comex..ACMXMONEDA, COL_ADI, OBL, CTR, NEG_ADI, ACMXINTERE, CAN, ICR, COL | [CMXsrv_fincol_efec_calpa](#cmxsrv_fincol_efec_calpa) |
-| Form_Activate | CAN, COL | [CMXsrv_fincol_cons_pag](#cmxsrv_fincol_cons_pag) |
-| Form_Load | ACMXDESEMB, EVE, COL, CUO | [CMXsrv_fincol_cons_detp](#cmxsrv_fincol_cons_detp) |
-| Aceptar_Click | ACMXINTERE, COL | [CMXsrv_fincol_calc_pror](#cmxsrv_fincol_calc_pror) |
-| Contabilizar_Click | TAS, CRD, NEG_ADI, ACMXINTERE, TIP, CUO, OBL, CAM_TAS, ACMXPLAZO, COL_ADI, LIB, ACMXINTEREFEC, CLN, ACMXOPEIMP, CTO, de, comex..ACMXINTEREFEC, COD, COM, ACMXMONEDAFEC, EVE, CAN, COL | [CMXsrv_fincol_cont_pror](#cmxsrv_fincol_cont_pror) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_pror](#cmxsrv_fincol_cons_pror) |
-| Form_Activate | ACMXDESEMB, EVE, COL | [CMXsrv_fincol_cons_dpror](#cmxsrv_fincol_cons_dpror) |
-| Aceptar_Click | TIP, COL | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) |
-| Aceptar_Click | COL | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) |
-| Aceptar_Click | TIP, CUO, COD, OBL, TF_ENL, ENL, CAN, COL, CTO | [CMXsrv_fincol_cctb_anu](#cmxsrv_fincol_cctb_anu) |
-| Form_Load | TIP, COL | [CMXsrv_fincol_calc_anu](#cmxsrv_fincol_calc_anu) |
-| Form_Load | TIP, COL | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) |
-| CALCULAR_Click | TIP, COL | [CMXsrv_fincol_calc_anu](#cmxsrv_fincol_calc_anu) |
-| Form_Activate | ACMXDESEMB, CAN, EVE, COL | [CMXsrv_fincol_cons_anu](#cmxsrv_fincol_cons_anu) |
-| Form_Activate | EVE, COL | [CMXsrv_fincol_cons_mod](#cmxsrv_fincol_cons_mod) |
-| Form_Activate | CAN, EVE | [CMXsrv_fincol_cons_dmod](#cmxsrv_fincol_cons_dmod) |
-| Form_Load | ACMXFECPRO | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) |
-| Form_Load |  | [CMXsrv_grl_trae_cod_bco](#cmxsrv_grl_trae_cod_bco) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| CALCULAR_Click | [CMXsrv_fincol_efec_calpa](#cmxsrv_fincol_efec_calpa) | TF_PPAG, TIP, TAS, CUO, comex..ACMXMONEDA, COL_ADI, OBL, CTR, NEG_ADI, ACMXINTERE, CAN, ICR, COL |
+| Form_Activate | [CMXsrv_fincol_cons_pag](#cmxsrv_fincol_cons_pag) | CAN, COL |
+| Form_Load | [CMXsrv_fincol_cons_detp](#cmxsrv_fincol_cons_detp) | ACMXDESEMB, EVE, COL, CUO |
+| Aceptar_Click | [CMXsrv_fincol_calc_pror](#cmxsrv_fincol_calc_pror) | ACMXINTERE, COL |
+| Contabilizar_Click | [CMXsrv_fincol_cont_pror](#cmxsrv_fincol_cont_pror) | TAS, CRD, NEG_ADI, ACMXINTERE, TIP, CUO, OBL, CAM_TAS, ACMXPLAZO, COL_ADI, LIB, ACMXINTEREFEC, CLN, ACMXOPEIMP, CTO, de, comex..ACMXINTEREFEC, COD, COM, ACMXMONEDAFEC, EVE, CAN, COL |
+| Form_Activate | [CMXsrv_fincol_cons_pror](#cmxsrv_fincol_cons_pror) | EVE, COL |
+| Form_Activate | [CMXsrv_fincol_cons_dpror](#cmxsrv_fincol_cons_dpror) | ACMXDESEMB, EVE, COL |
+| Aceptar_Click | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) | TIP, COL |
+| Aceptar_Click | [CMXsrv_col_trae_num_ope](#cmxsrv_col_trae_num_ope) | COL |
+| Aceptar_Click | [CMXsrv_fincol_cctb_anu](#cmxsrv_fincol_cctb_anu) | TIP, CUO, COD, OBL, TF_ENL, ENL, CAN, COL, CTO |
+| Form_Load | [CMXsrv_fincol_calc_anu](#cmxsrv_fincol_calc_anu) | TIP, COL |
+| Form_Load | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) | TIP, COL |
+| CALCULAR_Click | [CMXsrv_fincol_calc_anu](#cmxsrv_fincol_calc_anu) | TIP, COL |
+| Form_Activate | [CMXsrv_fincol_cons_anu](#cmxsrv_fincol_cons_anu) | ACMXDESEMB, CAN, EVE, COL |
+| Form_Activate | [CMXsrv_fincol_cons_mod](#cmxsrv_fincol_cons_mod) | EVE, COL |
+| Form_Activate | [CMXsrv_fincol_cons_dmod](#cmxsrv_fincol_cons_dmod) | CAN, EVE |
+| Form_Load | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) | ACMXFECPRO |
+| Form_Load | [CMXsrv_grl_trae_cod_bco](#cmxsrv_grl_trae_cod_bco) |  |
 
 ---
 
 ## PGOEXT
 <a name="pgoext" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| calcular_Click | TIP, CUO, comex..ACMXMONEDA, OBL, CTR, COL, CTO | [CMXsrv_fincol_cal_pext](#cmxsrv_fincol_cal_pext) |
-| Contabilizar_Click | TIP, COL | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) |
-| Contabilizar_Click | TIP, ACMXDESEMB, comex..ACMXINTEREFEC, TAS, CUO, COD, OBL, COL_ADI, ACMXMONEDAFEC, CTR, NEG_ADI, ACMXINTERE, EVE, ACMXINTEREFEC, COL, CTO, CCO | [CMXsrv_fincol_ctb_pext](#cmxsrv_fincol_ctb_pext) |
-| calcular_Click | TIP, OBL, ACMXINTERE, ACMXMONEDA, OBL_ADI, CTO | [CMXsrv_finobl_cal_pext](#cmxsrv_finobl_cal_pext) |
-| Contabilizar_Click | ACMXDESEMB, TIP, COD, OBL, ACMXMONEDAFEC, CTO, CCO | [CMXsrv_finobl_ctb_pext](#cmxsrv_finobl_ctb_pext) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| Form_Load | ACMXFECPRO | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| calcular_Click | [CMXsrv_fincol_cal_pext](#cmxsrv_fincol_cal_pext) | TIP, CUO, comex..ACMXMONEDA, OBL, CTR, COL, CTO |
+| Contabilizar_Click | [CMXsrv_busc_cod_ope](#cmxsrv_busc_cod_ope) | TIP, COL |
+| Contabilizar_Click | [CMXsrv_fincol_ctb_pext](#cmxsrv_fincol_ctb_pext) | TIP, ACMXDESEMB, comex..ACMXINTEREFEC, TAS, CUO, COD, OBL, COL_ADI, ACMXMONEDAFEC, CTR, NEG_ADI, ACMXINTERE, EVE, ACMXINTEREFEC, COL, CTO, CCO |
+| calcular_Click | [CMXsrv_finobl_cal_pext](#cmxsrv_finobl_cal_pext) | TIP, OBL, ACMXINTERE, ACMXMONEDA, OBL_ADI, CTO |
+| Contabilizar_Click | [CMXsrv_finobl_ctb_pext](#cmxsrv_finobl_ctb_pext) | ACMXDESEMB, TIP, COD, OBL, ACMXMONEDAFEC, CTO, CCO |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| Form_Load | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) | ACMXFECPRO |
 
 ---
 
 ## ARCOS
 <a name="arcos" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Eliminar_Click | ADI, CRD, ARC, NEG, COB, INF, COL | [CMXsrv_iarc_eli_arc](#cmxsrv_iarc_eli_arc) |
-| Form_activate | ARC | [CMXsrv_iarc_busc_arc](#cmxsrv_iarc_busc_arc) |
-| aceptar_click | INF | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) |
-| aceptar_click | CRD, comex..ACMXMONEDA, ARC, NEG, CBR, ACMXMONEDAFEC, INF, COL | [CMXsrv_iarc_act_arc](#cmxsrv_iarc_act_arc) |
-| Form_Load | ARC | [CMXsrv_iarc_lee_arc](#cmxsrv_iarc_lee_arc) |
-| buscar_Click | ARC | [CMXsrv_iinf_busc_opr](#cmxsrv_iinf_busc_opr) |
-| Form_activate | INF | [CMXsrv_iinf_lee_vlr](#cmxsrv_iinf_lee_vlr) |
-| aceptar_click | CRD, comex..ACMXMONEDA, ARC, NEG, CBR, ACMXMONEDAFEC, INF, COL | [CMXsrv_iarc_act_arc](#cmxsrv_iarc_act_arc) |
-| Form_activate | INF | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) |
-| reversar_Click | INF, ARC, INC, EVI | [CMXsrv_iinf_rev_evi](#cmxsrv_iinf_rev_evi) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Eliminar_Click | [CMXsrv_iarc_eli_arc](#cmxsrv_iarc_eli_arc) | ADI, CRD, ARC, NEG, COB, INF, COL |
+| Form_activate | [CMXsrv_iarc_busc_arc](#cmxsrv_iarc_busc_arc) | ARC |
+| aceptar_click | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) | INF |
+| aceptar_click | [CMXsrv_iarc_act_arc](#cmxsrv_iarc_act_arc) | CRD, comex..ACMXMONEDA, ARC, NEG, CBR, ACMXMONEDAFEC, INF, COL |
+| Form_Load | [CMXsrv_iarc_lee_arc](#cmxsrv_iarc_lee_arc) | ARC |
+| buscar_Click | [CMXsrv_iinf_busc_opr](#cmxsrv_iinf_busc_opr) | ARC |
+| Form_activate | [CMXsrv_iinf_lee_vlr](#cmxsrv_iinf_lee_vlr) | INF |
+| aceptar_click | [CMXsrv_iarc_act_arc](#cmxsrv_iarc_act_arc) | CRD, comex..ACMXMONEDA, ARC, NEG, CBR, ACMXMONEDAFEC, INF, COL |
+| Form_activate | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) | INF |
+| reversar_Click | [CMXsrv_iinf_rev_evi](#cmxsrv_iinf_rev_evi) | INF, ARC, INC, EVI |
 
 ---
 
 ## COBERIMP
 <a name="coberimp" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Form_Activate | DIC, POSBCX10, COB, ACMXBCOCEN, ACMXMONEDA, ACMXPAIS | [CMXsrv_icob_lee_pln](#cmxsrv_icob_lee_pln) |
-| Mcobcur_Click | comex.dbo, COB | [CMXsrv_icob_cur_cob](#cmxsrv_icob_cur_cob) |
-| Mcobcur_Click | DDI, ACMXDESEMB, ADI, DIC, ACMXPRMGRL, ACMXMONEDAFEC, COB, INF, warnmsg | [CMXsrv_icob_pag_sop](#cmxsrv_icob_pag_sop) |
-| MCOBELI_CLICK | COB | [CMXsrv_icob_eli_pln](#cmxsrv_icob_eli_pln) |
-| Mcobrev_Click | POSBCX10, TRSD, PSO, comex..COB, COB | [CMXsrv_icob_rev_etd](#cmxsrv_icob_rev_etd) |
-| Mcobvali_Click | DDI, LCB, ADI, CUO, ARC, NEG, CBR, COB, INF, ACMXFPAIMP, warnmsg, COL | [CMXsrv_icob_val_cob](#cmxsrv_icob_val_cob) |
-| buscar_click | COB | [CMXsrv_icob_busc_pln](#cmxsrv_icob_busc_pln) |
-| FLD_COB_COD_CLI_LostFocus | CLN | [CMXsrv_icob_lee_cln](#cmxsrv_icob_lee_cln) |
-| PROXIMAS_Click | COB | [CMXsrv_icob_busc_pln](#cmxsrv_icob_busc_pln) |
-| ACEPTAR_Click | CRD, ARC, CBR, COB, INF, tbl_User, CLN, COL | [CMXsrv_icob_crea_norm](#cmxsrv_icob_crea_norm) |
-| ACEPTAR_Click | DIC, COB | [CMXsrv_icob_crea_reem](#cmxsrv_icob_crea_reem) |
-| ACEPTAR_Click | CLN, COB | [CMXsrv_icob_act_gral](#cmxsrv_icob_act_gral) |
-| FLD_COB_COD_CLI_LostFocus | CLN | [CMXsrv_icob_lee_cln2](#cmxsrv_icob_lee_cln2) |
-| Form_Activate | ACMXBCOCEN, ACMXPAIS, COB | [CMXsrv_icob_lee_gral](#cmxsrv_icob_lee_gral) |
-| ACEPTAR_Click | ACMXMONEDAFEC, COB | [CMXsrv_icob_act_val](#cmxsrv_icob_act_val) |
-| Form_Activate | COB | [CMXsrv_icob_lee_val](#cmxsrv_icob_lee_val) |
-| ACEPTAR_Click | COB | [CMXsrv_icob_act_acu](#cmxsrv_icob_act_acu) |
-| Form_Activate | ACMXPAIS, COB | [CMXsrv_icob_lee_acu](#cmxsrv_icob_lee_acu) |
-| Form_Load | ACMXPAIS, COB | [CMXsrv_icob_lee_acu](#cmxsrv_icob_lee_acu) |
-| ELIMINAR_Click | DIC, COB | [CMXsrv_icob_eli_int](#cmxsrv_icob_eli_int) |
-| Form_Activate | DIC | [CMXsrv_icob_busc_int](#cmxsrv_icob_busc_int) |
-| ACEPTAR_Click | DIC, COB | [CMXsrv_icob_ingmod_int](#cmxsrv_icob_ingmod_int) |
-| Form_Activate | DIC | [CMXsrv_icob_lee_int](#cmxsrv_icob_lee_int) |
-| ACEPTAR_Click | CLN, tbl_User, COB | [CMXsrv_icob_ing_mod_srf](#cmxsrv_icob_ing_mod_srf) |
-| CmdEliminar_Click | COB | [CMXsrv_icob_eli_pln](#cmxsrv_icob_eli_pln) |
-| CmdReversar_Click | POSBCX10, TRSD, PSO, comex..COB, COB | [CMXsrv_icob_rev_etd](#cmxsrv_icob_rev_etd) |
-| CURSAR_Click | CLN, tbl_User, COB | [CMXsrv_icob_ing_mod_srf](#cmxsrv_icob_ing_mod_srf) |
-| CURSAR_Click | DDI, ACMXDESEMB, ADI, DIC, ACMXPRMGRL, ACMXMONEDAFEC, COB, INF, warnmsg | [CMXsrv_icob_pag_sop](#cmxsrv_icob_pag_sop) |
-| FLD_COB_COD_CLI_LostFocus | CLN | [CMXsrv_icob_lee_cln2](#cmxsrv_icob_lee_cln2) |
-| Reversar_Click | POSBCX10, TRSD, PSO, comex..COB, COB | [CMXsrv_icob_rev_etd](#cmxsrv_icob_rev_etd) |
-| ACEPTAR_Click | DIC, POSBCX10, ACMXMONEDAFEC, PSO, COB, ACMXTPOAUTN | [CMXsrv_icob_anu](#cmxsrv_icob_anu) |
-| Form_Load | COB | [CMXsrv_icob_lee_anu](#cmxsrv_icob_lee_anu) |
-| FLD_COB_COD_CLI_LostFocus | CLN | [CMXsrv_icob_lee_cln](#cmxsrv_icob_lee_cln) |
-| ACEPTAR_Click | DDI, ACMXDESEMB, ADI, DIC, ACMXPRMGRL, ACMXMONEDAFEC, COB, INF, warnmsg | [CMXsrv_icob_pag_sop](#cmxsrv_icob_pag_sop) |
-| ACEPTAR_Click | comex..COB, COB | [CMXsrv_icob_cur_reem](#cmxsrv_icob_cur_reem) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Form_Activate | [CMXsrv_icob_lee_pln](#cmxsrv_icob_lee_pln) | DIC, POSBCX10, COB, ACMXBCOCEN, ACMXMONEDA, ACMXPAIS |
+| Mcobcur_Click | [CMXsrv_icob_cur_cob](#cmxsrv_icob_cur_cob) | comex.dbo, COB |
+| Mcobcur_Click | [CMXsrv_icob_pag_sop](#cmxsrv_icob_pag_sop) | DDI, ACMXDESEMB, ADI, DIC, ACMXPRMGRL, ACMXMONEDAFEC, COB, INF, warnmsg |
+| MCOBELI_CLICK | [CMXsrv_icob_eli_pln](#cmxsrv_icob_eli_pln) | COB |
+| Mcobrev_Click | [CMXsrv_icob_rev_etd](#cmxsrv_icob_rev_etd) | POSBCX10, TRSD, PSO, comex..COB, COB |
+| Mcobvali_Click | [CMXsrv_icob_val_cob](#cmxsrv_icob_val_cob) | DDI, LCB, ADI, CUO, ARC, NEG, CBR, COB, INF, ACMXFPAIMP, warnmsg, COL |
+| buscar_click | [CMXsrv_icob_busc_pln](#cmxsrv_icob_busc_pln) | COB |
+| FLD_COB_COD_CLI_LostFocus | [CMXsrv_icob_lee_cln](#cmxsrv_icob_lee_cln) | CLN |
+| PROXIMAS_Click | [CMXsrv_icob_busc_pln](#cmxsrv_icob_busc_pln) | COB |
+| ACEPTAR_Click | [CMXsrv_icob_crea_norm](#cmxsrv_icob_crea_norm) | CRD, ARC, CBR, COB, INF, tbl_User, CLN, COL |
+| ACEPTAR_Click | [CMXsrv_icob_crea_reem](#cmxsrv_icob_crea_reem) | DIC, COB |
+| ACEPTAR_Click | [CMXsrv_icob_act_gral](#cmxsrv_icob_act_gral) | CLN, COB |
+| FLD_COB_COD_CLI_LostFocus | [CMXsrv_icob_lee_cln2](#cmxsrv_icob_lee_cln2) | CLN |
+| Form_Activate | [CMXsrv_icob_lee_gral](#cmxsrv_icob_lee_gral) | ACMXBCOCEN, ACMXPAIS, COB |
+| ACEPTAR_Click | [CMXsrv_icob_act_val](#cmxsrv_icob_act_val) | ACMXMONEDAFEC, COB |
+| Form_Activate | [CMXsrv_icob_lee_val](#cmxsrv_icob_lee_val) | COB |
+| ACEPTAR_Click | [CMXsrv_icob_act_acu](#cmxsrv_icob_act_acu) | COB |
+| Form_Activate | [CMXsrv_icob_lee_acu](#cmxsrv_icob_lee_acu) | ACMXPAIS, COB |
+| Form_Load | [CMXsrv_icob_lee_acu](#cmxsrv_icob_lee_acu) | ACMXPAIS, COB |
+| ELIMINAR_Click | [CMXsrv_icob_eli_int](#cmxsrv_icob_eli_int) | DIC, COB |
+| Form_Activate | [CMXsrv_icob_busc_int](#cmxsrv_icob_busc_int) | DIC |
+| ACEPTAR_Click | [CMXsrv_icob_ingmod_int](#cmxsrv_icob_ingmod_int) | DIC, COB |
+| Form_Activate | [CMXsrv_icob_lee_int](#cmxsrv_icob_lee_int) | DIC |
+| ACEPTAR_Click | [CMXsrv_icob_ing_mod_srf](#cmxsrv_icob_ing_mod_srf) | CLN, tbl_User, COB |
+| CmdEliminar_Click | [CMXsrv_icob_eli_pln](#cmxsrv_icob_eli_pln) | COB |
+| CmdReversar_Click | [CMXsrv_icob_rev_etd](#cmxsrv_icob_rev_etd) | POSBCX10, TRSD, PSO, comex..COB, COB |
+| CURSAR_Click | [CMXsrv_icob_ing_mod_srf](#cmxsrv_icob_ing_mod_srf) | CLN, tbl_User, COB |
+| CURSAR_Click | [CMXsrv_icob_pag_sop](#cmxsrv_icob_pag_sop) | DDI, ACMXDESEMB, ADI, DIC, ACMXPRMGRL, ACMXMONEDAFEC, COB, INF, warnmsg |
+| FLD_COB_COD_CLI_LostFocus | [CMXsrv_icob_lee_cln2](#cmxsrv_icob_lee_cln2) | CLN |
+| Reversar_Click | [CMXsrv_icob_rev_etd](#cmxsrv_icob_rev_etd) | POSBCX10, TRSD, PSO, comex..COB, COB |
+| ACEPTAR_Click | [CMXsrv_icob_anu](#cmxsrv_icob_anu) | DIC, POSBCX10, ACMXMONEDAFEC, PSO, COB, ACMXTPOAUTN |
+| Form_Load | [CMXsrv_icob_lee_anu](#cmxsrv_icob_lee_anu) | COB |
+| FLD_COB_COD_CLI_LostFocus | [CMXsrv_icob_lee_cln](#cmxsrv_icob_lee_cln) | CLN |
+| ACEPTAR_Click | [CMXsrv_icob_pag_sop](#cmxsrv_icob_pag_sop) | DDI, ACMXDESEMB, ADI, DIC, ACMXPRMGRL, ACMXMONEDAFEC, COB, INF, warnmsg |
+| ACEPTAR_Click | [CMXsrv_icob_cur_reem](#cmxsrv_icob_cur_reem) | comex..COB, COB |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## COBRANZA
 <a name="cobranza" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| ejecut_avi_imp_999 | SWT | [CMXsrv_busc_cor_swf](#cmxsrv_busc_cor_swf) |
-| ejecut_avi_imp_999 | SMS | [CMXsrv_swf_bus_sms](#cmxsrv_swf_bus_sms) |
-| Form_Activate | ACMXPAIS, COR, LCB, ACMXVIATPT, ACMXBCOBCC, CBR, ACMXMONEDA, ACMXCLACOM, tbl_User, ACMXSUCSAL, CLN | [CMXsrv_icbr_lee_cbr](#cmxsrv_icbr_lee_cbr) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| Mcbrace_Click | comex..CBR, LCB, CBR | [CMXsrv_icbr_acep_let](#cmxsrv_icbr_acep_let) |
-| Mcbrcon_Click | OPE_BCI, APRCBL, LCB, CBR | [CMXsrv_icbr_cont_cbr](#cmxsrv_icbr_cont_cbr) |
-| Mcbreli_click | ARC, REMENT, CBR, comex..COL | [CMXsrv_icbr_eli_cbr](#cmxsrv_icbr_eli_cbr) |
-| McbrTxt999_Click | ACMXSUCSAL, MCBRCTP, CBR, ACMXPAIS, CLN, CBRANX | [CMXsrv_icbr_lee_ctp](#cmxsrv_icbr_lee_ctp) |
-| Mcbrtxtrec_Click | ACMXDESEMB, ASND, ACMXBCOBCC, ARC, CBR, ACMXINTERE, PCX, ECE, ACMXMONEDA, ACMXSUCSAL, CLN | [CMXsrv_icbr_avi1](#cmxsrv_icbr_avi1) |
-| aceptar_Click | ACMXSUCSAL, tbl_User | [CMXsrv_val_suc](#cmxsrv_val_suc) |
-| buscar_Click | ACMXSUCSAL, ACMXMONEDA, CLN, CBR | [CMXsrv_icbr_busc_cbr](#cmxsrv_icbr_busc_cbr) |
-| fld_aux_glo_ofi_LostFocus | ACMXSUCSAL, tbl_User | [CMXsrv_val_suc](#cmxsrv_val_suc) |
-| fld_cbr_cod_gdo_LostFocus | CLN | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) |
-| fld_cbr_cod_ofi_lostfocus | ACMXSUCSAL, tbl_User | [CMXsrv_val_suc](#cmxsrv_val_suc) |
-| proximas_Click | ACMXSUCSAL, ACMXMONEDA, CLN, CBR | [CMXsrv_icbr_busc_cbr](#cmxsrv_icbr_busc_cbr) |
-| crear_Click | CLN, tbl_User | [CMXsrv_icbr_crea_cbr](#cmxsrv_icbr_crea_cbr) |
-| fld_cbr_cod_gdo_LostFocus | CLN | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) |
-| fld_cbr_cod_ofi_lostfocus | ACMXSUCSAL, tbl_User | [CMXsrv_val_suc](#cmxsrv_val_suc) |
-| INGRESAR_Click | CLN, tbl_User | [CMXsrv_icbr_crea_cbr](#cmxsrv_icbr_crea_cbr) |
-| fld_cbr_cod_gdo_LostFocus | CLN | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) |
-| Form_Activate | COB | [CMXsrv_icbr_lee_cob](#cmxsrv_icbr_lee_cob) |
-| Form_Load | ACMXSUCSAL, MCBRCTP, CBR, ACMXPAIS, CLN, CBRANX | [CMXsrv_icbr_lee_ctp](#cmxsrv_icbr_lee_ctp) |
-| INGRESAR_Click | comex..CBR, MCBRCTP, CBRANX, CBR | [CMXsrv_icbr_act_ctp](#cmxsrv_icbr_act_ctp) |
-| Form_Activate | COB | [CMXsrv_icbr_lee_cob](#cmxsrv_icbr_lee_cob) |
-| Form_Load | ACMXVIATPT, CBR, ACMXINTERE, ACMXMONEDA, MCBRTER, ACMXCLACOM, ACMXPAIS | [CMXsrv_icbr_lee_trm](#cmxsrv_icbr_lee_trm) |
-| INGRESAR_Click | LCB, COM, CBR, MCBRTER, warnmsg, CLN | [CMXsrv_icbr_act_trm](#cmxsrv_icbr_act_trm) |
-| Form_Activate | COB | [CMXsrv_icbr_lee_cob](#cmxsrv_icbr_lee_cob) |
-| Form_Load | LCB, MCBRDOC, MLCB, CBR, ACMXMONEDA | [CMXsrv_icbr_lee_doc](#cmxsrv_icbr_lee_doc) |
-| INGRESAR_Click | LCB, MCBRDOC, MLCB, CBR, comex..CBR | [CMXsrv_icbr_act_doc](#cmxsrv_icbr_act_doc) |
-| Form_Activate | MLCB, comex..MLCB, comex..LCB | [CMXsrv_icbr_busc_let](#cmxsrv_icbr_busc_let) |
-| aceptar_Click | LCB, CBR, comex.dbo | [CMXsrv_icbr_ingmod_let](#cmxsrv_icbr_ingmod_let) |
-| eliminar_Click | LCB, MCBRDOC, MLCB, CBR, comex..COL | [CMXsrv_icbr_eli_let](#cmxsrv_icbr_eli_let) |
-| Form_Activate | ACMXNOTARIO, LCB, MLCB | [CMXsrv_icbr_lee_let](#cmxsrv_icbr_lee_let) |
-| aceptar_Click | comex..CBR, LCB, CBR | [CMXsrv_icbr_prorr](#cmxsrv_icbr_prorr) |
-| EFECTUAR_Click | APRCBL, TRSD, CBR, vig_trs, ECE, DIP, LIB, tbl_User | [CMXsrv_icbr_rev_eve](#cmxsrv_icbr_rev_eve) |
-| Form_Activate | ECE | [CMXsrv_icbr_busc_eve](#cmxsrv_icbr_busc_eve) |
-| Form_Load | ECE, ACMXDESEMB | [CMXsrv_icbr_lee_eve](#cmxsrv_icbr_lee_eve) |
-| Form_Load | CBR | [CMXsrv_icbr_lee_ent_doc](#cmxsrv_icbr_lee_ent_doc) |
-| aceptar_Click | LCB, CBR | [CMXsrv_icbr_prot](#cmxsrv_icbr_prot) |
-| Form_Load | LCB, CBR | [CMXsrv_icbr_pcg_prot](#cmxsrv_icbr_pcg_prot) |
-| aceptar_Click | comex..CBR, LCB, CBR | [CMXsrv_icbr_liq_sdo](#cmxsrv_icbr_liq_sdo) |
-| aceptar_Click | comex..CBR, CBR | [CMXsrv_icbr_act_vis](#cmxsrv_icbr_act_vis) |
-| eliminar_Click | REP | [CMXsrv_icbr_eli_rep](#cmxsrv_icbr_eli_rep) |
-| Form_Activate | REP | [CMXsrv_icbr_busc_rep](#cmxsrv_icbr_busc_rep) |
-| aceptar_Click | REP, CBR | [CMXsrv_icbr_imod_rep](#cmxsrv_icbr_imod_rep) |
-| aceptar_Click | comex..CBR, LCB, CBR | [CMXsrv_icbr_ent_doc](#cmxsrv_icbr_ent_doc) |
-| Form_Load | CBR | [CMXsrv_icbr_lee_ent_doc](#cmxsrv_icbr_lee_ent_doc) |
-| aceptar_Click | comex..CBR, ACMXSUCSAL, CBR | [CMXsrv_icbr_trf_ofi](#cmxsrv_icbr_trf_ofi) |
-| aceptar_Click | ACMXSUCSAL, tbl_User | [CMXsrv_val_suc](#cmxsrv_val_suc) |
-| aceptar_Click | comex..CBR, ARC, CBR, LCB | [CMXsrv_icbr_trf_bco](#cmxsrv_icbr_trf_bco) |
-| aceptar_Click | comex..CBR, CBR | [CMXsrv_icbr_act_inst](#cmxsrv_icbr_act_inst) |
-| enviar_Click | switxt, switxt1 | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) |
-| Form_Load | DDI, LCB, COR, ADI, ARC, ACMXMONEDAFEC, CBR, ACMXINTEREFEC, warnmsg | [CMXsrv_icbr_val_cbr](#cmxsrv_icbr_val_cbr) |
-| word_Click | DDI, LCB, COR, ADI, ARC, ACMXMONEDAFEC, CBR, ACMXINTEREFEC, warnmsg | [CMXsrv_icbr_val_cbr](#cmxsrv_icbr_val_cbr) |
-| word_Click | switxt, switxt1 | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| ejecut_avi_imp_999 | [CMXsrv_busc_cor_swf](#cmxsrv_busc_cor_swf) | SWT |
+| ejecut_avi_imp_999 | [CMXsrv_swf_bus_sms](#cmxsrv_swf_bus_sms) | SMS |
+| Form_Activate | [CMXsrv_icbr_lee_cbr](#cmxsrv_icbr_lee_cbr) | ACMXPAIS, COR, LCB, ACMXVIATPT, ACMXBCOBCC, CBR, ACMXMONEDA, ACMXCLACOM, tbl_User, ACMXSUCSAL, CLN |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| Mcbrace_Click | [CMXsrv_icbr_acep_let](#cmxsrv_icbr_acep_let) | comex..CBR, LCB, CBR |
+| Mcbrcon_Click | [CMXsrv_icbr_cont_cbr](#cmxsrv_icbr_cont_cbr) | OPE_BCI, APRCBL, LCB, CBR |
+| Mcbreli_click | [CMXsrv_icbr_eli_cbr](#cmxsrv_icbr_eli_cbr) | ARC, REMENT, CBR, comex..COL |
+| McbrTxt999_Click | [CMXsrv_icbr_lee_ctp](#cmxsrv_icbr_lee_ctp) | ACMXSUCSAL, MCBRCTP, CBR, ACMXPAIS, CLN, CBRANX |
+| Mcbrtxtrec_Click | [CMXsrv_icbr_avi1](#cmxsrv_icbr_avi1) | ACMXDESEMB, ASND, ACMXBCOBCC, ARC, CBR, ACMXINTERE, PCX, ECE, ACMXMONEDA, ACMXSUCSAL, CLN |
+| aceptar_Click | [CMXsrv_val_suc](#cmxsrv_val_suc) | ACMXSUCSAL, tbl_User |
+| buscar_Click | [CMXsrv_icbr_busc_cbr](#cmxsrv_icbr_busc_cbr) | ACMXSUCSAL, ACMXMONEDA, CLN, CBR |
+| fld_aux_glo_ofi_LostFocus | [CMXsrv_val_suc](#cmxsrv_val_suc) | ACMXSUCSAL, tbl_User |
+| fld_cbr_cod_gdo_LostFocus | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) | CLN |
+| fld_cbr_cod_ofi_lostfocus | [CMXsrv_val_suc](#cmxsrv_val_suc) | ACMXSUCSAL, tbl_User |
+| proximas_Click | [CMXsrv_icbr_busc_cbr](#cmxsrv_icbr_busc_cbr) | ACMXSUCSAL, ACMXMONEDA, CLN, CBR |
+| crear_Click | [CMXsrv_icbr_crea_cbr](#cmxsrv_icbr_crea_cbr) | CLN, tbl_User |
+| fld_cbr_cod_gdo_LostFocus | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) | CLN |
+| fld_cbr_cod_ofi_lostfocus | [CMXsrv_val_suc](#cmxsrv_val_suc) | ACMXSUCSAL, tbl_User |
+| INGRESAR_Click | [CMXsrv_icbr_crea_cbr](#cmxsrv_icbr_crea_cbr) | CLN, tbl_User |
+| fld_cbr_cod_gdo_LostFocus | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) | CLN |
+| Form_Activate | [CMXsrv_icbr_lee_cob](#cmxsrv_icbr_lee_cob) | COB |
+| Form_Load | [CMXsrv_icbr_lee_ctp](#cmxsrv_icbr_lee_ctp) | ACMXSUCSAL, MCBRCTP, CBR, ACMXPAIS, CLN, CBRANX |
+| INGRESAR_Click | [CMXsrv_icbr_act_ctp](#cmxsrv_icbr_act_ctp) | comex..CBR, MCBRCTP, CBRANX, CBR |
+| Form_Activate | [CMXsrv_icbr_lee_cob](#cmxsrv_icbr_lee_cob) | COB |
+| Form_Load | [CMXsrv_icbr_lee_trm](#cmxsrv_icbr_lee_trm) | ACMXVIATPT, CBR, ACMXINTERE, ACMXMONEDA, MCBRTER, ACMXCLACOM, ACMXPAIS |
+| INGRESAR_Click | [CMXsrv_icbr_act_trm](#cmxsrv_icbr_act_trm) | LCB, COM, CBR, MCBRTER, warnmsg, CLN |
+| Form_Activate | [CMXsrv_icbr_lee_cob](#cmxsrv_icbr_lee_cob) | COB |
+| Form_Load | [CMXsrv_icbr_lee_doc](#cmxsrv_icbr_lee_doc) | LCB, MCBRDOC, MLCB, CBR, ACMXMONEDA |
+| INGRESAR_Click | [CMXsrv_icbr_act_doc](#cmxsrv_icbr_act_doc) | LCB, MCBRDOC, MLCB, CBR, comex..CBR |
+| Form_Activate | [CMXsrv_icbr_busc_let](#cmxsrv_icbr_busc_let) | MLCB, comex..MLCB, comex..LCB |
+| aceptar_Click | [CMXsrv_icbr_ingmod_let](#cmxsrv_icbr_ingmod_let) | LCB, CBR, comex.dbo |
+| eliminar_Click | [CMXsrv_icbr_eli_let](#cmxsrv_icbr_eli_let) | LCB, MCBRDOC, MLCB, CBR, comex..COL |
+| Form_Activate | [CMXsrv_icbr_lee_let](#cmxsrv_icbr_lee_let) | ACMXNOTARIO, LCB, MLCB |
+| aceptar_Click | [CMXsrv_icbr_prorr](#cmxsrv_icbr_prorr) | comex..CBR, LCB, CBR |
+| EFECTUAR_Click | [CMXsrv_icbr_rev_eve](#cmxsrv_icbr_rev_eve) | APRCBL, TRSD, CBR, vig_trs, ECE, DIP, LIB, tbl_User |
+| Form_Activate | [CMXsrv_icbr_busc_eve](#cmxsrv_icbr_busc_eve) | ECE |
+| Form_Load | [CMXsrv_icbr_lee_eve](#cmxsrv_icbr_lee_eve) | ECE, ACMXDESEMB |
+| Form_Load | [CMXsrv_icbr_lee_ent_doc](#cmxsrv_icbr_lee_ent_doc) | CBR |
+| aceptar_Click | [CMXsrv_icbr_prot](#cmxsrv_icbr_prot) | LCB, CBR |
+| Form_Load | [CMXsrv_icbr_pcg_prot](#cmxsrv_icbr_pcg_prot) | LCB, CBR |
+| aceptar_Click | [CMXsrv_icbr_liq_sdo](#cmxsrv_icbr_liq_sdo) | comex..CBR, LCB, CBR |
+| aceptar_Click | [CMXsrv_icbr_act_vis](#cmxsrv_icbr_act_vis) | comex..CBR, CBR |
+| eliminar_Click | [CMXsrv_icbr_eli_rep](#cmxsrv_icbr_eli_rep) | REP |
+| Form_Activate | [CMXsrv_icbr_busc_rep](#cmxsrv_icbr_busc_rep) | REP |
+| aceptar_Click | [CMXsrv_icbr_imod_rep](#cmxsrv_icbr_imod_rep) | REP, CBR |
+| aceptar_Click | [CMXsrv_icbr_ent_doc](#cmxsrv_icbr_ent_doc) | comex..CBR, LCB, CBR |
+| Form_Load | [CMXsrv_icbr_lee_ent_doc](#cmxsrv_icbr_lee_ent_doc) | CBR |
+| aceptar_Click | [CMXsrv_icbr_trf_ofi](#cmxsrv_icbr_trf_ofi) | comex..CBR, ACMXSUCSAL, CBR |
+| aceptar_Click | [CMXsrv_val_suc](#cmxsrv_val_suc) | ACMXSUCSAL, tbl_User |
+| aceptar_Click | [CMXsrv_icbr_trf_bco](#cmxsrv_icbr_trf_bco) | comex..CBR, ARC, CBR, LCB |
+| aceptar_Click | [CMXsrv_icbr_act_inst](#cmxsrv_icbr_act_inst) | comex..CBR, CBR |
+| enviar_Click | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) | switxt, switxt1 |
+| Form_Load | [CMXsrv_icbr_val_cbr](#cmxsrv_icbr_val_cbr) | DDI, LCB, COR, ADI, ARC, ACMXMONEDAFEC, CBR, ACMXINTEREFEC, warnmsg |
+| word_Click | [CMXsrv_icbr_val_cbr](#cmxsrv_icbr_val_cbr) | DDI, LCB, COR, ADI, ARC, ACMXMONEDAFEC, CBR, ACMXINTEREFEC, warnmsg |
+| word_Click | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) | switxt, switxt1 |
 
 ---
 
 ## CRDEXT
 <a name="crdext" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Aceptar_Click | MIBAB, IBAB | [CMXsrv_icrd_a_ibab](#cmxsrv_icrd_a_ibab) |
-| Form_Load | IBAB, COL, MIBAB | [CMXsrv_icrd_lee_glo_ibab](#cmxsrv_icrd_lee_glo_ibab) |
-| Aceptar_Click | MIBAR, IBAR | [CMXsrv_icrd_a_ibar](#cmxsrv_icrd_a_ibar) |
-| Form_Load | MIBAR, COL, IBAR | [CMXsrv_icrd_lee_glo_ibar](#cmxsrv_icrd_lee_glo_ibar) |
-| buscar_click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) |
-| Aceptar_Click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_cod_txt_swf](#cmxsrv_icrd_lee_cod_txt_swf) |
-| buscar_click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) |
-| Form_Load | MCTP, CRD | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) |
-| llena_arreglo | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) |
-| proximo_Click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) |
-| aceptar_Click | CRD | [CMXsrv_icrd_ing_acu](#cmxsrv_icrd_ing_acu) |
-| Form_Load | CRD | [CMXsrv_icrd_lee_acu](#cmxsrv_icrd_lee_acu) |
-| aceptar_Click | CRD, comex..COL, OPE_BCI, COL, comex..CRD | [CMXsrv_icrd_rech_sol](#cmxsrv_icrd_rech_sol) |
-| aceptar_Click | INF, ARC, COL, CRD | [CMXsrv_icrd_end](#cmxsrv_icrd_end) |
-| Form_Load | CRD | [CMXsrv_icrd_lee_dat_end](#cmxsrv_icrd_lee_dat_end) |
-| aceptar_Click | COR, ACMXMONEDAFEC, CRD, LCR | [CMXsrv_icrd_asignar_cor](#cmxsrv_icrd_asignar_cor) |
-| buscar_Click | COR | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) |
-| proximo_Click | COR | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Aceptar_Click | [CMXsrv_icrd_a_ibab](#cmxsrv_icrd_a_ibab) | MIBAB, IBAB |
+| Form_Load | [CMXsrv_icrd_lee_glo_ibab](#cmxsrv_icrd_lee_glo_ibab) | IBAB, COL, MIBAB |
+| Aceptar_Click | [CMXsrv_icrd_a_ibar](#cmxsrv_icrd_a_ibar) | MIBAR, IBAR |
+| Form_Load | [CMXsrv_icrd_lee_glo_ibar](#cmxsrv_icrd_lee_glo_ibar) | MIBAR, COL, IBAR |
+| buscar_click | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Aceptar_Click | [CMXsrv_icrd_lee_cod_txt_swf](#cmxsrv_icrd_lee_cod_txt_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| buscar_click | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Form_Load | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) | MCTP, CRD |
+| llena_arreglo | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| proximo_Click | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| aceptar_Click | [CMXsrv_icrd_ing_acu](#cmxsrv_icrd_ing_acu) | CRD |
+| Form_Load | [CMXsrv_icrd_lee_acu](#cmxsrv_icrd_lee_acu) | CRD |
+| aceptar_Click | [CMXsrv_icrd_rech_sol](#cmxsrv_icrd_rech_sol) | CRD, comex..COL, OPE_BCI, COL, comex..CRD |
+| aceptar_Click | [CMXsrv_icrd_end](#cmxsrv_icrd_end) | INF, ARC, COL, CRD |
+| Form_Load | [CMXsrv_icrd_lee_dat_end](#cmxsrv_icrd_lee_dat_end) | CRD |
+| aceptar_Click | [CMXsrv_icrd_asignar_cor](#cmxsrv_icrd_asignar_cor) | COR, ACMXMONEDAFEC, CRD, LCR |
+| buscar_Click | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) | COR |
+| proximo_Click | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) | COR |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## CRD_CORR
 <a name="crd_corr" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| aceptar_Click | COR, ACMXMONEDAFEC, CRD, LCR | [CMXsrv_icrd_asignar_cor](#cmxsrv_icrd_asignar_cor) |
-| buscar_Click | COR | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) |
-| fld_cor_cod_mtr_LostFocus | comex..ACMXBANCOS | [CMXsrv_icrd_lee_bco_mtr](#cmxsrv_icrd_lee_bco_mtr) |
-| fld_cor_cod_pais_Lostfocus | comex..ACMXPAIS | [CMXsrv_icrd_cor_lee_pais](#cmxsrv_icrd_cor_lee_pais) |
-| fld_cor_cod_plz_Lostfocus | ACMXPLAZAS | [CMXsrv_icrd_lee_plz](#cmxsrv_icrd_lee_plz) |
-| proximo_Click | COR | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) |
-| buscar_Click | comex..ACMXPLAZAS | [CMXsrv_icrd_busc_plz](#cmxsrv_icrd_busc_plz) |
-| proximos_Click | comex..ACMXPLAZAS | [CMXsrv_icrd_busc_plz](#cmxsrv_icrd_busc_plz) |
-| buscar_Click | comex, comex..ACMXPAIS | [CMXsrv_icrd_cor_busc_pais](#cmxsrv_icrd_cor_busc_pais) |
-| proximos_Click | comex, comex..ACMXPAIS | [CMXsrv_icrd_cor_busc_pais](#cmxsrv_icrd_cor_busc_pais) |
-| buscar_Click | comex | [CMXsrv_icrd_busc_bco_mtr](#cmxsrv_icrd_busc_bco_mtr) |
-| proximos_Click | comex | [CMXsrv_icrd_busc_bco_mtr](#cmxsrv_icrd_busc_bco_mtr) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| aceptar_Click | [CMXsrv_icrd_asignar_cor](#cmxsrv_icrd_asignar_cor) | COR, ACMXMONEDAFEC, CRD, LCR |
+| buscar_Click | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) | COR |
+| fld_cor_cod_mtr_LostFocus | [CMXsrv_icrd_lee_bco_mtr](#cmxsrv_icrd_lee_bco_mtr) | comex..ACMXBANCOS |
+| fld_cor_cod_pais_Lostfocus | [CMXsrv_icrd_cor_lee_pais](#cmxsrv_icrd_cor_lee_pais) | comex..ACMXPAIS |
+| fld_cor_cod_plz_Lostfocus | [CMXsrv_icrd_lee_plz](#cmxsrv_icrd_lee_plz) | ACMXPLAZAS |
+| proximo_Click | [CMXsrv_icrd_bus_lcr_bco](#cmxsrv_icrd_bus_lcr_bco) | COR |
+| buscar_Click | [CMXsrv_icrd_busc_plz](#cmxsrv_icrd_busc_plz) | comex..ACMXPLAZAS |
+| proximos_Click | [CMXsrv_icrd_busc_plz](#cmxsrv_icrd_busc_plz) | comex..ACMXPLAZAS |
+| buscar_Click | [CMXsrv_icrd_cor_busc_pais](#cmxsrv_icrd_cor_busc_pais) | comex, comex..ACMXPAIS |
+| proximos_Click | [CMXsrv_icrd_cor_busc_pais](#cmxsrv_icrd_cor_busc_pais) | comex, comex..ACMXPAIS |
+| buscar_Click | [CMXsrv_icrd_busc_bco_mtr](#cmxsrv_icrd_busc_bco_mtr) | comex |
+| proximos_Click | [CMXsrv_icrd_busc_bco_mtr](#cmxsrv_icrd_busc_bco_mtr) | comex |
 
 ---
 
 ## DDI
 <a name="ddi" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| aceptar_Click | INF, DDI | [CMXsrv_iddi_ingmod_ddi](#cmxsrv_iddi_ingmod_ddi) |
-| continuar_Click | DDI, ACMXVIATPT, ACMXRGMIMP, INF, ACMXBCOCEN, ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM, ACMXPAIS, CLN | [CMXsrv_iddi_lee_dec](#cmxsrv_iddi_lee_dec) |
-| eliminar_Click | DDI | [CMXsrv_iddi_eli_ddi](#cmxsrv_iddi_eli_ddi) |
-| fld_ddi_fec_ii_lostfocus | INF | [CMXsrv_iddi_lee_inf](#cmxsrv_iddi_lee_inf) |
-| fld_ddi_rut_imp_lostfocus | CLN | [CMXsrv_iddi_lee_cln](#cmxsrv_iddi_lee_cln) |
-| Asociar_Click | DDI | [CMXsrv_iddi_lee_rut](#cmxsrv_iddi_lee_rut) |
-| Asociar_Click | DDI, ARC, ACMXMONEDAFEC, CBR, COB, INF, ACMXMONEDA, COL | [CMXsrv_iddi_asoc_ddi](#cmxsrv_iddi_asoc_ddi) |
-| Command2_Click | DDI, ADI, COB | [CMXsrv_iddi_des_ddi](#cmxsrv_iddi_des_ddi) |
-| Desasociar_Click | DDI | [CMXsrv_iddi_lee_rut](#cmxsrv_iddi_lee_rut) |
-| Desasociar_Click | DDI, ADI, COB | [CMXsrv_iddi_des_ddi](#cmxsrv_iddi_des_ddi) |
-| fld_aux_rut_cli_lostfocus | CLN | [CMXsrv_iddi_lee_cln](#cmxsrv_iddi_lee_cln) |
-| inicio_asoc | ADI | [CMXsrv_iddi_busc_asoc](#cmxsrv_iddi_busc_asoc) |
-| inicio_noasoc | DDI, ADI | [CMXsrv_iddi_busc_noasoc](#cmxsrv_iddi_busc_noasoc) |
-| proximo_no_aso_Click | DDI, ADI | [CMXsrv_iddi_busc_noasoc](#cmxsrv_iddi_busc_noasoc) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| aceptar_Click | [CMXsrv_iddi_ingmod_ddi](#cmxsrv_iddi_ingmod_ddi) | INF, DDI |
+| continuar_Click | [CMXsrv_iddi_lee_dec](#cmxsrv_iddi_lee_dec) | DDI, ACMXVIATPT, ACMXRGMIMP, INF, ACMXBCOCEN, ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM, ACMXPAIS, CLN |
+| eliminar_Click | [CMXsrv_iddi_eli_ddi](#cmxsrv_iddi_eli_ddi) | DDI |
+| fld_ddi_fec_ii_lostfocus | [CMXsrv_iddi_lee_inf](#cmxsrv_iddi_lee_inf) | INF |
+| fld_ddi_rut_imp_lostfocus | [CMXsrv_iddi_lee_cln](#cmxsrv_iddi_lee_cln) | CLN |
+| Asociar_Click | [CMXsrv_iddi_lee_rut](#cmxsrv_iddi_lee_rut) | DDI |
+| Asociar_Click | [CMXsrv_iddi_asoc_ddi](#cmxsrv_iddi_asoc_ddi) | DDI, ARC, ACMXMONEDAFEC, CBR, COB, INF, ACMXMONEDA, COL |
+| Command2_Click | [CMXsrv_iddi_des_ddi](#cmxsrv_iddi_des_ddi) | DDI, ADI, COB |
+| Desasociar_Click | [CMXsrv_iddi_lee_rut](#cmxsrv_iddi_lee_rut) | DDI |
+| Desasociar_Click | [CMXsrv_iddi_des_ddi](#cmxsrv_iddi_des_ddi) | DDI, ADI, COB |
+| fld_aux_rut_cli_lostfocus | [CMXsrv_iddi_lee_cln](#cmxsrv_iddi_lee_cln) | CLN |
+| inicio_asoc | [CMXsrv_iddi_busc_asoc](#cmxsrv_iddi_busc_asoc) | ADI |
+| inicio_noasoc | [CMXsrv_iddi_busc_noasoc](#cmxsrv_iddi_busc_noasoc) | DDI, ADI |
+| proximo_no_aso_Click | [CMXsrv_iddi_busc_noasoc](#cmxsrv_iddi_busc_noasoc) | DDI, ADI |
 
 ---
 
 ## IMPORT
 <a name="import" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| buscar_Click | DIRCLN | [CMXsrv_icrd_lee_dir_cln](#cmxsrv_icrd_lee_dir_cln) |
-| buscar_click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) |
-| Aceptar_Click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_cod_txt_swf](#cmxsrv_icrd_lee_cod_txt_swf) |
-| buscar_click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) |
-| Form_Load | MCTP, CRD | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) |
-| llena_arreglo | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) |
-| proximo_Click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) |
-| Aceptar_Click | CND | [CMXCRDsrv_icrd_a_cnd_esp](#cmxcrdsrv_icrd_a_cnd_esp) |
-| Form_Load | MMCND, COL, CND | [CMXsrv_icrd_lee_cnd_esp](#cmxsrv_icrd_lee_cnd_esp) |
-| clon_Click | CRS, MER, CRD, TAS, CRDCLON, COL_ADI, CND, DAC, ODOC, AVAL, COL, EMB | [CMXCRDsrv_icrd_clon_crd](#cmxcrdsrv_icrd_clon_crd) |
-| Form_Activate | CRD_ADI, ACMXFORPAG, ACMXPAIS, ACMXVIATPT, CRD, COR, COL_ADI, ACMXFINVER, PMIX, NEG, ACMXMONEDA, tbl_User, OPE_BCI, ACMXSUCSAL, CLN, COL, DIRCLN, EMB | [CMXCRDsrv_icrd_lee_crdcre](#cmxcrdsrv_icrd_lee_crdcre) |
-| Form_Activate | MCTP, CRD | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) |
-| Form_Activate | COL | [CMXsrv_icrd_lee_top](#cmxsrv_icrd_lee_top) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| Form_Load |  | [CMXsrv_cmx_get_codes](#cmxsrv_cmx_get_codes) |
-| Form_Load | ACMXSUCSAL, ACMXDL3475FEC, tbl_User | [CMXsrv_trae_glo_fec](#cmxsrv_trae_glo_fec) |
-| Mcrdapr_Click | warnmsg | [CMXCRDsrv_icrd_val_crd](#cmxcrdsrv_icrd_val_crd) |
-| Mcrdeli_click | comex..COL, OPE_BCI, CRD | [CMXCRDsrv_icrd_eli_crd](#cmxcrdsrv_icrd_eli_crd) |
-| Mcrdtxtliq_Click | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) |
-| Mcrdtxtope_Click | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) |
-| msg_swift | switxt, switxt1 | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) |
-| Aceptar_Click | CRD, CRDCLON, MCTP, comex..COL, COL | [CMXsrv_icrd_a_ctp](#cmxsrv_icrd_a_ctp) |
-| FLD_COL_COD_CLI_LostFocus | CLN, DIRCLN | [CMXsrv_icrd_lee_cln](#cmxsrv_icrd_lee_cln) |
-| Form_Load | ACMXFECPRO | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) |
-| Aceptar_Click | TIP, CRD_ADI, CRD, CRDCLON, COL_ADI, COM, ACMXMONEDA, LIB, comex..COL, MAPR, MCND, COL, ACMXOPEIMP, comex..CRD | [CMXsrv_icrd_a_cnd](#cmxsrv_icrd_a_cnd) |
-| Aceptar_Click | CRD_ADI, PMIX, ACMXMONEDA, CLN, COL | [CMXCRDsrv_icrd_crea_crd](#cmxcrdsrv_icrd_crea_crd) |
-| fld_col_fec_vto_LostFocus | ACMXFERIADO | [CMXsrv_util_det_habil](#cmxsrv_util_det_habil) |
-| Form_Activate | comex..EMB, comex..MEMB | [CMXsrv_icrd_busc_emb](#cmxsrv_icrd_busc_emb) |
-| ELIMINAR_Click | comex..COL, EMB, COL, CRD | [CMXsrv_icrd_eli_emb](#cmxsrv_icrd_eli_emb) |
-| Form_Load | CRS, COL, EMB | [CMXsrv_icrd_lee_emb1](#cmxsrv_icrd_lee_emb1) |
-| Form_Load | COL, EMB | [CMXsrv_icrd_lee_emb2](#cmxsrv_icrd_lee_emb2) |
-| ingresar_Click | CRS, MEMB, CRD, MCRS, CRDCLON, COL, EMB | [CMXsrv_icrd_a_emb1](#cmxsrv_icrd_a_emb1) |
-| ingresar_Click | EMB, COL, MEMB, CRD | [CMXsrv_icrd_a_emb2](#cmxsrv_icrd_a_emb2) |
-| VALIDA_EMBARQUE | warnmsg | [CMXsrv_icrd_val_emb2](#cmxsrv_icrd_val_emb2) |
-| VALIDA_EMBARQUE | INF, ARC, warnmsg | [CMXsrv_icrd_val_emb1](#cmxsrv_icrd_val_emb1) |
-| Aceptar_Click | MREF, CRD, CRDCLON, comex..MREF, comex..COL, COL | [CMXsrv_icrd_act_ref](#cmxsrv_icrd_act_ref) |
-| Form_Load | MREF, CRD, CRDCLON, comex..MREF, comex..COL, COL | [CMXsrv_icrd_act_ref](#cmxsrv_icrd_act_ref) |
-| Form_Load | COR, COL, CRD | [CMXsrv_icrd_lee_ref](#cmxsrv_icrd_lee_ref) |
-| FLD_COL_COD_CLI_LostFocus | CLN, DIRCLN | [CMXsrv_icrd_lee_cln](#cmxsrv_icrd_lee_cln) |
-| Aceptar_Click | TIP, CRD, COL_ADI, COM, LIB, OPE_BCI, sysobjects, CLN, COL | [CMXCRDsrv_icrd_apr_sol](#cmxcrdsrv_icrd_apr_sol) |
-| Form_Load | CRS, CRD, COL_ADI, DAC, ACMXAPROBAC | [CMXsrv_icrd_lee_crdapr](#cmxsrv_icrd_lee_crdapr) |
-| Aceptar_Click | CRD, comex..COL, OPE_BCI, COL, comex..CRD | [CMXsrv_icrd_rech_sol](#cmxsrv_icrd_rech_sol) |
-| Aceptar_Click | MER | [CMXCRDsrv_icrd_a_desc_merc](#cmxcrdsrv_icrd_a_desc_merc) |
-| Form_Load | MMER, MER | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) |
-| Aceptar_Click | ODOC, MODOC | [CMXsrv_icrd_a_otr_doc](#cmxsrv_icrd_a_otr_doc) |
-| Form_Load | ODOC, MODOC | [CMXsrv_icrd_lee_otr_doc](#cmxsrv_icrd_lee_otr_doc) |
-| enviar_Click | switxt, switxt1 | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| buscar_Click | [CMXsrv_icrd_lee_dir_cln](#cmxsrv_icrd_lee_dir_cln) | DIRCLN |
+| buscar_click | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Aceptar_Click | [CMXsrv_icrd_lee_cod_txt_swf](#cmxsrv_icrd_lee_cod_txt_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| buscar_click | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Form_Load | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) | MCTP, CRD |
+| llena_arreglo | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| proximo_Click | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Aceptar_Click | [CMXCRDsrv_icrd_a_cnd_esp](#cmxcrdsrv_icrd_a_cnd_esp) | CND |
+| Form_Load | [CMXsrv_icrd_lee_cnd_esp](#cmxsrv_icrd_lee_cnd_esp) | MMCND, COL, CND |
+| clon_Click | [CMXCRDsrv_icrd_clon_crd](#cmxcrdsrv_icrd_clon_crd) | CRS, MER, CRD, TAS, CRDCLON, COL_ADI, CND, DAC, ODOC, AVAL, COL, EMB |
+| Form_Activate | [CMXCRDsrv_icrd_lee_crdcre](#cmxcrdsrv_icrd_lee_crdcre) | CRD_ADI, ACMXFORPAG, ACMXPAIS, ACMXVIATPT, CRD, COR, COL_ADI, ACMXFINVER, PMIX, NEG, ACMXMONEDA, tbl_User, OPE_BCI, ACMXSUCSAL, CLN, COL, DIRCLN, EMB |
+| Form_Activate | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) | MCTP, CRD |
+| Form_Activate | [CMXsrv_icrd_lee_top](#cmxsrv_icrd_lee_top) | COL |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| Form_Load | [CMXsrv_cmx_get_codes](#cmxsrv_cmx_get_codes) |  |
+| Form_Load | [CMXsrv_trae_glo_fec](#cmxsrv_trae_glo_fec) | ACMXSUCSAL, ACMXDL3475FEC, tbl_User |
+| Mcrdapr_Click | [CMXCRDsrv_icrd_val_crd](#cmxcrdsrv_icrd_val_crd) | warnmsg |
+| Mcrdeli_click | [CMXCRDsrv_icrd_eli_crd](#cmxcrdsrv_icrd_eli_crd) | comex..COL, OPE_BCI, CRD |
+| Mcrdtxtliq_Click | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL |
+| Mcrdtxtope_Click | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL |
+| msg_swift | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) | switxt, switxt1 |
+| Aceptar_Click | [CMXsrv_icrd_a_ctp](#cmxsrv_icrd_a_ctp) | CRD, CRDCLON, MCTP, comex..COL, COL |
+| FLD_COL_COD_CLI_LostFocus | [CMXsrv_icrd_lee_cln](#cmxsrv_icrd_lee_cln) | CLN, DIRCLN |
+| Form_Load | [CMXsrv_lee_fpro](#cmxsrv_lee_fpro) | ACMXFECPRO |
+| Aceptar_Click | [CMXsrv_icrd_a_cnd](#cmxsrv_icrd_a_cnd) | TIP, CRD_ADI, CRD, CRDCLON, COL_ADI, COM, ACMXMONEDA, LIB, comex..COL, MAPR, MCND, COL, ACMXOPEIMP, comex..CRD |
+| Aceptar_Click | [CMXCRDsrv_icrd_crea_crd](#cmxcrdsrv_icrd_crea_crd) | CRD_ADI, PMIX, ACMXMONEDA, CLN, COL |
+| fld_col_fec_vto_LostFocus | [CMXsrv_util_det_habil](#cmxsrv_util_det_habil) | ACMXFERIADO |
+| Form_Activate | [CMXsrv_icrd_busc_emb](#cmxsrv_icrd_busc_emb) | comex..EMB, comex..MEMB |
+| ELIMINAR_Click | [CMXsrv_icrd_eli_emb](#cmxsrv_icrd_eli_emb) | comex..COL, EMB, COL, CRD |
+| Form_Load | [CMXsrv_icrd_lee_emb1](#cmxsrv_icrd_lee_emb1) | CRS, COL, EMB |
+| Form_Load | [CMXsrv_icrd_lee_emb2](#cmxsrv_icrd_lee_emb2) | COL, EMB |
+| ingresar_Click | [CMXsrv_icrd_a_emb1](#cmxsrv_icrd_a_emb1) | CRS, MEMB, CRD, MCRS, CRDCLON, COL, EMB |
+| ingresar_Click | [CMXsrv_icrd_a_emb2](#cmxsrv_icrd_a_emb2) | EMB, COL, MEMB, CRD |
+| VALIDA_EMBARQUE | [CMXsrv_icrd_val_emb2](#cmxsrv_icrd_val_emb2) | warnmsg |
+| VALIDA_EMBARQUE | [CMXsrv_icrd_val_emb1](#cmxsrv_icrd_val_emb1) | INF, ARC, warnmsg |
+| Aceptar_Click | [CMXsrv_icrd_act_ref](#cmxsrv_icrd_act_ref) | MREF, CRD, CRDCLON, comex..MREF, comex..COL, COL |
+| Form_Load | [CMXsrv_icrd_act_ref](#cmxsrv_icrd_act_ref) | MREF, CRD, CRDCLON, comex..MREF, comex..COL, COL |
+| Form_Load | [CMXsrv_icrd_lee_ref](#cmxsrv_icrd_lee_ref) | COR, COL, CRD |
+| FLD_COL_COD_CLI_LostFocus | [CMXsrv_icrd_lee_cln](#cmxsrv_icrd_lee_cln) | CLN, DIRCLN |
+| Aceptar_Click | [CMXCRDsrv_icrd_apr_sol](#cmxcrdsrv_icrd_apr_sol) | TIP, CRD, COL_ADI, COM, LIB, OPE_BCI, sysobjects, CLN, COL |
+| Form_Load | [CMXsrv_icrd_lee_crdapr](#cmxsrv_icrd_lee_crdapr) | CRS, CRD, COL_ADI, DAC, ACMXAPROBAC |
+| Aceptar_Click | [CMXsrv_icrd_rech_sol](#cmxsrv_icrd_rech_sol) | CRD, comex..COL, OPE_BCI, COL, comex..CRD |
+| Aceptar_Click | [CMXCRDsrv_icrd_a_desc_merc](#cmxcrdsrv_icrd_a_desc_merc) | MER |
+| Form_Load | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) | MMER, MER |
+| Aceptar_Click | [CMXsrv_icrd_a_otr_doc](#cmxsrv_icrd_a_otr_doc) | ODOC, MODOC |
+| Form_Load | [CMXsrv_icrd_lee_otr_doc](#cmxsrv_icrd_lee_otr_doc) | ODOC, MODOC |
+| enviar_Click | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) | switxt, switxt1 |
 
 ---
 
 ## INFORME
 <a name="informe" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Eliminar_Click | ADI, CRD, ARC, NEG, COB, INF, COL | [CMXsrv_iarc_eli_arc](#cmxsrv_iarc_eli_arc) |
-| Form_Activate | ARC | [CMXsrv_iarc_busc_arc](#cmxsrv_iarc_busc_arc) |
-| Form_Activate | INF | [CMXsrv_iinf_lee0_inf](#cmxsrv_iinf_lee0_inf) |
-| Form_Activate | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| Form_Activate | INF, CLN | [CMXsrv_iinf_lee1_inf](#cmxsrv_iinf_lee1_inf) |
-| Form_Activate | CLN | [CMXsrv_iinf_lee_cln](#cmxsrv_iinf_lee_cln) |
-| Form_Activate | INF | [CMXsrv_iinf_lee2_inf](#cmxsrv_iinf_lee2_inf) |
-| Form_Activate | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Maviapr_Click | INF, CLN | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) |
-| Maviapr_Click | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Mavicom_Click | INF, CLN | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) |
-| Mavicom_Click | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Mavicom_Click | TIP, ACMXDESEMB, ASND, CRD, EVI, COM, TRSD, EVE, ACMXMONEDA | [CMXsrv_icrd_lee_dat_com](#cmxsrv_icrd_lee_dat_com) |
-| Mavimis1_Click | INF, CLN | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) |
-| Mavimis1_Click | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Mavimis2_Click | INF, CLN | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) |
-| Mavimis2_Click | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Mavirec_Click | INF, CLN | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) |
-| Mavirec_Click | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Mavitib_Click | INF, CLN | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) |
-| Mavitib_Click | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Mavitras_Click | INF, CLN | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) |
-| Mavitras_Click | INF | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) |
-| Mavitras_Click | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) |
-| Minfoeli_click | INF, ARC | [CMXsrv_iinf_eli_inf](#cmxsrv_iinf_eli_inf) |
-| Minforev_Click | EVI | [CMXsrv_iinf_busc_evi](#cmxsrv_iinf_busc_evi) |
-| Minfoval_click | INF, ACMXPAIS, warnmsg | [CMXsrv_iinf_val_inf](#cmxsrv_iinf_val_inf) |
-| Aceptar_Click | INF, tbl_User, warnmsg | [CMXsrv_iinf_ingmod_inf](#cmxsrv_iinf_ingmod_inf) |
-| Fec_pre |  | [CMXsrv_iinf_lee_fec](#cmxsrv_iinf_lee_fec) |
-| fld_aux_glo_cls_com_LostFocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_aux_glo_for_pag1_LostFocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_aux_glo_for_pag2_LostFocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_aux_glo_for_pag3_LostFocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_aux_glo_mon_LostFocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_inf_cls_com_Lostfocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_inf_cod_imp_LostFocus | CLN | [CMXsrv_iinf_lee_cln](#cmxsrv_iinf_lee_cln) |
-| fld_inf_for_pag1_lostfocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_inf_for_pag2_LostFocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_inf_for_pag3_LostFocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| fld_inf_mon_inf_lostfocus | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| Form_Load | INF | [CMXsrv_iinf_lee0_inf](#cmxsrv_iinf_lee0_inf) |
-| Form_Load | INF, CLN | [CMXsrv_iinf_lee1_inf](#cmxsrv_iinf_lee1_inf) |
-| Form_Load | INF | [CMXsrv_iinf_lee2_inf](#cmxsrv_iinf_lee2_inf) |
-| valor_usd |  | [CMXsrv_iinf_lee_usd](#cmxsrv_iinf_lee_usd) |
-| Aceptar_Click | INF | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) |
-| buscar_Click | INF | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) |
-| Fec_pre |  | [CMXsrv_iinf_lee_fec](#cmxsrv_iinf_lee_fec) |
-| fld_inf_cod_imp_LostFocus | CLN | [CMXsrv_iinf_lee_cln](#cmxsrv_iinf_lee_cln) |
-| PROXIMA_Click | INF | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) |
-| Aceptar_Click | INF | [CMXsrv_iinf_act_apr](#cmxsrv_iinf_act_apr) |
-| Form_Activate | EVI | [CMXsrv_iinf_busc_evi](#cmxsrv_iinf_busc_evi) |
-| reversar_Click | INF, ARC, INC, EVI | [CMXsrv_iinf_rev_evi](#cmxsrv_iinf_rev_evi) |
-| Form_Load | EVI | [CMXsrv_iinf_lee_evi](#cmxsrv_iinf_lee_evi) |
-| Aceptar_Click | INF | [CMXsrv_iinf_act_tib](#cmxsrv_iinf_act_tib) |
-| Aceptar_Click | INF | [CMXsrv_iinf_act_rec](#cmxsrv_iinf_act_rec) |
-| Aceptar_Click | INF | [CMXsrv_iinf_act_rib](#cmxsrv_iinf_act_rib) |
-| Form_Activate | INF | [CMXsrv_iinf_busc_comp](#cmxsrv_iinf_busc_comp) |
-| proximos_Click | INF | [CMXsrv_iinf_busc_comp](#cmxsrv_iinf_busc_comp) |
-| Aceptar_Click | INF, warnmsg | [CMXsrv_iinf_ingmod_comp](#cmxsrv_iinf_ingmod_comp) |
-| Fec_pre |  | [CMXsrv_iinf_lee_fec](#cmxsrv_iinf_lee_fec) |
-| Form_Activate | INF | [CMXsrv_iinf_lee_comp](#cmxsrv_iinf_lee_comp) |
-| Form_Activate | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) |
-| aceptar_click | COR | [CMXsrv_iinf_lee_bco](#cmxsrv_iinf_lee_bco) |
-| buscar_Click | ACMXBCOBCC | [CMXsrv_iinf_busc_bco](#cmxsrv_iinf_busc_bco) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Eliminar_Click | [CMXsrv_iarc_eli_arc](#cmxsrv_iarc_eli_arc) | ADI, CRD, ARC, NEG, COB, INF, COL |
+| Form_Activate | [CMXsrv_iarc_busc_arc](#cmxsrv_iarc_busc_arc) | ARC |
+| Form_Activate | [CMXsrv_iinf_lee0_inf](#cmxsrv_iinf_lee0_inf) | INF |
+| Form_Activate | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| Form_Activate | [CMXsrv_iinf_lee1_inf](#cmxsrv_iinf_lee1_inf) | INF, CLN |
+| Form_Activate | [CMXsrv_iinf_lee_cln](#cmxsrv_iinf_lee_cln) | CLN |
+| Form_Activate | [CMXsrv_iinf_lee2_inf](#cmxsrv_iinf_lee2_inf) | INF |
+| Form_Activate | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Maviapr_Click | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) | INF, CLN |
+| Maviapr_Click | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Mavicom_Click | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) | INF, CLN |
+| Mavicom_Click | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Mavicom_Click | [CMXsrv_icrd_lee_dat_com](#cmxsrv_icrd_lee_dat_com) | TIP, ACMXDESEMB, ASND, CRD, EVI, COM, TRSD, EVE, ACMXMONEDA |
+| Mavimis1_Click | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) | INF, CLN |
+| Mavimis1_Click | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Mavimis2_Click | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) | INF, CLN |
+| Mavimis2_Click | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Mavirec_Click | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) | INF, CLN |
+| Mavirec_Click | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Mavitib_Click | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) | INF, CLN |
+| Mavitib_Click | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Mavitras_Click | [CMXsrv_iinf_avi_misca](#cmxsrv_iinf_avi_misca) | INF, CLN |
+| Mavitras_Click | [CMXsrv_iinf_avi_miscb](#cmxsrv_iinf_avi_miscb) | INF |
+| Mavitras_Click | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL |
+| Minfoeli_click | [CMXsrv_iinf_eli_inf](#cmxsrv_iinf_eli_inf) | INF, ARC |
+| Minforev_Click | [CMXsrv_iinf_busc_evi](#cmxsrv_iinf_busc_evi) | EVI |
+| Minfoval_click | [CMXsrv_iinf_val_inf](#cmxsrv_iinf_val_inf) | INF, ACMXPAIS, warnmsg |
+| Aceptar_Click | [CMXsrv_iinf_ingmod_inf](#cmxsrv_iinf_ingmod_inf) | INF, tbl_User, warnmsg |
+| Fec_pre | [CMXsrv_iinf_lee_fec](#cmxsrv_iinf_lee_fec) |  |
+| fld_aux_glo_cls_com_LostFocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_aux_glo_for_pag1_LostFocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_aux_glo_for_pag2_LostFocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_aux_glo_for_pag3_LostFocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_aux_glo_mon_LostFocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_inf_cls_com_Lostfocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_inf_cod_imp_LostFocus | [CMXsrv_iinf_lee_cln](#cmxsrv_iinf_lee_cln) | CLN |
+| fld_inf_for_pag1_lostfocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_inf_for_pag2_LostFocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_inf_for_pag3_LostFocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| fld_inf_mon_inf_lostfocus | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| Form_Load | [CMXsrv_iinf_lee0_inf](#cmxsrv_iinf_lee0_inf) | INF |
+| Form_Load | [CMXsrv_iinf_lee1_inf](#cmxsrv_iinf_lee1_inf) | INF, CLN |
+| Form_Load | [CMXsrv_iinf_lee2_inf](#cmxsrv_iinf_lee2_inf) | INF |
+| valor_usd | [CMXsrv_iinf_lee_usd](#cmxsrv_iinf_lee_usd) |  |
+| Aceptar_Click | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) | INF |
+| buscar_Click | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) | INF |
+| Fec_pre | [CMXsrv_iinf_lee_fec](#cmxsrv_iinf_lee_fec) |  |
+| fld_inf_cod_imp_LostFocus | [CMXsrv_iinf_lee_cln](#cmxsrv_iinf_lee_cln) | CLN |
+| PROXIMA_Click | [CMXsrv_iinf_busc_inf](#cmxsrv_iinf_busc_inf) | INF |
+| Aceptar_Click | [CMXsrv_iinf_act_apr](#cmxsrv_iinf_act_apr) | INF |
+| Form_Activate | [CMXsrv_iinf_busc_evi](#cmxsrv_iinf_busc_evi) | EVI |
+| reversar_Click | [CMXsrv_iinf_rev_evi](#cmxsrv_iinf_rev_evi) | INF, ARC, INC, EVI |
+| Form_Load | [CMXsrv_iinf_lee_evi](#cmxsrv_iinf_lee_evi) | EVI |
+| Aceptar_Click | [CMXsrv_iinf_act_tib](#cmxsrv_iinf_act_tib) | INF |
+| Aceptar_Click | [CMXsrv_iinf_act_rec](#cmxsrv_iinf_act_rec) | INF |
+| Aceptar_Click | [CMXsrv_iinf_act_rib](#cmxsrv_iinf_act_rib) | INF |
+| Form_Activate | [CMXsrv_iinf_busc_comp](#cmxsrv_iinf_busc_comp) | INF |
+| proximos_Click | [CMXsrv_iinf_busc_comp](#cmxsrv_iinf_busc_comp) | INF |
+| Aceptar_Click | [CMXsrv_iinf_ingmod_comp](#cmxsrv_iinf_ingmod_comp) | INF, warnmsg |
+| Fec_pre | [CMXsrv_iinf_lee_fec](#cmxsrv_iinf_lee_fec) |  |
+| Form_Activate | [CMXsrv_iinf_lee_comp](#cmxsrv_iinf_lee_comp) | INF |
+| Form_Activate | [CMXsrv_iinf_lee_tablas](#cmxsrv_iinf_lee_tablas) | ACMXFPAIMP, ACMXMONEDA, ACMXCLACOM |
+| aceptar_click | [CMXsrv_iinf_lee_bco](#cmxsrv_iinf_lee_bco) | COR |
+| buscar_Click | [CMXsrv_iinf_busc_bco](#cmxsrv_iinf_busc_bco) | ACMXBCOBCC |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## MOD_ADI
 <a name="mod_adi" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Aceptar_Click | TIP, CRD_ADI, CRD, CRDCLON, COL_ADI, COM, ACMXMONEDA, LIB, comex..COL, MAPR, MCND, COL, ACMXOPEIMP, comex..CRD | [CMXsrv_icrd_a_cnd](#cmxsrv_icrd_a_cnd) |
-| busca_bco | ACMXPAIS, COR | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) |
-| fld_col_fec_vto_LostFocus | ACMXFERIADO | [CMXsrv_util_det_habil](#cmxsrv_util_det_habil) |
-| Form_Load | CRD_ADI, ACMXFORPAG, CRD, PMIX, ACMXMONEDA, MPMIX, MCND | [CMXMCRDsrv_icrd_lee_mcnd](#cmxmcrdsrv_icrd_lee_mcnd) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Aceptar_Click | [CMXsrv_icrd_a_cnd](#cmxsrv_icrd_a_cnd) | TIP, CRD_ADI, CRD, CRDCLON, COL_ADI, COM, ACMXMONEDA, LIB, comex..COL, MAPR, MCND, COL, ACMXOPEIMP, comex..CRD |
+| busca_bco | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) | ACMXPAIS, COR |
+| fld_col_fec_vto_LostFocus | [CMXsrv_util_det_habil](#cmxsrv_util_det_habil) | ACMXFERIADO |
+| Form_Load | [CMXMCRDsrv_icrd_lee_mcnd](#cmxmcrdsrv_icrd_lee_mcnd) | CRD_ADI, ACMXFORPAG, CRD, PMIX, ACMXMONEDA, MPMIX, MCND |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## MOD_CBR
 <a name="mod_cbr" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| fld_cbr_cod_gdo_LostFocus | CLN | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) |
-| Form_Load | ACMXSUCSAL, MCBRCTP, CBR, ACMXPAIS, CLN, CBRANX | [CMXsrv_icbr_lee_ctp](#cmxsrv_icbr_lee_ctp) |
-| INGRESAR_Click | comex..CBR, MCBRCTP, CBRANX, CBR | [CMXsrv_icbr_act_ctp](#cmxsrv_icbr_act_ctp) |
-| Form_Load | ACMXVIATPT, CBR, ACMXINTERE, ACMXMONEDA, MCBRTER, ACMXCLACOM, ACMXPAIS | [CMXsrv_icbr_lee_trm](#cmxsrv_icbr_lee_trm) |
-| INGRESAR_Click | LCB, COM, CBR, MCBRTER, warnmsg, CLN | [CMXsrv_icbr_act_trm](#cmxsrv_icbr_act_trm) |
-| Form_Load | LCB, MCBRDOC, MLCB, CBR, ACMXMONEDA | [CMXsrv_icbr_lee_doc](#cmxsrv_icbr_lee_doc) |
-| INGRESAR_Click | LCB, MCBRDOC, MLCB, CBR, comex..CBR | [CMXsrv_icbr_act_doc](#cmxsrv_icbr_act_doc) |
-| Form_Activate | MLCB, comex..MLCB, comex..LCB | [CMXsrv_icbr_busc_let](#cmxsrv_icbr_busc_let) |
-| aceptar_Click | LCB, MLCB, CBR, end | [CMXsrv_icbr_mod_ing_let](#cmxsrv_icbr_mod_ing_let) |
-| eliminar_Click | LCB, MCBRDOC, MLCB, CBR, comex..COL | [CMXsrv_icbr_eli_let](#cmxsrv_icbr_eli_let) |
-| Form_Activate | ACMXNOTARIO, LCB, MLCB | [CMXsrv_icbr_lee_let](#cmxsrv_icbr_lee_let) |
-| actualizar_Click | LCB, MCBRDOC, MCBRCTP, MLCB, CBR, MCBRTER, warnmsg | [CMXsrv_icbr_acep_mod_cbr](#cmxsrv_icbr_acep_mod_cbr) |
-| Cancelar_Click | MCBRDOC, MCBRCTP, MLCB, CBR, MCBRTER | [CMXsrv_icbr_eli_no_cont](#cmxsrv_icbr_eli_no_cont) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| fld_cbr_cod_gdo_LostFocus | [CMXsrv_icbr_lee_cln](#cmxsrv_icbr_lee_cln) | CLN |
+| Form_Load | [CMXsrv_icbr_lee_ctp](#cmxsrv_icbr_lee_ctp) | ACMXSUCSAL, MCBRCTP, CBR, ACMXPAIS, CLN, CBRANX |
+| INGRESAR_Click | [CMXsrv_icbr_act_ctp](#cmxsrv_icbr_act_ctp) | comex..CBR, MCBRCTP, CBRANX, CBR |
+| Form_Load | [CMXsrv_icbr_lee_trm](#cmxsrv_icbr_lee_trm) | ACMXVIATPT, CBR, ACMXINTERE, ACMXMONEDA, MCBRTER, ACMXCLACOM, ACMXPAIS |
+| INGRESAR_Click | [CMXsrv_icbr_act_trm](#cmxsrv_icbr_act_trm) | LCB, COM, CBR, MCBRTER, warnmsg, CLN |
+| Form_Load | [CMXsrv_icbr_lee_doc](#cmxsrv_icbr_lee_doc) | LCB, MCBRDOC, MLCB, CBR, ACMXMONEDA |
+| INGRESAR_Click | [CMXsrv_icbr_act_doc](#cmxsrv_icbr_act_doc) | LCB, MCBRDOC, MLCB, CBR, comex..CBR |
+| Form_Activate | [CMXsrv_icbr_busc_let](#cmxsrv_icbr_busc_let) | MLCB, comex..MLCB, comex..LCB |
+| aceptar_Click | [CMXsrv_icbr_mod_ing_let](#cmxsrv_icbr_mod_ing_let) | LCB, MLCB, CBR, end |
+| eliminar_Click | [CMXsrv_icbr_eli_let](#cmxsrv_icbr_eli_let) | LCB, MCBRDOC, MLCB, CBR, comex..COL |
+| Form_Activate | [CMXsrv_icbr_lee_let](#cmxsrv_icbr_lee_let) | ACMXNOTARIO, LCB, MLCB |
+| actualizar_Click | [CMXsrv_icbr_acep_mod_cbr](#cmxsrv_icbr_acep_mod_cbr) | LCB, MCBRDOC, MCBRCTP, MLCB, CBR, MCBRTER, warnmsg |
+| Cancelar_Click | [CMXsrv_icbr_eli_no_cont](#cmxsrv_icbr_eli_no_cont) | MCBRDOC, MCBRCTP, MLCB, CBR, MCBRTER |
 
 ---
 
 ## MOD_CRD
 <a name="mod_crd" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Aceptar_Click | MIBAB, IBAB | [CMXsrv_icrd_a_ibab](#cmxsrv_icrd_a_ibab) |
-| Form_Load | IBAB, COL, MIBAB | [CMXsrv_icrd_lee_glo_ibab](#cmxsrv_icrd_lee_glo_ibab) |
-| Aceptar_Click | MIBAR, IBAR | [CMXsrv_icrd_a_ibar](#cmxsrv_icrd_a_ibar) |
-| Form_Load | MIBAR, COL, IBAR | [CMXsrv_icrd_lee_glo_ibar](#cmxsrv_icrd_lee_glo_ibar) |
-| buscar_click | DIRCLN | [CMXsrv_icrd_lee_dir_cln](#cmxsrv_icrd_lee_dir_cln) |
-| buscar_Click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) |
-| buscar_click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) |
-| Aceptar_Click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_cod_txt_swf](#cmxsrv_icrd_lee_cod_txt_swf) |
-| buscar_click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) |
-| Form_Load | MCTP, CRD | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) |
-| llena_arreglo | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) |
-| proximo_Click | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) |
-| Aceptar_Click | MMCND | [CMXMCRDsrv_icrd_a_mmcnd](#cmxmcrdsrv_icrd_a_mmcnd) |
-| Form_Load | MMCND, COL, CND | [CMXsrv_icrd_lee_cnd_esp](#cmxsrv_icrd_lee_cnd_esp) |
-| Aceptar_Click | CRD, CRDCLON, MCTP, comex..COL, COL | [CMXsrv_icrd_a_ctp](#cmxsrv_icrd_a_ctp) |
-| FLD_COL_COD_CLI_LostFocus | CLN, DIRCLN | [CMXsrv_icrd_lee_cln](#cmxsrv_icrd_lee_cln) |
-| Form_Load | ACMXPAIS, MCTP, DIRCLN, CRD | [CMXMCRDsrv_icrd_lee_mctp](#cmxmcrdsrv_icrd_lee_mctp) |
-| Aceptar_Click | TIP, CRD_ADI, CRD, CRDCLON, COL_ADI, COM, ACMXMONEDA, LIB, comex..COL, MAPR, MCND, COL, ACMXOPEIMP, comex..CRD | [CMXsrv_icrd_a_cnd](#cmxsrv_icrd_a_cnd) |
-| Form_Load | CRD_ADI, ACMXFORPAG, CRD, PMIX, ACMXMONEDA, MPMIX, MCND | [CMXMCRDsrv_icrd_lee_mcnd](#cmxmcrdsrv_icrd_lee_mcnd) |
-| Form_Activate | comex..EMB, comex..MEMB | [CMXsrv_icrd_busc_emb](#cmxsrv_icrd_busc_emb) |
-| cancelar_Click | MMER, MER | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) |
-| ELIMINAR_Click | comex..COL, EMB, COL, CRD | [CMXsrv_icrd_eli_emb](#cmxsrv_icrd_eli_emb) |
-| Form_Load | MEMB, EMB | [CMXMCRDsrv_icrd_lee_memb2](#cmxmcrdsrv_icrd_lee_memb2) |
-| Form_Load | CRS, MEMB, EMB, MCRS | [CMXMCRDsrv_icrd_lee_memb1](#cmxmcrdsrv_icrd_lee_memb1) |
-| ingresar_Click | CRS, MEMB, CRD, MCRS, CRDCLON, COL, EMB | [CMXsrv_icrd_a_emb1](#cmxsrv_icrd_a_emb1) |
-| ingresar_Click | EMB, COL, MEMB, CRD | [CMXsrv_icrd_a_emb2](#cmxsrv_icrd_a_emb2) |
-| VALIDA_EMBARQUE | warnmsg | [CMXsrv_icrd_val_emb2](#cmxsrv_icrd_val_emb2) |
-| VALIDA_EMBARQUE | INF, ARC, warnmsg | [CMXsrv_icrd_val_emb1](#cmxsrv_icrd_val_emb1) |
-| Aceptar_Click | MREF, CRD, CRDCLON, comex..MREF, comex..COL, COL | [CMXsrv_icrd_act_ref](#cmxsrv_icrd_act_ref) |
-| fld_obl_cod_bco_acre_DblClick | ACMXPAIS, COR | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) |
-| fld_obl_cod_bco_acre_LostFocus | ACMXPAIS, COR | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) |
-| Form_Load | MREF, COR, COL, CRD | [CMXMCRDsrv_icrd_lee_mref](#cmxmcrdsrv_icrd_lee_mref) |
-| Aceptar_Click | MTXT | [CMXsrv_icrd_ing_txt](#cmxsrv_icrd_ing_txt) |
-| Form_Load | ACMXPAIS, MCTP, CRD | [CMXCRDsrv_icrd_get_ing_esp](#cmxcrdsrv_icrd_get_ing_esp) |
-| Form_Load | MTXT | [CMXMCRDsrv_icrd_lee_mtxt](#cmxmcrdsrv_icrd_lee_mtxt) |
-| Form_Load | ACMXTSWFESPMSG, ACMXTSWFINGMSG | [CMXCRDsrv_icrd_get_pre_fra](#cmxcrdsrv_icrd_get_pre_fra) |
-| Aceptar_Click | MMER | [CMXMCRDsrv_icrd_a_mmer](#cmxmcrdsrv_icrd_a_mmer) |
-| Form_Load | MMER, MER | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) |
-| Aceptar_Click | ODOC, MODOC | [CMXsrv_icrd_a_otr_doc](#cmxsrv_icrd_a_otr_doc) |
-| Form_Load | ODOC, MODOC | [CMXsrv_icrd_lee_otr_doc](#cmxsrv_icrd_lee_otr_doc) |
-| Aceptar_Click | MCND, COL, CRD, COM | [CMXsrv_fincol_lee_cod_eve](#cmxsrv_fincol_lee_cod_eve) |
-| Aceptar_Click | de, TIP, CRD, COD, MCRS, OBL, EVE, LIB, warnmsg, OPE_BCI, sysobjects, COL | [CMXMCRDsrv_icrd_acep_mod_crd](#cmxmcrdsrv_icrd_acep_mod_crd) |
-| cancelar_Click | MREF, MEMB, MCRS, MMCND, COM, MODOC, MIBAB, CRD_AMD, MPMIX, MCTP, MMER, MCND, MIBAR, TNIH, MAPR, FE_IN_REJECTED_TRANS, MTXT | [CMXMCRDsrv_icrd_eli_no_cont](#cmxmcrdsrv_icrd_eli_no_cont) |
-| fld_crd_cod_bco_rem_LostFocus | ACMXPAIS, COR | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) |
-| fld_crd_fec_mod_lostFocus | TF_PPAG, TIP, TAS, CUO, comex..ACMXMONEDA, COL_ADI, OBL, CTR, NEG_ADI, ACMXINTERE, CAN, ICR, COL | [CMXsrv_fincol_efec_calpa](#cmxsrv_fincol_efec_calpa) |
-| Form_Activate | MCTP, CRD | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) |
-| Form_Load | TF_PPAG, TIP, TAS, CUO, comex..ACMXMONEDA, COL_ADI, OBL, CTR, NEG_ADI, ACMXINTERE, CAN, ICR, COL | [CMXsrv_fincol_efec_calpa](#cmxsrv_fincol_efec_calpa) |
-| Form_Load | CRD_ADI, ACMXFORPAG, CRD, PMIX, ACMXMONEDA, MPMIX, MCND | [CMXMCRDsrv_icrd_lee_mcnd](#cmxmcrdsrv_icrd_lee_mcnd) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Aceptar_Click | [CMXsrv_icrd_a_ibab](#cmxsrv_icrd_a_ibab) | MIBAB, IBAB |
+| Form_Load | [CMXsrv_icrd_lee_glo_ibab](#cmxsrv_icrd_lee_glo_ibab) | IBAB, COL, MIBAB |
+| Aceptar_Click | [CMXsrv_icrd_a_ibar](#cmxsrv_icrd_a_ibar) | MIBAR, IBAR |
+| Form_Load | [CMXsrv_icrd_lee_glo_ibar](#cmxsrv_icrd_lee_glo_ibar) | MIBAR, COL, IBAR |
+| buscar_click | [CMXsrv_icrd_lee_dir_cln](#cmxsrv_icrd_lee_dir_cln) | DIRCLN |
+| buscar_Click | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| buscar_click | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Aceptar_Click | [CMXsrv_icrd_lee_cod_txt_swf](#cmxsrv_icrd_lee_cod_txt_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| buscar_click | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Form_Load | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) | MCTP, CRD |
+| llena_arreglo | [CMXsrv_icrd_lee_tex_swf](#cmxsrv_icrd_lee_tex_swf) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| proximo_Click | [CMXsrv_icrd_lee_txt_swf_all](#cmxsrv_icrd_lee_txt_swf_all) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Aceptar_Click | [CMXMCRDsrv_icrd_a_mmcnd](#cmxmcrdsrv_icrd_a_mmcnd) | MMCND |
+| Form_Load | [CMXsrv_icrd_lee_cnd_esp](#cmxsrv_icrd_lee_cnd_esp) | MMCND, COL, CND |
+| Aceptar_Click | [CMXsrv_icrd_a_ctp](#cmxsrv_icrd_a_ctp) | CRD, CRDCLON, MCTP, comex..COL, COL |
+| FLD_COL_COD_CLI_LostFocus | [CMXsrv_icrd_lee_cln](#cmxsrv_icrd_lee_cln) | CLN, DIRCLN |
+| Form_Load | [CMXMCRDsrv_icrd_lee_mctp](#cmxmcrdsrv_icrd_lee_mctp) | ACMXPAIS, MCTP, DIRCLN, CRD |
+| Aceptar_Click | [CMXsrv_icrd_a_cnd](#cmxsrv_icrd_a_cnd) | TIP, CRD_ADI, CRD, CRDCLON, COL_ADI, COM, ACMXMONEDA, LIB, comex..COL, MAPR, MCND, COL, ACMXOPEIMP, comex..CRD |
+| Form_Load | [CMXMCRDsrv_icrd_lee_mcnd](#cmxmcrdsrv_icrd_lee_mcnd) | CRD_ADI, ACMXFORPAG, CRD, PMIX, ACMXMONEDA, MPMIX, MCND |
+| Form_Activate | [CMXsrv_icrd_busc_emb](#cmxsrv_icrd_busc_emb) | comex..EMB, comex..MEMB |
+| cancelar_Click | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) | MMER, MER |
+| ELIMINAR_Click | [CMXsrv_icrd_eli_emb](#cmxsrv_icrd_eli_emb) | comex..COL, EMB, COL, CRD |
+| Form_Load | [CMXMCRDsrv_icrd_lee_memb2](#cmxmcrdsrv_icrd_lee_memb2) | MEMB, EMB |
+| Form_Load | [CMXMCRDsrv_icrd_lee_memb1](#cmxmcrdsrv_icrd_lee_memb1) | CRS, MEMB, EMB, MCRS |
+| ingresar_Click | [CMXsrv_icrd_a_emb1](#cmxsrv_icrd_a_emb1) | CRS, MEMB, CRD, MCRS, CRDCLON, COL, EMB |
+| ingresar_Click | [CMXsrv_icrd_a_emb2](#cmxsrv_icrd_a_emb2) | EMB, COL, MEMB, CRD |
+| VALIDA_EMBARQUE | [CMXsrv_icrd_val_emb2](#cmxsrv_icrd_val_emb2) | warnmsg |
+| VALIDA_EMBARQUE | [CMXsrv_icrd_val_emb1](#cmxsrv_icrd_val_emb1) | INF, ARC, warnmsg |
+| Aceptar_Click | [CMXsrv_icrd_act_ref](#cmxsrv_icrd_act_ref) | MREF, CRD, CRDCLON, comex..MREF, comex..COL, COL |
+| fld_obl_cod_bco_acre_DblClick | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) | ACMXPAIS, COR |
+| fld_obl_cod_bco_acre_LostFocus | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) | ACMXPAIS, COR |
+| Form_Load | [CMXMCRDsrv_icrd_lee_mref](#cmxmcrdsrv_icrd_lee_mref) | MREF, COR, COL, CRD |
+| Aceptar_Click | [CMXsrv_icrd_ing_txt](#cmxsrv_icrd_ing_txt) | MTXT |
+| Form_Load | [CMXCRDsrv_icrd_get_ing_esp](#cmxcrdsrv_icrd_get_ing_esp) | ACMXPAIS, MCTP, CRD |
+| Form_Load | [CMXMCRDsrv_icrd_lee_mtxt](#cmxmcrdsrv_icrd_lee_mtxt) | MTXT |
+| Form_Load | [CMXCRDsrv_icrd_get_pre_fra](#cmxcrdsrv_icrd_get_pre_fra) | ACMXTSWFESPMSG, ACMXTSWFINGMSG |
+| Aceptar_Click | [CMXMCRDsrv_icrd_a_mmer](#cmxmcrdsrv_icrd_a_mmer) | MMER |
+| Form_Load | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) | MMER, MER |
+| Aceptar_Click | [CMXsrv_icrd_a_otr_doc](#cmxsrv_icrd_a_otr_doc) | ODOC, MODOC |
+| Form_Load | [CMXsrv_icrd_lee_otr_doc](#cmxsrv_icrd_lee_otr_doc) | ODOC, MODOC |
+| Aceptar_Click | [CMXsrv_fincol_lee_cod_eve](#cmxsrv_fincol_lee_cod_eve) | MCND, COL, CRD, COM |
+| Aceptar_Click | [CMXMCRDsrv_icrd_acep_mod_crd](#cmxmcrdsrv_icrd_acep_mod_crd) | de, TIP, CRD, COD, MCRS, OBL, EVE, LIB, warnmsg, OPE_BCI, sysobjects, COL |
+| cancelar_Click | [CMXMCRDsrv_icrd_eli_no_cont](#cmxmcrdsrv_icrd_eli_no_cont) | MREF, MEMB, MCRS, MMCND, COM, MODOC, MIBAB, CRD_AMD, MPMIX, MCTP, MMER, MCND, MIBAR, TNIH, MAPR, FE_IN_REJECTED_TRANS, MTXT |
+| fld_crd_cod_bco_rem_LostFocus | [CMXsrv_icrd_lee_bco_swf](#cmxsrv_icrd_lee_bco_swf) | ACMXPAIS, COR |
+| fld_crd_fec_mod_lostFocus | [CMXsrv_fincol_efec_calpa](#cmxsrv_fincol_efec_calpa) | TF_PPAG, TIP, TAS, CUO, comex..ACMXMONEDA, COL_ADI, OBL, CTR, NEG_ADI, ACMXINTERE, CAN, ICR, COL |
+| Form_Activate | [CMXsrv_icrd_lee_ind_esp_ing](#cmxsrv_icrd_lee_ind_esp_ing) | MCTP, CRD |
+| Form_Load | [CMXsrv_fincol_efec_calpa](#cmxsrv_fincol_efec_calpa) | TF_PPAG, TIP, TAS, CUO, comex..ACMXMONEDA, COL_ADI, OBL, CTR, NEG_ADI, ACMXINTERE, CAN, ICR, COL |
+| Form_Load | [CMXMCRDsrv_icrd_lee_mcnd](#cmxmcrdsrv_icrd_lee_mcnd) | CRD_ADI, ACMXFORPAG, CRD, PMIX, ACMXMONEDA, MPMIX, MCND |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
 ## NEGO_AV
 <a name="nego_av" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| aviso1 | COR, TAS, CRD, CUO, CNEG, COM, NEG, TRSD, DIS, EVE, ACMXMONEDA, ACMXINTERE, ACMXSUCSAL, COL | [CMXsrv_icrd_a_rec_age](#cmxsrv_icrd_a_rec_age) |
-| aviso1 | CLN | [CMXsrv_busc_ofi_cta](#cmxsrv_busc_ofi_cta) |
-| aviso1 | ARC | [CMXsrv_neg_busc_arc](#cmxsrv_neg_busc_arc) |
-| aviso1 | CRD | [CMXsrv_icrd_lee_avi_adi](#cmxsrv_icrd_lee_avi_adi) |
-| aviso3 | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) |
-| Aviso4 | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) |
-| Aviso4 | NEG, CLN, COL | [CMXsrv_icrd_lee_dat_cln](#cmxsrv_icrd_lee_dat_cln) |
-| Aviso5 | NEG, CLN, COL | [CMXsrv_icrd_lee_dat_cln](#cmxsrv_icrd_lee_dat_cln) |
-| Aviso5 | DIS, COL | [CMXsrv_icrd_lee_avi_dis](#cmxsrv_icrd_lee_avi_dis) |
-| Aviso5 | CRD | [CMXsrv_icrd_lee_avi_adi](#cmxsrv_icrd_lee_avi_adi) |
-| Aviso5 | ADI | [CMXsrv_neg_ddi_asoc](#cmxsrv_neg_ddi_asoc) |
-| Aviso5 | ARC | [CMXsrv_neg_busc_arc](#cmxsrv_neg_busc_arc) |
-| Aviso5 | COL, CUO | [CMXsrv_neg_trae_vcto_mcf](#cmxsrv_neg_trae_vcto_mcf) |
-| lee_aval | TAS, CNEG, AVAL, CLN, COL | [CMXsrv_neg_avi_lee_aval](#cmxsrv_neg_avi_lee_aval) |
-| lee_nego | NEG, COL | [CMXsrv_icrd_neg_lee_crd](#cmxsrv_icrd_neg_lee_crd) |
-| lee_nego | TAS, CRD, ACMXFINVER, NEG, NEG_ADI, DIS, COL | [CMXsrv_icrd_lee_neg](#cmxsrv_icrd_lee_neg) |
-| avi_col1 | TIP, CRD, DAC, ACMXESPECI, ACMXSUCSAL, CLN, COL, ACLNEJECTA | [CMXsrv_col_avi_dat_cln](#cmxsrv_col_avi_dat_cln) |
-| avi_col1 | CCX, TIP, TAS, CRD, COB, ACMXINTERE, EVE, ACMXMONEDA, ACMXINTEREFEC, CAN, CAN_REN, COL | [CMXsrv_col_avi_det_pag](#cmxsrv_col_avi_det_pag) |
-| avi_col2 | TIP, CRD, DAC, ACMXESPECI, ACMXSUCSAL, CLN, COL, ACLNEJECTA | [CMXsrv_col_avi_dat_cln](#cmxsrv_col_avi_dat_cln) |
-| avi_col2 | TIP, ACMXDESEMB, ASND, TAS, CUO, COD, NEG, ACMXINTERE, EVE, ACMXMONEDA, ACMXINTEREFEC, AVAL, CLN, COL | [CMXsrv_col_avi_det_oto](#cmxsrv_col_avi_det_oto) |
-| avi_col4 | TIP, CRD, DAC, ACMXESPECI, ACMXSUCSAL, CLN, COL, ACLNEJECTA | [CMXsrv_col_avi_dat_cln](#cmxsrv_col_avi_dat_cln) |
-| avi_col4 | EVE, COL, TIP, COD | [CMXsrv_col_lee_num_trs](#cmxsrv_col_lee_num_trs) |
-| lee_obl_pag | CNO, EVO | [CMXsrv_finobl_avi_pag](#cmxsrv_finobl_avi_pag) |
-| traspaso | ACMXDESEMB, ASND, COD, TRSD, ACMXMONEDA | [CMXsrv_neg_avi_trae_asnd_mn](#cmxsrv_neg_avi_trae_asnd_mn) |
-| traspaso | ACMXDESEMB, ACMXMONEDA, ASND | [CMXsrv_neg_avi_trae_asnd_mx](#cmxsrv_neg_avi_trae_asnd_mx) |
-| Form_Activate | NEG, COL | [CMXsrv_icrd_neg_lee_crd](#cmxsrv_icrd_neg_lee_crd) |
-| Form_Activate | TAS, CRD, ACMXFINVER, NEG, NEG_ADI, DIS, COL | [CMXsrv_icrd_lee_neg](#cmxsrv_icrd_lee_neg) |
-| Mcrdtxtliq_Click | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) |
-| Mcrdtxtope_Click | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) |
-| MNEGCONT_Click | COL, NEG, CRD, COD | [CMXsrv_icrd_cont_neg](#cmxsrv_icrd_cont_neg) |
-| MNEGELI_CLICK | CRD, COM, NEG, CND, NEG_ADI, ACMXTXTSWF, comex..COL | [CMXsrv_icrd_eli_neg](#cmxsrv_icrd_eli_neg) |
-| precarga_datos | COR, TAS, CRD, CUO, CNEG, COM, NEG, TRSD, DIS, EVE, ACMXMONEDA, ACMXINTERE, ACMXSUCSAL, COL | [CMXsrv_icrd_a_rec_age](#cmxsrv_icrd_a_rec_age) |
-| precarga_datos | CLN | [CMXsrv_busc_ofi_cta](#cmxsrv_busc_ofi_cta) |
-| Form_Load | ACMXSUCSAL, ACMXDL3475FEC, tbl_User | [CMXsrv_trae_glo_fec](#cmxsrv_trae_glo_fec) |
-| Form_Load | COL | [CMXsrv_icrd_lee_num_col](#cmxsrv_icrd_lee_num_col) |
-| Form_Load | CAN | [CMXsrv_icrd_bus_pago](#cmxsrv_icrd_bus_pago) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| aviso1 | [CMXsrv_icrd_a_rec_age](#cmxsrv_icrd_a_rec_age) | COR, TAS, CRD, CUO, CNEG, COM, NEG, TRSD, DIS, EVE, ACMXMONEDA, ACMXINTERE, ACMXSUCSAL, COL |
+| aviso1 | [CMXsrv_busc_ofi_cta](#cmxsrv_busc_ofi_cta) | CLN |
+| aviso1 | [CMXsrv_neg_busc_arc](#cmxsrv_neg_busc_arc) | ARC |
+| aviso1 | [CMXsrv_icrd_lee_avi_adi](#cmxsrv_icrd_lee_avi_adi) | CRD |
+| aviso3 | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL |
+| Aviso4 | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL |
+| Aviso4 | [CMXsrv_icrd_lee_dat_cln](#cmxsrv_icrd_lee_dat_cln) | NEG, CLN, COL |
+| Aviso5 | [CMXsrv_icrd_lee_dat_cln](#cmxsrv_icrd_lee_dat_cln) | NEG, CLN, COL |
+| Aviso5 | [CMXsrv_icrd_lee_avi_dis](#cmxsrv_icrd_lee_avi_dis) | DIS, COL |
+| Aviso5 | [CMXsrv_icrd_lee_avi_adi](#cmxsrv_icrd_lee_avi_adi) | CRD |
+| Aviso5 | [CMXsrv_neg_ddi_asoc](#cmxsrv_neg_ddi_asoc) | ADI |
+| Aviso5 | [CMXsrv_neg_busc_arc](#cmxsrv_neg_busc_arc) | ARC |
+| Aviso5 | [CMXsrv_neg_trae_vcto_mcf](#cmxsrv_neg_trae_vcto_mcf) | COL, CUO |
+| lee_aval | [CMXsrv_neg_avi_lee_aval](#cmxsrv_neg_avi_lee_aval) | TAS, CNEG, AVAL, CLN, COL |
+| lee_nego | [CMXsrv_icrd_neg_lee_crd](#cmxsrv_icrd_neg_lee_crd) | NEG, COL |
+| lee_nego | [CMXsrv_icrd_lee_neg](#cmxsrv_icrd_lee_neg) | TAS, CRD, ACMXFINVER, NEG, NEG_ADI, DIS, COL |
+| avi_col1 | [CMXsrv_col_avi_dat_cln](#cmxsrv_col_avi_dat_cln) | TIP, CRD, DAC, ACMXESPECI, ACMXSUCSAL, CLN, COL, ACLNEJECTA |
+| avi_col1 | [CMXsrv_col_avi_det_pag](#cmxsrv_col_avi_det_pag) | CCX, TIP, TAS, CRD, COB, ACMXINTERE, EVE, ACMXMONEDA, ACMXINTEREFEC, CAN, CAN_REN, COL |
+| avi_col2 | [CMXsrv_col_avi_dat_cln](#cmxsrv_col_avi_dat_cln) | TIP, CRD, DAC, ACMXESPECI, ACMXSUCSAL, CLN, COL, ACLNEJECTA |
+| avi_col2 | [CMXsrv_col_avi_det_oto](#cmxsrv_col_avi_det_oto) | TIP, ACMXDESEMB, ASND, TAS, CUO, COD, NEG, ACMXINTERE, EVE, ACMXMONEDA, ACMXINTEREFEC, AVAL, CLN, COL |
+| avi_col4 | [CMXsrv_col_avi_dat_cln](#cmxsrv_col_avi_dat_cln) | TIP, CRD, DAC, ACMXESPECI, ACMXSUCSAL, CLN, COL, ACLNEJECTA |
+| avi_col4 | [CMXsrv_col_lee_num_trs](#cmxsrv_col_lee_num_trs) | EVE, COL, TIP, COD |
+| lee_obl_pag | [CMXsrv_finobl_avi_pag](#cmxsrv_finobl_avi_pag) | CNO, EVO |
+| traspaso | [CMXsrv_neg_avi_trae_asnd_mn](#cmxsrv_neg_avi_trae_asnd_mn) | ACMXDESEMB, ASND, COD, TRSD, ACMXMONEDA |
+| traspaso | [CMXsrv_neg_avi_trae_asnd_mx](#cmxsrv_neg_avi_trae_asnd_mx) | ACMXDESEMB, ACMXMONEDA, ASND |
+| Form_Activate | [CMXsrv_icrd_neg_lee_crd](#cmxsrv_icrd_neg_lee_crd) | NEG, COL |
+| Form_Activate | [CMXsrv_icrd_lee_neg](#cmxsrv_icrd_lee_neg) | TAS, CRD, ACMXFINVER, NEG, NEG_ADI, DIS, COL |
+| Mcrdtxtliq_Click | [CMXsrv_icrd_lee_dat_trs](#cmxsrv_icrd_lee_dat_trs) | ASND, EVI, TRSD, EVE, ACMXMONEDA, COL |
+| Mcrdtxtope_Click | [CMXsrv_icrd_dat_liq_ope](#cmxsrv_icrd_dat_liq_ope) | ACMXDESEMB, ASND, EVO, CRD, CNO, OBL, CUO, TRSD, NEG, COM, EVE, ACMXTIPEVE, CAN, COL |
+| MNEGCONT_Click | [CMXsrv_icrd_cont_neg](#cmxsrv_icrd_cont_neg) | COL, NEG, CRD, COD |
+| MNEGELI_CLICK | [CMXsrv_icrd_eli_neg](#cmxsrv_icrd_eli_neg) | CRD, COM, NEG, CND, NEG_ADI, ACMXTXTSWF, comex..COL |
+| precarga_datos | [CMXsrv_icrd_a_rec_age](#cmxsrv_icrd_a_rec_age) | COR, TAS, CRD, CUO, CNEG, COM, NEG, TRSD, DIS, EVE, ACMXMONEDA, ACMXINTERE, ACMXSUCSAL, COL |
+| precarga_datos | [CMXsrv_busc_ofi_cta](#cmxsrv_busc_ofi_cta) | CLN |
+| Form_Load | [CMXsrv_trae_glo_fec](#cmxsrv_trae_glo_fec) | ACMXSUCSAL, ACMXDL3475FEC, tbl_User |
+| Form_Load | [CMXsrv_icrd_lee_num_col](#cmxsrv_icrd_lee_num_col) | COL |
+| Form_Load | [CMXsrv_icrd_bus_pago](#cmxsrv_icrd_bus_pago) | CAN |
 
 ---
 
 ## NNEGO
 <a name="nnego" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| Form_Activate | NEG, COL | [CMXsrv_icrd_neg_lee_crd](#cmxsrv_icrd_neg_lee_crd) |
-| Form_Activate | TAS, CRD, ACMXFINVER, NEG, NEG_ADI, DIS, COL | [CMXsrv_icrd_lee_neg](#cmxsrv_icrd_lee_neg) |
-| gen_mens_swift | switxt, switxt1 | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) |
-| llama_pagos | CCL, COL, TAS | [CMXsrv_icrd_lee_col](#cmxsrv_icrd_lee_col) |
-| Mnegavi9_Click | switxt, switxt1 | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) |
-| MNEGCONT_Click | COL, NEG, CRD, COD | [CMXsrv_icrd_cont_neg](#cmxsrv_icrd_cont_neg) |
-| MNEGELI_CLICK | CRD, COM, NEG, CND, NEG_ADI, ACMXTXTSWF, comex..COL | [CMXsrv_icrd_eli_neg](#cmxsrv_icrd_eli_neg) |
-| pertas_Click | CCL, COL, TAS | [CMXsrv_icrd_lee_col](#cmxsrv_icrd_lee_col) |
-| Form_Activate | NEG | [CMXsrv_icrd_busc_neg](#cmxsrv_icrd_busc_neg) |
-| Form_Load | comex..EMB, comex..MEMB | [CMXsrv_icrd_busc_emb](#cmxsrv_icrd_busc_emb) |
-| ACEPTAR_Click | TAS, CNEG, NEG, COL, DOCNEG | [CMXsrv_icrd_a_neg_emb1](#cmxsrv_icrd_a_neg_emb1) |
-| ACEPTAR_Click | NEG, COL, comex..COL, DOCNEG | [CMXsrv_icrd_a_neg_emb2](#cmxsrv_icrd_a_neg_emb2) |
-| CANCELAR_Click | COL, DOCNEG | [CMXsrv_icrd_eli_doc_neg](#cmxsrv_icrd_eli_doc_neg) |
-| Form_Activate | CRS, COL, EMB | [CMXsrv_icrd_lee_emb1](#cmxsrv_icrd_lee_emb1) |
-| Form_Activate | COL, EMB | [CMXsrv_icrd_lee_emb2](#cmxsrv_icrd_lee_emb2) |
-| Form_Activate | COL, NEG | [CMXsrv_icrd_lee_neg_emb1](#cmxsrv_icrd_lee_neg_emb1) |
-| Form_Activate | COL, NEG | [CMXsrv_icrd_lee_neg_emb2](#cmxsrv_icrd_lee_neg_emb2) |
-| Form_Activate | MMCND, COL, CND | [CMXsrv_icrd_lee_cnd_esp](#cmxsrv_icrd_lee_cnd_esp) |
-| Form_Activate | MMER, MER | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) |
-| ACEPTAR_Click | COL, DIS, NEG | [CMXsrv_icrd_a_neg_disc](#cmxsrv_icrd_a_neg_disc) |
-| Form_Load | DIS, NEG | [CMXsrv_icrd_neg_lee_disc](#cmxsrv_icrd_neg_lee_disc) |
-| ACEPTAR_Click | COL, NEG, comex..COL | [CMXsrv_icrd_ent_doc](#cmxsrv_icrd_ent_doc) |
-| ELIMINAR_Click | COL, NEG, comex..COL | [CMXsrv_icrd_ent_doc](#cmxsrv_icrd_ent_doc) |
-| Form_Load | COL, NEG, comex..COL | [CMXsrv_icrd_ent_doc](#cmxsrv_icrd_ent_doc) |
-| ACEPTAR_Click | comex..ACMXINTEREFEC, COR, TAS, CRD, CUO, COD, CNEG, NEG, ACMXMONEDAFEC, NEG_ADI, ACMXINTERE, ACMXBCOUSU, ACMXINTEREFEC, sysobjects, COL | [CMXsrv_icrd_alz_disc](#cmxsrv_icrd_alz_disc) |
-| aceptar_click | COR, ACMXMONEDAFEC, CRD, LCR | [CMXCRDsrv_icrd_asignar_cor](#cmxcrdsrv_icrd_asignar_cor) |
-| BUSCAR_Click | COR | [CMXCRDsrv_icrd_bus_lcr_bco](#cmxcrdsrv_icrd_bus_lcr_bco) |
-| proximo_Click | COR | [CMXCRDsrv_icrd_bus_lcr_bco](#cmxcrdsrv_icrd_bus_lcr_bco) |
-| ACEPTAR_Click | NEG, COL, DOCNEG | [CMXsrv_icrd_act_doc_neg](#cmxsrv_icrd_act_doc_neg) |
-| Form_Load | NEG, EMB | [CMXsrv_icrd_lee_doc_neg](#cmxsrv_icrd_lee_doc_neg) |
-| enviar_Click | switxt, switxt1 | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) |
-| Form_Load | DDI, COR, ADI, TAS, CUO, NEG, ACMXMONEDAFEC, DAC, ACMXINTERE, ACMXMONEDA, ACMXSIGGAR, ACMXINTEREFEC, CAN, DIS, warnmsg, AVAL, COL, CCO | [CMXsrv_icrd_val_neg](#cmxsrv_icrd_val_neg) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
-| Form_Load | CAN | [CMXsrv_icrd_bus_pago](#cmxsrv_icrd_bus_pago) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| Form_Activate | [CMXsrv_icrd_neg_lee_crd](#cmxsrv_icrd_neg_lee_crd) | NEG, COL |
+| Form_Activate | [CMXsrv_icrd_lee_neg](#cmxsrv_icrd_lee_neg) | TAS, CRD, ACMXFINVER, NEG, NEG_ADI, DIS, COL |
+| gen_mens_swift | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) | switxt, switxt1 |
+| llama_pagos | [CMXsrv_icrd_lee_col](#cmxsrv_icrd_lee_col) | CCL, COL, TAS |
+| Mnegavi9_Click | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) | switxt, switxt1 |
+| MNEGCONT_Click | [CMXsrv_icrd_cont_neg](#cmxsrv_icrd_cont_neg) | COL, NEG, CRD, COD |
+| MNEGELI_CLICK | [CMXsrv_icrd_eli_neg](#cmxsrv_icrd_eli_neg) | CRD, COM, NEG, CND, NEG_ADI, ACMXTXTSWF, comex..COL |
+| pertas_Click | [CMXsrv_icrd_lee_col](#cmxsrv_icrd_lee_col) | CCL, COL, TAS |
+| Form_Activate | [CMXsrv_icrd_busc_neg](#cmxsrv_icrd_busc_neg) | NEG |
+| Form_Load | [CMXsrv_icrd_busc_emb](#cmxsrv_icrd_busc_emb) | comex..EMB, comex..MEMB |
+| ACEPTAR_Click | [CMXsrv_icrd_a_neg_emb1](#cmxsrv_icrd_a_neg_emb1) | TAS, CNEG, NEG, COL, DOCNEG |
+| ACEPTAR_Click | [CMXsrv_icrd_a_neg_emb2](#cmxsrv_icrd_a_neg_emb2) | NEG, COL, comex..COL, DOCNEG |
+| CANCELAR_Click | [CMXsrv_icrd_eli_doc_neg](#cmxsrv_icrd_eli_doc_neg) | COL, DOCNEG |
+| Form_Activate | [CMXsrv_icrd_lee_emb1](#cmxsrv_icrd_lee_emb1) | CRS, COL, EMB |
+| Form_Activate | [CMXsrv_icrd_lee_emb2](#cmxsrv_icrd_lee_emb2) | COL, EMB |
+| Form_Activate | [CMXsrv_icrd_lee_neg_emb1](#cmxsrv_icrd_lee_neg_emb1) | COL, NEG |
+| Form_Activate | [CMXsrv_icrd_lee_neg_emb2](#cmxsrv_icrd_lee_neg_emb2) | COL, NEG |
+| Form_Activate | [CMXsrv_icrd_lee_cnd_esp](#cmxsrv_icrd_lee_cnd_esp) | MMCND, COL, CND |
+| Form_Activate | [CMXsrv_icrd_lee_desc_merc](#cmxsrv_icrd_lee_desc_merc) | MMER, MER |
+| ACEPTAR_Click | [CMXsrv_icrd_a_neg_disc](#cmxsrv_icrd_a_neg_disc) | COL, DIS, NEG |
+| Form_Load | [CMXsrv_icrd_neg_lee_disc](#cmxsrv_icrd_neg_lee_disc) | DIS, NEG |
+| ACEPTAR_Click | [CMXsrv_icrd_ent_doc](#cmxsrv_icrd_ent_doc) | COL, NEG, comex..COL |
+| ELIMINAR_Click | [CMXsrv_icrd_ent_doc](#cmxsrv_icrd_ent_doc) | COL, NEG, comex..COL |
+| Form_Load | [CMXsrv_icrd_ent_doc](#cmxsrv_icrd_ent_doc) | COL, NEG, comex..COL |
+| ACEPTAR_Click | [CMXsrv_icrd_alz_disc](#cmxsrv_icrd_alz_disc) | comex..ACMXINTEREFEC, COR, TAS, CRD, CUO, COD, CNEG, NEG, ACMXMONEDAFEC, NEG_ADI, ACMXINTERE, ACMXBCOUSU, ACMXINTEREFEC, sysobjects, COL |
+| aceptar_click | [CMXCRDsrv_icrd_asignar_cor](#cmxcrdsrv_icrd_asignar_cor) | COR, ACMXMONEDAFEC, CRD, LCR |
+| BUSCAR_Click | [CMXCRDsrv_icrd_bus_lcr_bco](#cmxcrdsrv_icrd_bus_lcr_bco) | COR |
+| proximo_Click | [CMXCRDsrv_icrd_bus_lcr_bco](#cmxcrdsrv_icrd_bus_lcr_bco) | COR |
+| ACEPTAR_Click | [CMXsrv_icrd_act_doc_neg](#cmxsrv_icrd_act_doc_neg) | NEG, COL, DOCNEG |
+| Form_Load | [CMXsrv_icrd_lee_doc_neg](#cmxsrv_icrd_lee_doc_neg) | NEG, EMB |
+| enviar_Click | [CMXsrv_iswf_a_pru](#cmxsrv_iswf_a_pru) | switxt, switxt1 |
+| Form_Load | [CMXsrv_icrd_val_neg](#cmxsrv_icrd_val_neg) | DDI, COR, ADI, TAS, CUO, NEG, ACMXMONEDAFEC, DAC, ACMXINTERE, ACMXMONEDA, ACMXSIGGAR, ACMXINTEREFEC, CAN, DIS, warnmsg, AVAL, COL, CCO |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
+| Form_Load | [CMXsrv_icrd_bus_pago](#cmxsrv_icrd_bus_pago) | CAN |
 
 ---
 
 ## PAGCBR
 <a name="pagcbr" ></a>
 
-| **Segmento** | **Tabla Referenciada** | **Procedimiento Almacenado** |
-|-------------|----------------------|--------------------------|
-| ACEPTAR_Click | ACMXMONEDAFEC, CBR, ACMXPRMENL | [CMXsrv_icbr_lee_dat_var](#cmxsrv_icbr_lee_dat_var) |
-| ACEPTAR_Click | LCB, CBR, CCO | [CMXsrv_icbr_val_pag](#cmxsrv_icbr_val_pag) |
-| ACEPTAR_Click | LCB, ACMXDESEMB, vig_cmx, COD, ICX, COM, ACMXMONEDAFEC, CBR, PCX, DIP, LIB, CLN, CCO | [CMXsrv_icbr_ctb_pag](#cmxsrv_icbr_ctb_pag) |
-| Calcular_Click | DDI, ADI, ACMXMONEDAFEC, CBR, COB, ACMXMONEDA | [CMXsrv_icbr_cal_pag](#cmxsrv_icbr_cal_pag) |
-| CANCELAR_Click | ECE, PCX, COB, ICX | [CMXsrv_icbr_eli_pag](#cmxsrv_icbr_eli_pag) |
-| fld_cbr_cod_des_mn_pag_lostfocus | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX | [CMXsrv_val_vig](#cmxsrv_val_vig) |
-| fld_cbr_cod_des_mx_pag_lostfocus | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX | [CMXsrv_val_vig](#cmxsrv_val_vig) |
-| Form_Load | ACMXMONEDA, CBR | [CMXsrv_icbr_lee_cbr0](#cmxsrv_icbr_lee_cbr0) |
-| Form_Load |  | [CMXsrv_icbr_obt_mon_nac](#cmxsrv_icbr_obt_mon_nac) |
-| Form_Load | ACMXDESEMB, ECE, PCX, CBR | [CMXsrv_icbr_lee_dat_pag](#cmxsrv_icbr_lee_dat_pag) |
-| Form_Load | ACMXMONEDAFEC, CBR | [CMXsrv_icbr_pcg_pag](#cmxsrv_icbr_pcg_pag) |
-| lee_cta | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX | [CMXsrv_vig_lee_cta](#cmxsrv_vig_lee_cta) |
-| Form_Activate | PCX | [CMXsrv_icbr_busc_pago](#cmxsrv_icbr_busc_pago) |
-| ACEPTAR_Click | LCB, CBR, CCO | [CMXsrv_icbr_val_pag](#cmxsrv_icbr_val_pag) |
-| Aceptar_Click | ACMXMONEDAFEC, COB | [CMXsrv_icob_act_val](#cmxsrv_icob_act_val) |
-| Form_Activate | COB | [CMXsrv_icob_lee_val](#cmxsrv_icob_lee_val) |
-| ELIMINAR_Click | PCX, ICX | [CMXsrv_icbr_eli_int_pago](#cmxsrv_icbr_eli_int_pago) |
-| Form_Activate | ICX | [CMXsrv_icbr_busc_int](#cmxsrv_icbr_busc_int) |
-| Aceptar_Click | PCX, CBR, ICX, ACMXINTEREFEC | [CMXsrv_icbr_ingmod_int](#cmxsrv_icbr_ingmod_int) |
-| Form_Activate | ICX | [CMXsrv_icbr_lee_int_pago](#cmxsrv_icbr_lee_int_pago) |
-| Aceptar_Click | ACMXPAIS, COR | [CMXsrv_icbr_lee_bco](#cmxsrv_icbr_lee_bco) |
-| buscar_Click | COR | [CMXsrv_icbr_busc_bco](#cmxsrv_icbr_busc_bco) |
-| Form_Load |  | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |
+| **Segmento** | **Procedimiento Almacenado** | **Tabla Referenciada** |
+|-------------|-----------------------------|----------------------|
+| ACEPTAR_Click | [CMXsrv_icbr_lee_dat_var](#cmxsrv_icbr_lee_dat_var) | ACMXMONEDAFEC, CBR, ACMXPRMENL |
+| ACEPTAR_Click | [CMXsrv_icbr_val_pag](#cmxsrv_icbr_val_pag) | LCB, CBR, CCO |
+| ACEPTAR_Click | [CMXsrv_icbr_ctb_pag](#cmxsrv_icbr_ctb_pag) | LCB, ACMXDESEMB, vig_cmx, COD, ICX, COM, ACMXMONEDAFEC, CBR, PCX, DIP, LIB, CLN, CCO |
+| Calcular_Click | [CMXsrv_icbr_cal_pag](#cmxsrv_icbr_cal_pag) | DDI, ADI, ACMXMONEDAFEC, CBR, COB, ACMXMONEDA |
+| CANCELAR_Click | [CMXsrv_icbr_eli_pag](#cmxsrv_icbr_eli_pag) | ECE, PCX, COB, ICX |
+| fld_cbr_cod_des_mn_pag_lostfocus | [CMXsrv_val_vig](#cmxsrv_val_vig) | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX |
+| fld_cbr_cod_des_mx_pag_lostfocus | [CMXsrv_val_vig](#cmxsrv_val_vig) | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX |
+| Form_Load | [CMXsrv_icbr_lee_cbr0](#cmxsrv_icbr_lee_cbr0) | ACMXMONEDA, CBR |
+| Form_Load | [CMXsrv_icbr_obt_mon_nac](#cmxsrv_icbr_obt_mon_nac) |  |
+| Form_Load | [CMXsrv_icbr_lee_dat_pag](#cmxsrv_icbr_lee_dat_pag) | ACMXDESEMB, ECE, PCX, CBR |
+| Form_Load | [CMXsrv_icbr_pcg_pag](#cmxsrv_icbr_pcg_pag) | ACMXMONEDAFEC, CBR |
+| lee_cta | [CMXsrv_vig_lee_cta](#cmxsrv_vig_lee_cta) | ACMXPLNCTAN, ACMXDESEMB, ACMXPLNCTAX |
+| Form_Activate | [CMXsrv_icbr_busc_pago](#cmxsrv_icbr_busc_pago) | PCX |
+| ACEPTAR_Click | [CMXsrv_icbr_val_pag](#cmxsrv_icbr_val_pag) | LCB, CBR, CCO |
+| Aceptar_Click | [CMXsrv_icob_act_val](#cmxsrv_icob_act_val) | ACMXMONEDAFEC, COB |
+| Form_Activate | [CMXsrv_icob_lee_val](#cmxsrv_icob_lee_val) | COB |
+| ELIMINAR_Click | [CMXsrv_icbr_eli_int_pago](#cmxsrv_icbr_eli_int_pago) | PCX, ICX |
+| Form_Activate | [CMXsrv_icbr_busc_int](#cmxsrv_icbr_busc_int) | ICX |
+| Aceptar_Click | [CMXsrv_icbr_ingmod_int](#cmxsrv_icbr_ingmod_int) | PCX, CBR, ICX, ACMXINTEREFEC |
+| Form_Activate | [CMXsrv_icbr_lee_int_pago](#cmxsrv_icbr_lee_int_pago) | ICX |
+| Aceptar_Click | [CMXsrv_icbr_lee_bco](#cmxsrv_icbr_lee_bco) | ACMXPAIS, COR |
+| buscar_Click | [CMXsrv_icbr_busc_bco](#cmxsrv_icbr_busc_bco) | COR |
+| Form_Load | [CMXsrv_grl_fec_serv](#cmxsrv_grl_fec_serv) |  |
 
 ---
 
